@@ -1,0 +1,11 @@
+.panel-primary {
+    width: 45%;
+}
+
+#signup {
+    float: left;
+}
+
+#login {
+    float: right;
+}
