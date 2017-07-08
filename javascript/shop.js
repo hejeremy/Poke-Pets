@@ -1,9 +1,9 @@
 
 //Variable to save store items and pricing
 var store = {
-    potion: 10,
-    superPotion: 20,
-    megaPotion: 30,
+    'Potion': 10,
+    'SuperPotion': 20,
+    'MegaPotion': 30,
 }
 
 //To generate table row with the item from the shop
@@ -26,24 +26,23 @@ for (var key in store) {
 //On click to buy, calls shop function
 $(document).on('click', '.buyThis', function() {
     var item = $(this).val();
-    console.log(item);
-    shop(examplePlayer, item);
-    //console.log(examplePlayer);
+    //console.log(item);
+    shop(examplePlayer1, item);
 });
 
 //Makes a call against player money, then either buys the item + subtracts playerMoney + adds item to player bag
 function shop(player1, item) {
     var cost = store[item];
-    if (player1.playerMoney > store[item]) {
-        if (!player1.playerBag.hasOwnProperty(item)) {
-            player1.playerBag[item] = 0;
+    if (player1.Money >= store[item]) {
+        if (!player1.Bag.hasOwnProperty(item)) {
+            player1.Bag[item] = 0;
         }
-        player1.playerMoney -= store[item];
-        player1.playerBag[item] += 1;
+        player1.Money -= store[item];
+        player1.Bag[item] += 1;
     } else {
         console.log('Not enough money.');
+        return;
     }
-    console.log(store[item]);
-    console.log(player1.playerMoney);
-    console.log(player1.playerBag);
+    console.log(player1.Money);
+    console.log(player1.Bag);
 }
