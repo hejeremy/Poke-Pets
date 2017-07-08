@@ -8,7 +8,8 @@ var config = {
     messagingSenderId: "416846931"
 };
 firebase.initializeApp(config);
-
+// Link to database
+var database = firebase.database();
 
 
 $(".btn-facebook").click(function() {
@@ -16,8 +17,17 @@ $(".btn-facebook").click(function() {
     var provider = new firebase.auth.FacebookAuthProvider();
 
     // Login
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-        console.log(result);
+    firebase.auth().signInWithPopup(provider).then(function(data) {
+        var user = data.additionalUserInfo.profile;
+        var name = user.first_name;
+        var id = user.id;
+        var picture = user.picture.data.url;
+
+        database.ref("users/" + id).set({
+            name: name,
+            profilePic: picture
+        });
+        console.log(data);
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         var token = result.credential.accessToken;
         // The signed-in user info.
