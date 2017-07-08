@@ -34,10 +34,7 @@ exampleSkillList.push(new Skill('Tackle', 5));
 var examplePokemonList = [];
 examplePokemonList.push(new Pokemon('Squirtle', 'https://cdn.bulbagarden.net/upload/3/39/007Squirtle.png', 100, 0, exampleSkillList));
 
-var exampleBag = {
-    potion: 10,
-    superPotion: 0,
-};
+var exampleBag = {};
 
 var examplePlayer = new Player('bagelxp@gmail.com', 'Bagel', 0, 1000, exampleBag, examplePokemonList);
 console.log(examplePlayer);
