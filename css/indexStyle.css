@@ -1,11 +1,31 @@
-.panel-primary {
-    width: 45%;
+body {
+    background: #d7e3f7;
+}
+.login {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 36px;
+    display: block;
+    
 }
 
-#signup {
-    float: left;
+#title {
+    background: #ffbfbf;
+    padding: 24px;
+    font-size: 400%;
+    font-weight: bold;
+    border-bottom: 4px solid black;
+    color: #333;
+    margin-bottom: 96px;
 }
 
-#login {
-    float: right;
+#pokeball {
+    height: 128px;
 }
+
+#facebook {
+    background: #3b5998;
+    color: white;
+    font-weight: bold;
+}
+
