@@ -1,6 +1,6 @@
 
 //Variable to save store items and pricing
-var store {
+var store = {
     potion: 10,
     superPotion: 20,
 }
