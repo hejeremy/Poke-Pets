@@ -18,7 +18,7 @@ database.ref("users").once("value", function(snapshot) {
     console.log(player);
     var playerImage = $("<img>");
     playerImage.attr("src", player["profilePic"]);
-    $("playerTemp").append(playerImage);
+    $("#playerTemp").append(playerImage);
 })
 
 // If not, draw normal menu
