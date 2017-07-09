@@ -15,10 +15,15 @@ var database = firebase.database();
 database.ref("users").once("value", function(snapshot) {
     // Get correct user data
     var player = snapshot.val()[localStorage.getItem("id")];
-    console.log(player);
+    
+    // Display player info
     var playerImage = $("<img>");
     playerImage.attr("src", player["profilePic"]);
-    $("#playerTemp").append(playerImage);
+    var playerName = $("<h1>");
+    playerName.text("Hello, " + player["name"]);
+
+    // Append info
+    $("#playerTemp").append(playerImage, playerName);
 })
 
 // If not, draw normal menu
