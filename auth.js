@@ -49,5 +49,10 @@ $(".btn-facebook").click(function() {
 
     }).catch(function(error) {
         console.log(error);
-    }); 
+    });  
+});
+
+$(".btn-github").click(function() {
+    console.log("you are here");
+    document.location.href = "main.html";
 });

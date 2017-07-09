@@ -12,10 +12,13 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 // Check if first-time user...
-database.ref().once()
-var playerImage = $("<img>");
-
-playerImage.attr("src", )
-
+database.ref("users").once("value", function(snapshot) {
+    // Get correct user data
+    var player = snapshot.val()[localStorage.getItem("id")];
+    console.log(player);
+    var playerImage = $("<img>");
+    playerImage.attr("src", playerp[profilePic]);
+    $("playerTemp").append(playerImage);
+})
 
 // If not, draw normal menu
