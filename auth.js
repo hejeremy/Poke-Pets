@@ -18,21 +18,41 @@ $(".btn-facebook").click(function() {
 
     // Login
     firebase.auth().signInWithPopup(provider).then(function(data) {
+
+        // Store info
         var user = data.additionalUserInfo.profile;
         var name = user.first_name;
         var id = user.id;
         var picture = user.picture.data.url;
 
-        database.ref("users/" + id).set({
-            name: name,
-            profilePic: picture
+        // If new user...
+        database.ref("users/" + id).once("value", function(snapshot) {
+            var exists = snapshot.val() !== null;
+            if (!exists) {
+                // Write to DB
+                database.ref("users/" + id).set({
+                    name: name,
+                    profilePic: picture,
+                    pokedollar: 0,
+                    experience: 0
+                });
+            }
+            // Store id in localstorage
+            localStorage.setItem("id", id);
+
+            // Switch to Main Menu
+            //document.location.href = "main.html";
         });
+
+  
         console.log(data);
-        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-        var token = result.credential.accessToken;
-        // The signed-in user info.
-        var user = result.user;
+
     }).catch(function(error) {
         console.log(error);
-    }); 
+    });  
+});
+
+$(".btn-github").click(function() {
+    console.log("you are here");
+    document.location.href = "main.html";
 });
