@@ -17,7 +17,7 @@ database.ref("users").once("value", function(snapshot) {
     var player = snapshot.val()[localStorage.getItem("id")];
     console.log(player);
     var playerImage = $("<img>");
-    playerImage.attr("src", player[profilePic]);
+    playerImage.attr("src", player["profilePic"]);
     $("playerTemp").append(playerImage);
 })
 
