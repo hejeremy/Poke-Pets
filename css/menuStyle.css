@@ -4,16 +4,22 @@ body {
 
 h2 {
     font-size: 3vh;
+    margin-bottom: 2vh;
+}
+
+#pokemon1, #pokemon2, #pokemon3 {
+    margin-bottom: 2vh;
+    border-radius: 8px;
 }
 
 #pokemon1 {
-    background: green;
+    background: #ccffd5;
 }
 #pokemon2 {
-    background: red;
+    background: #ffcccc;
 }
 #pokemon3 {
-    background: blue;
+    background: #ccd7ff;
 }
 
 
@@ -44,4 +50,5 @@ h2 {
 
 #content {
     background: #fff;
+    border-radius: 8px;
 }
