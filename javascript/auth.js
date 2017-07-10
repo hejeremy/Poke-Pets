@@ -44,12 +44,12 @@ $("#button").click(function() {
             document.location.href = "main.html";
         });
 
-  
+
         console.log(data);
 
     }).catch(function(error) {
         console.log(error);
-    });  
+    });
 });
 
 $(".btn-github").click(function() {

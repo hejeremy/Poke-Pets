@@ -1,8 +1,25 @@
+var config = {
+    apiKey: "AIzaSyCzrx1SkMDyNlE4X2gOadgtPf8asSAWh70",
+    authDomain: "poke-pets.firebaseapp.com",
+    databaseURL: "https://poke-pets.firebaseio.com",
+    projectId: "poke-pets",
+    storageBucket: "poke-pets.appspot.com",
+    messagingSenderId: "416846931"
+};
+firebase.initializeApp(config);
+// Link to database
+var database = firebase.database();
+
 //Battle class
+var mainPlayer;
+database.ref('users/' + localStorage.getItem('id')).once('value', function(snapshot) {
+    mainPlayer = snapshot.val();
+});
 
 //TEST BATTLE
-var player1 = JSON.parse(JSON.stringify(examplePlayer1));
-var player2 = JSON.parse(JSON.stringify(examplePlayer2));
+//var player1 = JSON.parse(JSON.stringify(mainPlayer));
+var player1 = JSON.parse(JSON.stringify(examplePlayer2));
+var player2 = JSON.parse(JSON.stringify(examplePlayer3));
 
 var attacker = player1;
 var defender = player2;
@@ -48,9 +65,9 @@ function startBattle(atk, def) {
 }
 
 function battleRound(pokemon1, pokemon2) {
-    console.log(pokemon1.Name + ' used ' + pokemon1.Skills[0].skillName + '!');
-    pokemon2.HP -= pokemon1.Skills[0].skillDMG;
-    console.log(pokemon2.Name + ' took ' + pokemon1.Skills[0].skillDMG + ' dmg!');
+    console.log(pokemon1.Name + ' used ' + pokemon1.Skills.skillName + '!');
+    pokemon2.HP -= pokemon1.Skills.skillDMG;
+    console.log(pokemon2.Name + ' took ' + pokemon1.Skills.skillDMG + ' dmg!');
     console.log(pokemon2.Name + ' has ' + pokemon2.HP + ' HP left.');
 }
 
