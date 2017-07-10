@@ -33,4 +33,4 @@ $(document).ready(function() {
 
 		$("#my-pokemon").append(pokemonDiv);
 	}
-})
+});
