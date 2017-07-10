@@ -1,8 +1,27 @@
-$(document).ready(function() {
-	var player = JSON.parse(JSON.stringify(examplePlayer1));
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyCzrx1SkMDyNlE4X2gOadgtPf8asSAWh70",
+    authDomain: "poke-pets.firebaseapp.com",
+    databaseURL: "https://poke-pets.firebaseio.com",
+    projectId: "poke-pets",
+    storageBucket: "poke-pets.appspot.com",
+    messagingSenderId: "416846931"
+};
 
-	for (var i = 0; i<player.Pokemon.length; i++) {
-		var current = player.Pokemon[i];
+firebase.initializeApp(config);
+// Link to database
+var database = firebase.database();
+var currentPlayer;
+
+$(document).ready(function() {
+	// var player = JSON.parse(JSON.stringify(examplePlayer1));  //example player
+	database.ref("users").once("value", function(snap) {
+		currentPlayer = snap.val()[localStorage.getItem("id")];
+	});
+
+	console.log(currentPlayer);
+	for (var i = 0; i<currentPlayer.Pokemon.length; i++) {
+		var current = currentPlayer.Pokemon[i];
 
 		var pokemonDiv = $("<div>").addClass("pokemon").attr("id", current.Name);
 		var container = $("<div>").addClass("col-xs-4 img-container");
