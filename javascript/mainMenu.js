@@ -15,7 +15,7 @@ database.ref("users").once("value", function(snapshot) {
     // Get correct user data
     var player = snapshot.val()[localStorage.getItem("id")];
     
-    console.log(player["pokemon"][0] === null || player["pokemon"][0] === undefined);
+    console.log(player["pokemon"]);
 
     // Display player info
     var playerImage = $("<img>");
