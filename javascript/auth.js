@@ -12,7 +12,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 
-$(".btn-facebook").click(function() {
+$("#button").click(function() {
     // Create instance of Facebook provider object
     var provider = new firebase.auth.FacebookAuthProvider();
 
@@ -41,7 +41,7 @@ $(".btn-facebook").click(function() {
             localStorage.setItem("id", id);
 
             // Switch to Main Menu
-            //document.location.href = "main.html";
+            document.location.href = "main.html";
         });
 
   
