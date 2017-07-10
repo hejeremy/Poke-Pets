@@ -11,11 +11,12 @@ firebase.initializeApp(config);
 // Link to database
 var database = firebase.database();
 
-// Check if first-time user...
 database.ref("users").once("value", function(snapshot) {
     // Get correct user data
     var player = snapshot.val()[localStorage.getItem("id")];
     
+    console.log(player["pokemon"][0] === null || player["pokemon"][0] === undefined);
+
     // Display player info
     var playerImage = $("<img>");
     playerImage.attr("src", player["profilePic"]);
