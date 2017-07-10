@@ -28,4 +28,11 @@ function chooseStarter(name) {
     var text1 = $("<h2>Welcome to PokéPets, " + name + "</h2>"); 
     var text2 = $("<h2>To get started, choose your starter Pokemon!</h2>")
     $("#content").append(text1, text2);
+
+    var pokemon1 = $("<div id='pokemon1'>Charmander</div>");
+    pokemon1.addClass("col-md-4");
+    var pokemon2 = $("<div id='pokemon2'>Squirtle</div>");
+    pokemon2.addClass("col-md-4");
+    var pokemon3 = $("<div id='pokemon3'>Bulbasaur</div>");
+    pokemon3.addClass("col-md-4");
 }

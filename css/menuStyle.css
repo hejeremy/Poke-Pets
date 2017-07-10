@@ -6,6 +6,17 @@ h2 {
     font-size: 3vh;
 }
 
+.pokemon1 {
+    background: red;
+}
+.pokemon2 {
+    background: blue;
+}
+.pokemon3 {
+    background: green;
+}
+
+
 #header {
     background: #444;
     border-bottom: 4px solid #222;
