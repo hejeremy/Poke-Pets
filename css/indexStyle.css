@@ -1,26 +1,23 @@
 body {
     background: #d7e3f7;
 }
-.login {
-    width: 20%;
-    margin: auto;
-    margin-bottom: 36px;
-    display: block;
-    
-}
+
 
 #title {
     background: #ffbfbf;
-    padding: 24px;
-    font-size: 400%;
-    font-weight: bold;
     border-bottom: 4px solid black;
     color: #333;
     margin-bottom: 96px;
 }
 
+#titleText {
+    float: middle;
+    font-size: 64px;
+}
+
 #pokeball {
     height: 128px;
+    float: left;
 }
 
 #facebook {
@@ -29,3 +26,9 @@ body {
     font-weight: bold;
 }
 
+.login {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 36px;
+    display: block;
+}
