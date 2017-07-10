@@ -5,14 +5,9 @@
  * Last edited 6/8/2017
  */
 
-function Player(Email, Name, EXP, Level, Money, Bag, Pokemon) {
-    this.Email = Email;
+function Player(Name, Pokemon) {
     this.Name = Name;
-    this.EXP = EXP;
-    this.Level = Level;
-    this.Money = Money;
-    this.Bag = Bag;
-    this.Pokemon = Pokemon; //pokemon[];
+    this.Pokemon = Pokemon;
 }
 
 function Pokemon(Name, ImgFront, ImgBack, HP, EXP, Skills) {
@@ -41,7 +36,8 @@ var exampleBag1 = {};
 var examplePlayer1 = new Player('bagelxp@gmail.com', 'Bagel', 0, 1, 100, exampleBag1, examplePokemonList1);
 
 //EXAMPLE PLAYER2
-var exampleSkill2 = new Skill('Ember', 5);
+var exampleSkillList2 = [];
+exampleSkillList2.push(new Skill('Ember', 5));
 
 var examplePokemonList2 = [];
 examplePokemonList2.push(new Pokemon('Charmander', 'https://cdn.bulbagarden.net/upload/7/73/004Charmander.png', 50, 0, exampleSkill2));
