@@ -37,7 +37,7 @@ $("#button").click(function() {
                     profilePic: picture,
                     pokedollar: 0,
                     experience: 0,
-                    pokemon: 8
+                    pokemon: pokemon
                 });
             }
             // Store id in localstorage
