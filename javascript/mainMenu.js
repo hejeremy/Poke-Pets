@@ -14,19 +14,11 @@ var database = firebase.database();
 database.ref("users").once("value", function(snapshot) {
     // Get correct user data from localstorage
     var player = snapshot.val()[localStorage.getItem("id")];
-    
-    console.log(player["pokemon"] === null);
+
     console.log(player["pokemon"] === undefined);
 
     // Display player info
-    var playerImage = $("<img>");
-    playerImage.attr("src", player["profilePic"]);
-    var playerName = $("<h1>");
-    playerName.text("Hello, " + player["name"]);
-    chooseStarter(playerName);
-
-    // Append info
-    $("#playerTemp").append(playerImage, playerName);
+    chooseStarter(player["name"]);
 })
 
 // If not, draw normal menu
