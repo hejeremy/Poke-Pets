@@ -1,34 +1,57 @@
 body {
-    background: #d7e3f7;
+    background: #ddd;
 }
 
-
-#title {
-    background: #ffbfbf;
-    border-bottom: 4px solid black;
-    color: #333;
+#header {
+    background: #444;
+    border-bottom: 4px solid #222;
     margin-bottom: 96px;
 }
 
-#titleText {
-    float: middle;
-    font-size: 64px;
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #pokeball {
-    height: 128px;
-    float: left;
+    display: inline-block;
+    height: 10vh;
+    margin: 1.5vh 2vh 1.5vh 0;
 }
 
-#facebook {
+#titleText {
+    display: inline-block;
+    color: #eee;
+    font-size: 8vh;
+    margin: 0;
+}
+
+#signinDiv {
+    background: #fff;
+    border-radius: 8px;
+}
+
+#signin {
+    font-size: 3.5vh;
+    border-bottom: 4px solid #ddd;
+    margin: 0 -15px 4vh -15px;
+    padding: 3vh;
+    color: #444;
+}
+
+#button {
     background: #3b5998;
     color: white;
-    font-weight: bold;
+    border: 2px solid #1a4076;
+    margin-bottom: 4vh;
+    font-size: 3vh;
+    padding: 1vh 3vh 1vh 3vh;
+    border-radius: 8px;
 }
 
-.login {
-    width: 20%;
-    margin: auto;
-    margin-bottom: 36px;
-    display: block;
+#signinText {
+    display: inline;
+    font-size: 3vh;
+    margin-left: 1vh;
 }
