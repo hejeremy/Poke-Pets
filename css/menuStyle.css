@@ -6,14 +6,14 @@ h2 {
     font-size: 3vh;
 }
 
-.pokemon1 {
+#pokemon1 {
+    background: green;
+}
+#pokemon2 {
     background: red;
 }
-.pokemon2 {
+#pokemon3 {
     background: blue;
-}
-.pokemon3 {
-    background: green;
 }
 
 
