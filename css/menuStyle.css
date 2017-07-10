@@ -2,6 +2,10 @@ body {
     background: #ddd;
 }
 
+h2 {
+    font-size: 3vh;
+}
+
 #header {
     background: #444;
     border-bottom: 4px solid #222;
