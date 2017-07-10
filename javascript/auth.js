@@ -30,14 +30,11 @@ $("#button").click(function() {
             var exists = snapshot.val() !== null;
             if (!exists) {
                 // Write to DB
-                var pokemon = [];
-
                 database.ref("users/" + id).set({
                     name: name,
                     profilePic: picture,
                     pokedollar: 0,
                     experience: 0,
-                    pokemon: pokemon
                 });
             }
             // Store id in localstorage

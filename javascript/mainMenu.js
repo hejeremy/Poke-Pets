@@ -12,10 +12,11 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 database.ref("users").once("value", function(snapshot) {
-    // Get correct user data
+    // Get correct user data from localstorage
     var player = snapshot.val()[localStorage.getItem("id")];
     
-    console.log(player["pokemon"]);
+    console.log(player["pokemon"] === null);
+    console.log(player["pokemon"] === undefined);
 
     // Display player info
     var playerImage = $("<img>");
