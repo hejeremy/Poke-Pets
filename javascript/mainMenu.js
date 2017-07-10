@@ -29,24 +29,23 @@ function chooseStarter(name) {
     var text2 = $("<h2>To get started, choose your starter Pokemon!</h2>")
     $("#content").append(text1, text2);
 
-
     // Make 3 Pokemon Divs
     var pokemon1 = $("<div id='pokemon1'></div>");
-    pokemon1.addClass("col-md-4");
+    pokemon1.addClass("col-sm-4");
     var pokemon2 = $("<div id='pokemon2'></div>");
-    pokemon2.addClass("col-md-4");
+    pokemon2.addClass("col-sm-4");
     var pokemon3 = $("<div id='pokemon3'></div>");
-    pokemon3.addClass("col-md-4");
+    pokemon3.addClass("col-sm-4");
 
     // Add Pokemon Names
-    pokemon1.append("Bulbasaur");
-    pokemon2.append("Charmander");
-    pokemon3.append("Squirtle");
+    pokemon1.append("<h1 class='starterText'>Bulbasaur</h1>");
+    pokemon2.append("<h1 class='starterText'>Charmander</h1>");
+    pokemon3.append("<h1 class='starterText'>Squirtle</h1>");
 
     // Add Pokemon Images
-    pokemon1.append("<img src='https://placehold.it/200x200'>");
-    pokemon2.append("<img src='https://placehold.it/200x200'>");
-    pokemon3.append("<img src='https://placehold.it/200x200'>");
+    pokemon1.append("<img src='images/bulbasaur_lg.png' class='starterImage'>");
+    pokemon2.append("<img src='images/charmander_lg.png' class='starterImage'>");
+    pokemon3.append("<img src='images/squirtle_lg.png' class='starterImage'>");
 
     // Append Pokemon Divs
     $("#content").append(pokemon1, pokemon2, pokemon3);
