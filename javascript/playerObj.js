@@ -30,10 +30,11 @@ function Skill(skillName, skillDMG) {
 }
 
 //EXAMPLE PLAYER1
+/*
 exampleSkill1 = new Skill('Bubble', 5);
 
 var examplePokemonList1 = [];
-examplePokemonList1.push(new Pokemon('Squirtle', 'https://cdn.bulbagarden.net/upload/3/39/007Squirtle.png', 50, 0, exampleSkill));
+examplePokemonList1.push(new Pokemon('Squirtle', 'https://cdn.bulbagarden.net/upload/3/39/007Squirtle.png', 50, 0, exampleSkill1));
 
 var exampleBag1 = {};
 
@@ -58,3 +59,4 @@ examplePokemonList3.push(new Pokemon('Bulbasaur', 'https://cdn.bulbagarden.net/u
 var exampleBag3 = {};
 
 var examplePlayer3 = new Player('player3@gmail.com', 'Player3', 0, 1, 100, exampleBag3, examplePokemonList3);
+*/
