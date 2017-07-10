@@ -11,15 +11,17 @@ var config = {
 firebase.initializeApp(config);
 // Link to database
 var database = firebase.database();
+var currentPlayer;
 
 $(document).ready(function() {
 	// var player = JSON.parse(JSON.stringify(examplePlayer1));  //example player
-	var player = database.ref("users/ " + localStorage.getItem("id"));
-	
-	console.log(player);
+	database.ref("users").once("value", function(snap) {
+		currentPlayer = snap.val()[localStorage.getItem("id")];
+	});
 
-	for (var i = 0; i<player.Pokemon.length; i++) {
-		var current = player.Pokemon[i];
+	console.log(currentPlayer);
+	for (var i = 0; i<currentPlayer.Pokemon.length; i++) {
+		var current = currentPlayer.Pokemon[i];
 
 		var pokemonDiv = $("<div>").addClass("pokemon").attr("id", current.Name);
 		var container = $("<div>").addClass("col-xs-4 img-container");
