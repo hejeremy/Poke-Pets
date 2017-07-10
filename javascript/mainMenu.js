@@ -23,9 +23,17 @@ database.ref("users").once("value", function(snapshot) {
     playerImage.attr("src", player["profilePic"]);
     var playerName = $("<h1>");
     playerName.text("Hello, " + player["name"]);
+    chooseStarter(playerName);
 
     // Append info
     $("#playerTemp").append(playerImage, playerName);
 })
 
 // If not, draw normal menu
+
+function chooseStarter(name) {
+    // Draw welcome text
+    var text1 = $("<h2>Welcome to PokéPets, " + name + "</h2>"); 
+    var text2 = $("<h2>To get started, choose your starter Pokemon!</h2>")
+    $("#playerTemp").append("hfdsgsfdg");
+}

@@ -1,0 +1,32 @@
+body {
+    background: #ddd;
+}
+
+#header {
+    background: #444;
+    border-bottom: 4px solid #222;
+    margin-bottom: 96px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokeball {
+    display: inline-block;
+    height: 10vh;
+    margin: 1.5vh 2vh 1.5vh 0;
+}
+
+#titleText {
+    display: inline-block;
+    color: #eee;
+    font-size: 8vh;
+    margin: 0;
+}
+
+#playerTemp {
+    background: blue;
+}
