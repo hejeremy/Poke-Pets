@@ -7,6 +7,10 @@ h2 {
     margin-bottom: 2vh;
 }
 
+.starterImage {
+    width: 10vh;
+}
+
 #pokemon1, #pokemon2, #pokemon3 {
     margin-bottom: 2vh;
     border-radius: 8px;
