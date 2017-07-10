@@ -35,4 +35,5 @@ function chooseStarter(name) {
     pokemon2.addClass("col-md-4");
     var pokemon3 = $("<div id='pokemon3'>Bulbasaur</div>");
     pokemon3.addClass("col-md-4");
+    $("#content").append(pokemon1, pokemon2, pokemon3);
 }
