@@ -27,5 +27,5 @@ function chooseStarter(name) {
     // Draw welcome text
     var text1 = $("<h2>Welcome to PokéPets, " + name + "</h2>"); 
     var text2 = $("<h2>To get started, choose your starter Pokemon!</h2>")
-    $("#playerTemp").append("hfdsgsfdg");
+    $("#playerTemp").append(text1, text2);
 }
