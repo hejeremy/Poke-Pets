@@ -9,5 +9,5 @@ $(document).ready(function() {
 		console.log(response);
 	});
 
-})
+});
      
