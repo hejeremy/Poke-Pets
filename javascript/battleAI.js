@@ -15,15 +15,16 @@ var mainPlayer;
 console.log(localStorage.getItem('id'));
 database.ref('users').once('value', function(snapshot) {
     mainPlayer = snapshot.val()[localStorage.getItem('id')];
-    console.log(snapshot);
+    //console.log(snapshot);
     console.log(mainPlayer);
-    console.log(mainPlayer.profilePic);
+    //console.log(mainPlayer.profilePic);
     $('#opponentImage').append('<img src=\'https://placeholder.baker.com/100\' alt=\'Your Image\'>');
     $('#playerImage').append('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
 });
 
 $(document).on('click', '#clearYourself', function() {
-    database.ref('user').child(localStorage.getItem('id')).remove();
+    console.log('You have been cleared.');
+    database.ref('users').child(localStorage.getItem('id')).remove();
 });
 
 /*
