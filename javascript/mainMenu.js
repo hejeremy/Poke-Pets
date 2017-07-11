@@ -19,7 +19,7 @@ database.ref("users").once("value", function(snapshot) {
     if (player["pokemon"] === undefined) {
         chooseStarter(player["name"]);
     } else {
-        drawPlayer(player["profilePic"]);
+        drawPlayer(player["profilePic"], player["experience"]);
         drawMenu();
     }  
 })
@@ -77,14 +77,19 @@ function chooseStarter(name) {
     $("#content").append(pokemon1, pokemon2, pokemon3);
 }
 
-function drawPlayer(image) {
+function drawPlayer(image, exp) {
     // Make Player Image
     var playerImage = $("<div id='playerImage' class='col-md-3'>");
     var img = $("<img>");
     img.attr("src", image);
     playerImage.append(img);
     $("#player").append(playerImage);
-    
+
+    // Make Player Level
+    var playerLevel = $("<div>");
+    playerLevel.text = expToLevel(exp).level;
+    $("#playerImage").append(playerLevel);
+
     // Make Player XP, Name and Starter Image
 
 }
