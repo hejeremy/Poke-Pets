@@ -10,10 +10,11 @@ function Player(Name, Pokemon) {
     this.Pokemon = Pokemon;
 }
 
-function Pokemon(Name, ImgFront, ImgBack, HP, EXP, Skills) {
+function Pokemon(Name, ImgFront, ImgBack, ImgLarge, HP, EXP, Skills) {
     this.Name = Name;
     this.ImgFront = ImgFront;
     this.ImgBack = ImgBack;
+    this.ImgLarge = ImgLarge;
     this.HP = HP;
     this.EXP = EXP;
     this.Skills = Skills;   //skills[];

@@ -52,21 +52,21 @@ function chooseStarter(name) {
     // Add Click Events
     pokemon1.click(function() {
         database.ref("users/" + localStorage.getItem("id")).update({
-            pokemon: [new Pokemon("Bulbasaur", "#", "#", 60, 0, new Skill("Vine Whip", 5))]
+            pokemon: [new Pokemon("Bulbasaur", "#", "#", "images/bulbasaur_lg.png", 60, 0, new Skill("Vine Whip", 5))]
         });
         $("#content").empty();
         drawMenu();
     });
     pokemon2.click(function() {
         database.ref("users/" + localStorage.getItem("id")).update({
-            pokemon: [new Pokemon("Charmander", "#", "#", 60, 0, new Skill("Ember", 5))]
+            pokemon: [new Pokemon("Charmander", "#", "#", , "images/bulbasaur_lg.png", 60, 0, new Skill("Ember", 5))]
         });
         $("#content").empty();
         drawMenu();
     });
     pokemon3.click(function() {
         database.ref("users/" + localStorage.getItem("id")).update({
-            pokemon: [new Pokemon("Squirtle", "#", "#", 60, 0, new Skill("Bubble", 5))]
+            pokemon: [new Pokemon("Squirtle", "#", "#", , "images/bulbasaur_lg.png", 60, 0, new Skill("Bubble", 5))]
         });
         $("#content").empty();
         drawMenu();
