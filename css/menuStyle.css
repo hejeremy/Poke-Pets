@@ -60,6 +60,7 @@ h2 {
 #playerImageDiv {
     background: blue;
     width: 16vh;
+    height: 16vh;
     margin: 0;
     padding: 0;
 }
