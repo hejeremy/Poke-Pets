@@ -13,12 +13,11 @@ var database = firebase.database();
 //Battle class
 var mainPlayer;
 console.log(localStorage.getItem('id'));
-database.ref('users/' + localStorage.getItem('id')).once('value', function(snapshot) {
-    mainPlayer = snapshot.val();
+database.ref('users').once('value', function(snapshot) {
+    mainPlayer = snapshot.val()[localStorage.getItem('id')];
     console.log(snapshot);
+    console.log(mainPlayer);
 });
-
-console.log(mainPlayer);
 
 /*
 //TEST BATTLE
