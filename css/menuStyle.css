@@ -51,9 +51,10 @@ h2 {
     margin: 0;
 }
 
-#content {
+#content, #player {
     background: #fff;
     border-radius: 8px;
+    margin-bottom: 4vh;
 }
 
 #playerImage {
