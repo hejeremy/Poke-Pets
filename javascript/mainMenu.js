@@ -79,7 +79,7 @@ function chooseStarter(name) {
 
 function drawPlayer(image, exp) {
     // Make Player Image
-    var playerImageDiv = $("<div id='playerImage' class='col-md-3'>");
+    var playerImageDiv = $("<div id='playerImageDiv' class='col-md-3'>");
     var img = $("<img>");
     img.attr("src", image);
     playerImageDiv.append(img);
@@ -89,7 +89,7 @@ function drawPlayer(image, exp) {
     var playerLevel = $("<h1 id='playerLevel'>Test</h1>");
     console.log(expToLevel(exp).level);
     playerLevel.text(expToLevel(exp).level);
-    img.append(playerLevel);
+    playerImageDiv.append(playerLevel);
 
     // Make Player XP, Name and Starter Image
 
