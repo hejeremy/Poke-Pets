@@ -19,6 +19,8 @@ database.ref('users').once('value', function(snapshot) {
     console.log(mainPlayer);
 });
 
+$('#opponent').append('<img src=\'https://placeholder.baker.com/100\' alt=\'Your Image\'>');
+$('#playerBox').append('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
 /*
 //TEST BATTLE
 //var player1 = JSON.parse(JSON.stringify(mainPlayer));
