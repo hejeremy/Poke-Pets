@@ -5,11 +5,13 @@
  * Last edited 6/8/2017
  */
 
+//Player constructor for creating AI
 function Player(Name, Pokemon) {
     this.Name = Name;
     this.Pokemon = Pokemon;
 }
 
+//Pokemon constructor
 function Pokemon(Name, ImgFront, ImgBack, ImgLarge, HP, EXP, Skills) {
     this.Name = Name;
     this.ImgFront = ImgFront;
@@ -20,6 +22,7 @@ function Pokemon(Name, ImgFront, ImgBack, ImgLarge, HP, EXP, Skills) {
     this.Skills = Skills;   //skills[];
 }
 
+//Pokemon skill constructor
 function Skill(skillName, skillDMG) {
     this.skillName = skillName;
     this.skillDMG = skillDMG;
