@@ -35,8 +35,8 @@ $(document).ready(function() {
 				method: "GET"
 			}).done(function(response) {
 				currentID = response["id"];
-				console.log(response["id"]["flavor_text_entries"]);
-				currentDesc = response["id"]["flavor_text_entries"][1]["flavor_text"];
+				console.log(response"flavor_text_entries"]);
+				currentDesc = response["flavor_text_entries"][1]["flavor_text"];
 				console.log(response);
 				console.log("ID: " +currentID);
 				console.log("Desc: " + currentDesc);
