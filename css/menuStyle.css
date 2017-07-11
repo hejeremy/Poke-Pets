@@ -61,12 +61,13 @@ h2 {
     background: blue;
     width: 16vh;
     height: 16vh;
-    margin: 0;
+    margin: 1vh 1vh 1vh 0;
     padding: 0;
 }
 
 #playerImage {
     width: 100%;
+    border: 1px solid #333;
 }
 
 #playerLevel {
@@ -75,7 +76,7 @@ h2 {
     bottom: 4vh;
     font-size: 20px;
     background: white;
-    border: 1px solid black;
+    border: 1px solid #333;
     color: red;
     margin: 0;
     width: 4vh;
