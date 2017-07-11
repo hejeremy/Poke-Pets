@@ -46,7 +46,7 @@ $(document).ready(function() {
 				// contents of column
 				var img = $("<img>").addClass("pokemon-img").attr("src", current.ImgLarge);
 				var hp = createStatsDiv("hp", current.HP);
-				var xp = createStatsDiv("hp", current.EXP);
+				var xp = createStatsDiv("xp", current.EXP);
 				// add contents into column
 				var subRow1 = createRowDiv("stats-detail").html(hp).append(xp);
 				container.html(img).append(subRow1);
