@@ -86,7 +86,8 @@ function drawPlayer(image, exp) {
     $("#player").append(playerImage);
 
     // Make Player Level
-    var playerLevel = $("<div>");
+    var playerLevel = $("<div id='playerLevel'>");
+    console.log(exptoLevel(exp).level);
     playerLevel.text = expToLevel(exp).level;
     $("#playerImage").append(playerLevel);
 
