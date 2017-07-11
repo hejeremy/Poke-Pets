@@ -64,4 +64,5 @@ h2 {
 #playerLevel {
     font-size: 200px;
     color: red;
+    display: inline;
 }
