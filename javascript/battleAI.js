@@ -18,10 +18,10 @@ database.ref('users').once('value', function(snapshot) {
     console.log(snapshot);
     console.log(mainPlayer);
     console.log(mainPlayer.profilePic);
+    $('#opponentImage').append('<img src=\'https://placeholder.baker.com/100\' alt=\'Your Image\'>');
+    $('#playerImage').append('<img src=\'' + mainPlayer[profilePic] + '\' alt=\'Your Image\'>');
 });
 
-$('#opponentImage').append('<img src=\'https://placeholder.baker.com/100\' alt=\'Your Image\'>');
-$('#playerImage').append('<img src=\'' + mainPlayer[profilePic] + '\' alt=\'Your Image\'>');
 /*
 //TEST BATTLE
 //var player1 = JSON.parse(JSON.stringify(mainPlayer));
@@ -36,55 +36,55 @@ var round = 0;
 
 //Battle
 $(document).on('click', '#battle', function() {
-    if (battle) {
-        startBattle(attacker, defender);
-    } else {
-        console.log('Battle has ended.');
-        return;
-    }
+if (battle) {
+startBattle(attacker, defender);
+} else {
+console.log('Battle has ended.');
+return;
+}
 });
 //TEST BATTLE END
 
 //Start round of battle
 function startBattle(atk, def) {
-    var pokemon1 = atk.Pokemon[0];
-    var pokemon2 = def.Pokemon[0];
-    //console.log(pokemon1);
-    //console.log(pokemon2);
-    battleRound(pokemon1, pokemon2);
+var pokemon1 = atk.Pokemon[0];
+var pokemon2 = def.Pokemon[0];
+//console.log(pokemon1);
+//console.log(pokemon2);
+battleRound(pokemon1, pokemon2);
 
-    round++;
-    console.log('Round ' + round + ' ended.');
+round++;
+console.log('Round ' + round + ' ended.');
 
-    if (pokemon2.HP <= 0) {
-        endBattle();
-        battle = false;
-        return;
-    }
+if (pokemon2.HP <= 0) {
+endBattle();
+battle = false;
+return;
+}
 
-    if (round % 2 === 0) {
-        attacker = player1;
-        defender = player2;
-    } else {
-        attacker = player2;
-        defender = player1;
-    }
+if (round % 2 === 0) {
+attacker = player1;
+defender = player2;
+} else {
+attacker = player2;
+defender = player1;
+}
 }
 
 function battleRound(pokemon1, pokemon2) {
-    console.log(pokemon1.Name + ' used ' + pokemon1.Skills.skillName + '!');
-    pokemon2.HP -= pokemon1.Skills.skillDMG;
-    console.log(pokemon2.Name + ' took ' + pokemon1.Skills.skillDMG + ' dmg!');
-    console.log(pokemon2.Name + ' has ' + pokemon2.HP + ' HP left.');
+console.log(pokemon1.Name + ' used ' + pokemon1.Skills.skillName + '!');
+pokemon2.HP -= pokemon1.Skills.skillDMG;
+console.log(pokemon2.Name + ' took ' + pokemon1.Skills.skillDMG + ' dmg!');
+console.log(pokemon2.Name + ' has ' + pokemon2.HP + ' HP left.');
 }
 
 function useItem(player1, item) {
-    player1.Bag.item -= 1;
+player1.Bag.item -= 1;
 }
 
 function endBattle() {
-    console.log(defender.Pokemon[0].Name + ' has fainted.');
-    console.log(attacker.Pokemon[0].Name + ' wins!');
-    round = 0;
+console.log(defender.Pokemon[0].Name + ' has fainted.');
+console.log(attacker.Pokemon[0].Name + ' wins!');
+round = 0;
 }
 */
