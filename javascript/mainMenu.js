@@ -19,6 +19,7 @@ database.ref("users").once("value", function(snapshot) {
     if (player["pokemon"] === undefined) {
         chooseStarter(player["name"]);
     } else {
+        drawPlayer(player["profilePic"]);
         drawMenu();
     }  
 })
@@ -74,6 +75,15 @@ function chooseStarter(name) {
     
     // Append Pokemon Divs
     $("#content").append(pokemon1, pokemon2, pokemon3);
+}
+
+function drawPlayer(image) {
+    // Make Player Image
+    var playerImage = $("<div id='playerImage' class='col-md-3'>");
+    playerImage.append(image);
+    $("#player").append(playerImage);
+    // Make Player XP, Name and Starter Image
+
 }
 
 function drawMenu() {

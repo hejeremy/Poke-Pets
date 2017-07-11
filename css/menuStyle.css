@@ -55,3 +55,7 @@ h2 {
     background: #fff;
     border-radius: 8px;
 }
+
+#playerImage {
+    background: blue;
+}
