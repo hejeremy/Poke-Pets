@@ -22,6 +22,10 @@ database.ref('users').once('value', function(snapshot) {
     $('#playerImage').append('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
 });
 
+$(document).on('click', '#clearYourself', function() {
+    database.ref('user').child(localStorage.getItem('id')).remove();
+});
+
 /*
 //TEST BATTLE
 //var player1 = JSON.parse(JSON.stringify(mainPlayer));
