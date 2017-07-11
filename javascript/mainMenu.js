@@ -79,7 +79,7 @@ function chooseStarter(name) {
 
 function drawPlayer(image, exp) {
     // Make Player Image
-    var playerImageDiv = $("<div id='playerImageDiv' class='col-md-3'>");
+    var playerImageDiv = $("<div id='playerImageDiv' class='col-xs-2'>");
     var img = $("<img id='playerImage'>");
     img.attr("src", image);
     playerImageDiv.append(img);
