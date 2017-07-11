@@ -93,7 +93,7 @@ function drawPlayer(image, exp) {
 
     // Make Player XP Bar, Name and Starter Image
     var expBar = $("<div id='expBar'>");
-    var expProgress = $("<div> id='expProgress'");
+    var expProgress = $("<div id='expProgress'>");
     expBar.append(expProgress);
     $("#player").append(expBar);
 
