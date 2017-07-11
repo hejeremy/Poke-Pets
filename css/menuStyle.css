@@ -61,15 +61,6 @@ h2 {
     padding: 0;
 }
 
-#playerImageDiv {
-    display: inline-block;
-    background: blue;
-    width: 16vh;
-    height: 16vh;
-    margin: 1vh;
-    padding: 0;
-}
-
 #playerImage {
     width: 100%;
     border: 1px solid #333;
@@ -87,14 +78,25 @@ h2 {
     margin: 0;
     width: 4vh;
     height: 4vh;
+    border-bottom-right-radius: 8px;
 }
 
 #expBar {
     float: right;
-    width: calc(100% - 20vh);
+    width: calc(100% - 19vh);
     height: 3vw;
     background: #999;
     border-radius: 8px;
     border: 1px solid black;
     margin: 1vh;
+}
+
+#playerImageDiv {
+    display: inline-block;
+    background: blue;
+    width: 16vh;
+    height: 16vh;
+    margin: 1vh;
+    padding: 0;
+    border-radius: 8px;
 }
