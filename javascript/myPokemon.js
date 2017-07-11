@@ -24,8 +24,8 @@ $(document).ready(function() {
 	});
 
 
-	for (var i = 0; i<currentPlayer.Pokemon.length; i++) {
-		var current = currentPlayer.Pokemon[i];
+	for (var i = 0; i<currentPlayer.pokemon.length; i++) {
+		var current = currentPlayer.pokemon[i];
 
 		var pokemonDiv = $("<div>").addClass("pokemon").attr("id", current.Name);
 		var container = $("<div>").addClass("col-xs-4 img-container");
