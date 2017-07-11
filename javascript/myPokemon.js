@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 		for (var i = 0; i<currentPlayer.pokemon.length; i++) {
 			var current = currentPlayer.pokemon[i];
-			var queryURL = "https://pokeapi.co/api/v2/pokemon-species/" + current.Name + "/";
+			var queryURL = "https://pokeapi.co/api/v2/pokemon-species/" + current.Name.toLowerCase() + "/";
 		   
 		   $.ajax({
 				url: queryURL,
