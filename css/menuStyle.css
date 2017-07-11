@@ -68,12 +68,12 @@ h2 {
     height: 16vh;
     margin: 1vh;
     padding: 0;
-    border-radius: 8px;
 }
 
 #playerImage {
     width: 100%;
     border: 1px solid #333;
+    border-radius: 8px;
 }
 
 #playerLevel {
@@ -91,7 +91,9 @@ h2 {
 
 #expBar {
     float: right;
-    width: calc(100% - 16vh);
+    width: calc(100% - 20vh);
     height: 3vw;
-    background: yellow;
+    background: #999;
+    border-radius: 8px;
+    border: 1px solid black;
 }
