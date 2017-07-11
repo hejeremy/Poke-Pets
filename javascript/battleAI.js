@@ -17,10 +17,11 @@ database.ref('users').once('value', function(snapshot) {
     mainPlayer = snapshot.val()[localStorage.getItem('id')];
     console.log(snapshot);
     console.log(mainPlayer);
+    console.log(mainPlayer.profilePic);
 });
 
 $('#opponent').append('<img src=\'https://placeholder.baker.com/100\' alt=\'Your Image\'>');
-$('#playerBox').append('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
+$('#playerBox').append('<img src=\'' + mainPlayer[profilePic] + '\' alt=\'Your Image\'>');
 /*
 //TEST BATTLE
 //var player1 = JSON.parse(JSON.stringify(mainPlayer));
