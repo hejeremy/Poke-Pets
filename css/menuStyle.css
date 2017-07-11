@@ -59,11 +59,13 @@ h2 {
 
 #playerImageDiv {
     background: blue;
+    width: 16vh;
+    margin: 0;
+    padding: 0;
 }
 
 #playerImage {
-    float: right;
-    width: 16vh;
+    width: 100%;
 }
 
 #playerLevel {
@@ -75,6 +77,6 @@ h2 {
     border: 1px solid black;
     color: red;
     margin: 0;
-    width: 2vh;
-    height: 2vh;
+    width: 4vh;
+    height: 4vh;
 }
