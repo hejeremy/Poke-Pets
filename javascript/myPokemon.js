@@ -36,7 +36,6 @@ $(document).ready(function() {
 			}).done(function(response) {
 				currentID = response["id"];
 				currentDesc = response["flavor_text_entries"][1]["flavor_text"];
-				console.log(response);
 				console.log("ID: " +currentID);
 				console.log("Desc: " + currentDesc);
 
