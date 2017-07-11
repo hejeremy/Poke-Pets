@@ -15,7 +15,9 @@ var currentPlayer;
 
 $(document).ready(function() {
 	// var player = JSON.parse(JSON.stringify(examplePlayer1));  //example player
+	console.log(localStorage.getItem("id"));
 	database.ref("users").once("value", function(snap) {
+		console.log(snap);
 		currentPlayer = snap.val()[localStorage.getItem("id")];
 	});
 
