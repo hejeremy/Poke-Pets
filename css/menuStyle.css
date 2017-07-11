@@ -60,3 +60,7 @@ h2 {
 #playerImage {
     background: blue;
 }
+
+#playerLevel {
+    font-size: 48px;
+}
