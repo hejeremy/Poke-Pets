@@ -61,9 +61,13 @@ h2 {
     background: blue;
 }
 
+#playerImage {
+    width: 24vh;
+}
+
 #playerLevel {
     position: absolute;
-    left: 0;
+    left: 24vh;
     top: 0;
     font-size: 20px;
     color: red;
