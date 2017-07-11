@@ -16,6 +16,9 @@ database.ref('users/' + localStorage.getItem('id')).once('value', function(snaps
     mainPlayer = snapshot.val();
 });
 
+console.log(mainPlayer);
+
+/*
 //TEST BATTLE
 //var player1 = JSON.parse(JSON.stringify(mainPlayer));
 var player1 = JSON.parse(JSON.stringify(examplePlayer2));
@@ -80,3 +83,4 @@ function endBattle() {
     console.log(attacker.Pokemon[0].Name + ' wins!');
     round = 0;
 }
+*/
