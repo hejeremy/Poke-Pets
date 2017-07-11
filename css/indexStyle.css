@@ -1,5 +1,5 @@
 body {
-    background: #ddd;
+    background: #dce6f7;
 }
 
 #header {
@@ -34,7 +34,7 @@ body {
 
 #signin {
     font-size: 3.5vh;
-    border-bottom: 4px solid #ddd;
+    border-bottom: 4px solid #dce6f7;
     margin: 0 -15px 4vh -15px;
     padding: 3vh;
     color: #444;
