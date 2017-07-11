@@ -87,7 +87,7 @@ function drawMenu() {
     myPokemon.click(function() {
         document.location.href = "myPokemon.html";
     });
-    myPokemon.click(function() {
+    playAI.click(function() {
         document.location.href = "battleAI.html";
     });
 
