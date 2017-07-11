@@ -34,7 +34,7 @@ $(document).ready(function() {
 			}).done(function(response) {
 				currentID = response["id"];
 				console.log(response);
-				console.log(currentID);
+				console.log("ID: " +currentID);
 
 				var pokemonDiv = $("<div>").addClass("pokemon").attr("id", current.Name);
 				var container = $("<div>").addClass("col-xs-4 img-container");
@@ -45,7 +45,7 @@ $(document).ready(function() {
 				container.html(img).append(lvl);
 				pokemonDiv.html($("<div>").addClass("row").append(container).append(stats));
 				$("#my-pokemon").append(pokemonDiv);
-				
+
 			});
 		}
 	});
