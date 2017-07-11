@@ -8,7 +8,7 @@ h2 {
 }
 
 .starterImage {
-    width: 48vh;
+    width: 24vh;
 }
 
 #pokemon1, #pokemon2, #pokemon3 {
@@ -25,7 +25,6 @@ h2 {
 #pokemon3 {
     background: #ccd7ff;
 }
-
 
 #header {
     background: #444;

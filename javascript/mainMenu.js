@@ -10,15 +10,17 @@ var config = {
 firebase.initializeApp(config);
 // Link to database
 var database = firebase.database();
+var player;
 
 database.ref("users").once("value", function(snapshot) {
     // Get correct user data from localstorage
-    var player = snapshot.val()[localStorage.getItem("id")];
+    player = snapshot.val()[localStorage.getItem("id")];
 
-    console.log(player["pokemon"] === undefined);
-
-    // Display player info
-    chooseStarter(player["name"]);
+    if (player["pokemon"] === undefined) {
+        chooseStarter(player["name"]);
+    } else {
+        drawMenu();
+    }  
 })
 
 // If not, draw normal menu
@@ -47,6 +49,50 @@ function chooseStarter(name) {
     pokemon2.append("<img src='images/charmander_lg.png' class='starterImage'>");
     pokemon3.append("<img src='images/squirtle_lg.png' class='starterImage'>");
 
+    // Add Click Events
+    pokemon1.click(function() {
+        database.ref("users/" + localStorage.getItem("id")).update({
+            pokemon: [new Pokemon("Bulbasaur", "#", "#", 60, 0, new Skill("Vine Whip", 5))]
+        });
+        $("#content").empty();
+        drawMenu();
+    });
+    pokemon2.click(function() {
+        database.ref("users/" + localStorage.getItem("id")).update({
+            pokemon: [new Pokemon("Charmander", "#", "#", 60, 0, new Skill("Ember", 5))]
+        });
+        $("#content").empty();
+        drawMenu();
+    });
+    pokemon3.click(function() {
+        database.ref("users/" + localStorage.getItem("id")).update({
+            pokemon: [new Pokemon("Squirtle", "#", "#", 60, 0, new Skill("Bubble", 5))]
+        });
+        $("#content").empty();
+        drawMenu();
+    });
+    
     // Append Pokemon Divs
     $("#content").append(pokemon1, pokemon2, pokemon3);
 }
+
+function drawMenu() {
+    // Add Menu Buttons
+    var myPokemon = $("<button class='button'>");
+    myPokemon.append($("<h1 class='buttonText'>My Pokemon</h1>")) 
+    var playAI = $("<button class='button'>");
+    playAI.append($("<h1 class='buttonText'>Play AI</h1>")) 
+
+    // Add Click Events
+    myPokemon.click(function() {
+        document.location.href = "myPokemon.html";
+    });
+    playAI.click(function() {
+        document.location.href = "battleAI.html";
+    });
+
+    // Append Buttons
+    $("#content").append(myPokemon, playAI);
+}
+
+

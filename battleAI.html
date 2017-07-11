@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Battle AI</title>
+        <meta charset='utf-8'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Favicon -->
+        <link rel="icon" href="https://vignette3.wikia.nocookie.net/youtubepoop/images/4/4c/Pokeball.png/revision/latest?cb=20150418234807">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap-social.css">
+    </head>
+    <body>
+        <div class='container'>
+            <h1>Open Console</h1>
+            <!--
+                <div class="panel-body">
+                <table class="table table-striped table-hover" id='shopTable'>
+                <thead>
+                <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+                </div>
+            -->
+
+            <div class='row' id='opponent'>
+            </div>
+            <div class='row' id='playerBox'>
+            </div>
+            <button class='btn btn-default' id='battle'>Test Battle</button>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+        <script src='javascript/createPokemon.js'></script>
+        <script src='javascript/battleAI.js'></script>
+    </body>
+</html>
