@@ -35,25 +35,59 @@ $(document).ready(function() {
 				method: "GET"
 			}).done(function(response) {
 				currentID = response["id"];
-				console.log(response["flavor_text_entries"]);
 				currentDesc = response["flavor_text_entries"][1]["flavor_text"];
 				console.log(response);
 				console.log("ID: " +currentID);
 				console.log("Desc: " + currentDesc);
 
+				// creates main pokemon div
 				var pokemonDiv = $("<div>").addClass("pokemon").attr("id", current.Name);
+				// creates column to hold img and stats
 				var container = $("<div>").addClass("col-xs-4 img-container");
+				// contents of column
 				var img = $("<img>").addClass("pokemon-img").attr("src", current.ImgLarge);
-				var lvl = $("<div>").addClass("pokemon-lvl text-center").html("<h4>XP: " + current.EXP + "</h4>");
-				var stats = $("<div>").addClass("pokemon-stats col-xs-8").html("<h6>no. " + currentID + "</h6><h4>" + current.Name + "</h4>");
-			
-				container.html(img).append(lvl);
+				var hp = createStatsDiv("hp", current.HP);
+				var xp = createStatsDiv("hp", current.EXP);
+				// add contents into column
+				var subRow1 = createRowDiv("stats-detail").html(hp + xp);
+				container.html(img).append(subRow1);
+
+				//creates column to hold name, description, etc
+				var stats = $("<div>").addClass("pokemon-stats col-xs-8").html("<h6>no. " +  currentID + "</h6><h4>" + current.Name + "</h4>");
+				//contents of column
+				var desc = $("<div>").addClass("description").html(currentDesc);
+				var abilitiesTable = createTable(current.Skills.skillName, current.Skills.skillDMG);
+				var abilitiesPanel = createPanel("Abilities", abilitiesTable);
+				//add contents into column
+				var subRow2 = createRowDiv("stats-detail").html(desc + abilitiesPanel);
+				stats.append(subRow2)
+
+				//adds columns into main div
 				pokemonDiv.html($("<div>").addClass("row").append(container).append(stats));
 				$("#my-pokemon").append(pokemonDiv);
 
 			});
 		}
 	});
+
+	function createStatsDiv(statName, value) {
+		return $("<div>").addClass(statName).html(statName.toUpperCase() + ": " + value);
+	}
+
+	function createRowDiv(className) {
+		return $("<div>").addClass("row " + className);
+	}
+
+	function createPanel(title, content) {
+		var fullPanel = $("<div>").addClass("panel panel-default");
+		fullPanel.html($("<div>").addClass("panel-heading").html(title));
+		fullPanel.append($("<div>").addClass("panel-body").html(content));
+	}
+
+	function createTable(elem1, elem2) {
+		return $("<table>").addClass("table")
+		.html("<tbody><tr><td>" + elem1 + "</td><td>" + elem2 + "</td></tr></tbody>")
+	}
 
 
 });
