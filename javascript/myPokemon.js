@@ -49,7 +49,7 @@ $(document).ready(function() {
 				var hp = createStatsDiv("hp", current.HP);
 				var xp = createStatsDiv("hp", current.EXP);
 				// add contents into column
-				var subRow1 = createRowDiv("stats-detail").html(hp + xp);
+				var subRow1 = createRowDiv("stats-detail").html(hp).append(xp);
 				container.html(img).append(subRow1);
 
 				//creates column to hold name, description, etc
@@ -59,7 +59,7 @@ $(document).ready(function() {
 				var abilitiesTable = createTable(current.Skills.skillName, current.Skills.skillDMG);
 				var abilitiesPanel = createPanel("Abilities", abilitiesTable);
 				//add contents into column
-				var subRow2 = createRowDiv("stats-detail").html(desc + abilitiesPanel);
+				var subRow2 = createRowDiv("stats-detail").html(desc).append(abilitiesPanel);
 				stats.append(subRow2)
 
 				//adds columns into main div
