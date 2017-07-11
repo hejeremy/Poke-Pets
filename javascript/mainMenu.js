@@ -81,7 +81,7 @@ function drawMenu() {
     var myPokemon = $("<button class='button'>");
     myPokemon.append($("<h1 class='buttonText'>My Pokemon</h1>")) 
     var playAI = $("<button class='button'>");
-    playAI.append($("<h1 class='buttonText'>My Pokemon</h1>")) 
+    playAI.append($("<h1 class='buttonText'>Play AI</h1>")) 
 
     // Add Click Events
     myPokemon.click(function() {
