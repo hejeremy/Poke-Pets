@@ -59,14 +59,14 @@ function chooseStarter(name) {
     });
     pokemon2.click(function() {
         database.ref("users/" + localStorage.getItem("id")).update({
-            pokemon: [new Pokemon("Charmander", "#", "#", "images/bulbasaur_lg.png", 60, 0, new Skill("Ember", 5))]
+            pokemon: [new Pokemon("Charmander", "#", "#", "images/charmander_lg.png", 60, 0, new Skill("Ember", 5))]
         });
         $("#content").empty();
         drawMenu();
     });
     pokemon3.click(function() {
         database.ref("users/" + localStorage.getItem("id")).update({
-            pokemon: [new Pokemon("Squirtle", "#", "#", "images/bulbasaur_lg.png", 60, 0, new Skill("Bubble", 5))]
+            pokemon: [new Pokemon("Squirtle", "#", "#", "images/squirtle_lg.png", 60, 0, new Skill("Bubble", 5))]
         });
         $("#content").empty();
         drawMenu();
