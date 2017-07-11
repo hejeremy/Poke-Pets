@@ -25,16 +25,20 @@ $(document).ready(function() {
 
 		for (var i = 0; i<currentPlayer.pokemon.length; i++) {
 			var current = currentPlayer.pokemon[i];
-			var queryURL = "https://pokeapi.co/api/v2/pokemon-species/" + current.Name.toLowerCase() + "/";
 		   	var currentID;
+		   	var currentDesc;
+
+		   	var queryURL = "https://pokeapi.co/api/v2/pokemon-species/" + current.Name.toLowerCase() + "/";
 
 		   $.ajax({
 				url: queryURL,
 				method: "GET"
 			}).done(function(response) {
 				currentID = response["id"];
+				currentDesc = respone["id"]["flavor_text_entries"][0]["flavor_text"];
 				console.log(response);
 				console.log("ID: " +currentID);
+				console.log("Desc: " + currentDesc);
 
 				var pokemonDiv = $("<div>").addClass("pokemon").attr("id", current.Name);
 				var container = $("<div>").addClass("col-xs-4 img-container");

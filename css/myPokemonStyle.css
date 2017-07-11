@@ -7,13 +7,40 @@ body {
 	background-color: #dce6f7;
 }
 
+#header {
+   background: #444;
+   border-bottom: 4px solid #222;
+
+}
+
+#title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#pokeball {
+   display: inline-block;
+   height: 10vh;
+   margin: 1.5vh 2vh 1.5vh 0;
+}
+
+#titleText {
+   display: inline-block;
+   max-width: 100%;
+   width:auto;
+   height: auto;
+   padding: 20px;
+   margin: 0 auto;
+}
+
 .main-section {
 	margin-top: 100px;
 	margin-bottom: 100px;
 }
 
 .pokemon {
-	padding: 10px 25px;
+	padding: 15px 25px 10px 25px;
 	margin: 20px auto;
 	background: rgba(255,255,255, 0.5);
 	border-radius: 20px 0 20px 0;
@@ -31,8 +58,10 @@ body {
 
 .img-container {
 	text-align: center;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	border-radius: 20px;
+	padding: 10px 10px 0 10px;
+	margin-top: 1%;
 
 }
 
@@ -40,28 +69,76 @@ body {
 	max-width: 100%;
 	width:auto;
 	height: auto;
-	margin: 0 auto;
+	margin: 0 auto 10px auto;
 
 }
 
 .pokemon-stats {
-	padding: 10px 10px 10px 20px;
+	padding: 10px 10px 0 15px;
 	
 }
 
 .pokemon-stats h6 {
-	margin: 0px 0px 5px 5px;
+	margin: 0px 0px 5px 10px;
 }
 
 .pokemon-stats h4 {
 	margin: 0;
-	padding: 5px;
+	margin-bottom: 10px;
+	padding: 5px 10px;
 	background-color: #fff2ce;
 	border-radius: 20px;
 }
 
+.stats-detail {
+	padding: 0 15px;
+}
 
+.hp, .ap, .lvl {
+	display: inline-block;
+	background-color: #fff;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	margin:5px 0;
 
+}
+
+.description {
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.panel {
+	border-radius: 20px;
+}
+
+.panel-heading {
+	border-radius: 20px 20px 0 0;
+	padding: 5px 15px;
+}
+
+.panel-body {
+	padding: 0 10px;
+	margin-bottom: 0;
+}
+
+.pokemon-stats h4, .hp, .ap, .lvl, .description, .panel, .panel-heading {
+	border: 1px solid #aaa;
+}
+
+table {
+	margin: 5px 0;
+
+}
+
+.table td, .table th {
+	text-align: right;
+	border: none !important;
+}
 
 @media screen and (max-width: 768px) {
 .main-section {
