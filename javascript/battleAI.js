@@ -19,7 +19,7 @@ database.ref('users').once('value', function(snapshot) {
     console.log(mainPlayer);
     console.log(mainPlayer.profilePic);
     $('#opponentImage').append('<img src=\'https://placeholder.baker.com/100\' alt=\'Your Image\'>');
-    $('#playerImage').append('<img src=\'' + mainPlayer[profilePic] + '\' alt=\'Your Image\'>');
+    $('#playerImage').append('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
 });
 
 /*
