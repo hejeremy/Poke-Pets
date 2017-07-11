@@ -12,9 +12,10 @@ var database = firebase.database();
 
 //Battle class
 var mainPlayer;
-console.log(localStorage.getItem);
+console.log(localStorage.getItem('id'));
 database.ref('users/' + localStorage.getItem('id')).once('value', function(snapshot) {
     mainPlayer = snapshot.val();
+    console.log(snapshot);
 });
 
 console.log(mainPlayer);
