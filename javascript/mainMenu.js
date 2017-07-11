@@ -90,6 +90,9 @@ function drawMenu() {
     myPokemon.click(function() {
         document.location.href = "battleAI.html";
     });
+
+    // Append Buttons
+    $("#content").append(myPokemon, playAI);
 }
 
 
