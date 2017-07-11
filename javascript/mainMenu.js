@@ -91,7 +91,9 @@ function drawPlayer(image, exp) {
     playerLevel.text(expToLevel(exp).level);
     playerImageDiv.append(playerLevel);
 
-    // Make Player XP, Name and Starter Image
+    // Make Player XP Bar, Name and Starter Image
+    var expBar = $("<div id='expBar'>");
+    $("#player").append(expBar);
 
 }
 
