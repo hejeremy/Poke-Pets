@@ -58,11 +58,13 @@ h2 {
 }
 
 #playerImageDiv {
+    display: inline;
     background: blue;
 }
 
 #playerLevel {
+    display: inline;
     font-size: 200px;
     color: red;
-    display: inline;
+    
 }
