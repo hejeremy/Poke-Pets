@@ -101,7 +101,6 @@ function drawPlayer(image, exp) {
     expProgress.css("width", expToLevel(exp).exp + "%");
     expBar.append(expProgress);
     $("#leftContainer").append(expBar);
-
 }
 
 function drawMenu() {
