@@ -52,8 +52,8 @@ function generateOpponent() {
 }
 
 function setOpponent(name, image) {
-    $('#opponentName').html('<h2>' + capitalizeFirstLetter(Name) + '</h2>');
-    $('#opponentImage').html('<img src=\'' + Image + '\' alt=\'Opponent Image\'>');
+    $('#opponentName').html('<h2>' + capitalizeFirstLetter(name) + '</h2>');
+    $('#opponentImage').html('<img src=\'' + image + '\' alt=\'Opponent Image\'>');
 }
 
 function capitalizeFirstLetter(string) {
