@@ -43,9 +43,9 @@ function generateOpponent() {
         dataType: 'json',
         success: function(data) {
             console.log(data);
+            $('#opponentImage').html('<img src=\'' + data.results.picture.large + '\' alt=\'Opponent Image\'>');
         }
     });
-    $('#opponentImage').html('<img src=\'' + data.results.picture.large + '\' alt=\'Opponent Image\'>');
 }
 
 function startBattle() {
