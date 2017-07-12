@@ -29,7 +29,7 @@ h2 {
 #header {
     background: #444;
     border-bottom: 4px solid #222;
-    margin-bottom: 96px;
+    margin-bottom: 6vw;
 }
 
 #title {
@@ -117,9 +117,11 @@ h2 {
 #playerName {
     display: block;
     font-size: 8vh;
+    margin: 0;
 }
 
-#playerName {
+#playerMoney {
     display: block;
     font-size: 3vh;
+    margin: 0;
 }
