@@ -42,11 +42,11 @@ h2 {
     margin-bottom: 4vh;
 }
 
-#player {
+#player, #opponent {
     padding: 0;
 }
 
-#playerImage {
+#playerImage, #opponentImage {
     width: 100%;
     border: 1px solid #333;
     border-radius: 8px;
