@@ -29,6 +29,27 @@ $(document).on('click', '#clearYourself', function() {
     window.location.href = 'https://hejeremy.github.io/Poke-Pets/';
 });
 
+$(document).on('click', '#startBattle', function() {
+    generateOpponent();
+    startBattle();
+    $('#startBattle').css('visibility', 'hidden');
+}
+
+var opponent;
+
+function generateOpponent() {
+    $.ajax({
+        url: 'https://randomuser.me/api/',
+        dataType: 'json',
+        success: function(data) {
+            console.log(data);
+        }
+    });
+}
+
+function startBattle() {
+}
+
 /*
 //TEST BATTLE
 //var player1 = JSON.parse(JSON.stringify(mainPlayer));
