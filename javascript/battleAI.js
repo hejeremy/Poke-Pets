@@ -33,7 +33,7 @@ $(document).on('click', '#startBattle', function() {
     generateOpponent();
     startBattle();
     $('#startBattle').css('visibility', 'hidden');
-}
+});
 
 var opponent;
 
