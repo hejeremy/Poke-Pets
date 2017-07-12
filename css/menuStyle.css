@@ -80,6 +80,7 @@ h2 {
 }
 
 #leftContainer {
+    position: relative;
     float: right;
     width: calc(100% - 19vh);
     height: 16vh;
@@ -116,7 +117,7 @@ h2 {
 
 #playerName {
     display: block;
-    font-size: 8vh;
+    font-size: 9vh;
     margin: 0;
 }
 
@@ -124,6 +125,6 @@ h2 {
     display: block;
     position: absolute;
     bottom: 0;
-    font-size: 4vh;
+    font-size: 5vh;
     margin: 0;
 }
