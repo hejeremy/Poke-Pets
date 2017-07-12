@@ -19,7 +19,7 @@ database.ref("users").once("value", function(snapshot) {
     if (player["pokemon"] === undefined) {
         chooseStarter(player["name"]);
     } else {
-        drawPlayer(player["profilePic"], player["experience", player["name"]]);
+        drawPlayer(player["profilePic"], player["experience"], player["name"]);
         drawMenu();
     }  
 })
