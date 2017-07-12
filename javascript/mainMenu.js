@@ -77,17 +77,18 @@ function chooseStarter(name) {
     $("#content").append(pokemon1, pokemon2, pokemon3);
 }
 
-function drawPlayer(image, exp, name) {
+function drawPlayer(player) {
+    
     // Make Player Image
     var playerImageDiv = $("<div id='playerImageDiv'>");
     var img = $("<img id='playerImage'>");
-    img.attr("src", image);
+    img.attr("src", player["profilePic"]);
     playerImageDiv.append(img);
     $("#player").append(playerImageDiv);
 
     // Make Player Level
     var playerLevel = $("<h1 id='playerLevel'>Test</h1>");
-    playerLevel.text(expToLevel(exp).level);
+    playerLevel.text(expToLevel(player["experience"]).level);
     playerImageDiv.append(playerLevel);
 
     // Make EXP Bar and Name Storage
@@ -97,15 +98,19 @@ function drawPlayer(image, exp, name) {
     // Make Player EXP Bar
     var expBar = $("<div id='expBar'>");
     var expProgress = $("<div id='expProgress'>");
-    console.log(expToLevel(exp).exp);
-    expProgress.css("width", expToLevel(exp).exp + "%");
+    expProgress.css("width", expToLevel(player["experience"]).exp + "%");
     expBar.append(expProgress);
     $("#leftContainer").append(expBar);
 
     // Make Name
     var playerName = $("<h1 id='playerName'>");
-    playerName.text(name);
+    playerName.text(player["name"]);
     $("#leftContainer").append(playerName);
+
+    // Make Currency
+    var playerMoney = $("<h1 id='playerMoney'>");
+    playerMoney.text("$" + player["pokedollar"]);
+    $("#leftContainer").append(playerMoney);
 }
 
 function drawMenu() {

@@ -83,8 +83,6 @@ h2 {
     float: right;
     width: calc(100% - 19vh);
     height: 16vh;
-    background: yellow;
-    border: 1px solid black;
     margin: 1vh 1vh 1vh 0;
 }
 
@@ -117,6 +115,11 @@ h2 {
 }
 
 #playerName {
-    font-size: 16vh;
-    font-weight: bold;
+    display: block;
+    font-size: 8vh;
+}
+
+#playerName {
+    display: block;
+    font-size: 3vh;
 }
