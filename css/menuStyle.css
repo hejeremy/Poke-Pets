@@ -122,6 +122,8 @@ h2 {
 
 #playerMoney {
     display: block;
-    font-size: 3vh;
+    position: absolute;
+    bottom: 0;
+    font-size: 4vh;
     margin: 0;
 }
