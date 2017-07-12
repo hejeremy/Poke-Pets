@@ -131,3 +131,8 @@ h2 {
     font-size: 5vh;
     margin: 0;
 }
+
+.button {
+    width: 48vh;
+    font-size: 12vh;
+}
