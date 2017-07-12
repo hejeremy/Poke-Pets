@@ -79,14 +79,24 @@ h2 {
     height: 4vh;
 }
 
-#expBar {
+#leftContainer {
     float: right;
     width: calc(100% - 19vh);
+    height: 16vh;
+    background: yellow;
+    border: 1px solid black;
+    margin: 1vh 1vh 1vh 0;
+}
+
+#expBar {
+    float: right;
+    width: 100%;
     height: 2vh;
     background: #999;
     border-radius: 8px;
     border: 1px solid black;
-    margin: 1vh 1vh 1vh 0;
+    padding: 0;
+    margin: 0;
 }
 
 #expProgress {
