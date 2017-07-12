@@ -90,14 +90,17 @@ function drawPlayer(image, exp) {
     playerLevel.text(expToLevel(exp).level);
     playerImageDiv.append(playerLevel);
 
-    // Make Player XP Bar, Name and Starter Image
+    // Make EXP Bar and Name Storage
+    var leftContainer = $("<div id='leftContainer'>");
+    $("#player").append(leftContainer);
+
+    // Make Player EXP Bar and Name
     var expBar = $("<div id='expBar'>");
     var expProgress = $("<div id='expProgress'>");
     console.log(expToLevel(exp).exp);
     expProgress.css("width", expToLevel(exp).exp + "%");
     expBar.append(expProgress);
-    $("#player").append(expBar);
-
+    $("#leftContainer").append(expBar);
 }
 
 function drawMenu() {
