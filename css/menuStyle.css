@@ -115,3 +115,8 @@ h2 {
     padding: 0;
     border-radius: 8px;
 }
+
+#playerName {
+    font-size: 16vh;
+    font-weight: bold;
+}
