@@ -19,7 +19,7 @@ database.ref("users").once("value", function(snapshot) {
     if (player["pokemon"] === undefined) {
         chooseStarter(player["name"]);
     } else {
-        drawPlayer(player["profilePic"], player["experience"]);
+        drawPlayer(player["profilePic"], 256);
         drawMenu();
     }  
 })
@@ -87,13 +87,13 @@ function drawPlayer(image, exp) {
 
     // Make Player Level
     var playerLevel = $("<h1 id='playerLevel'>Test</h1>");
-    console.log(expToLevel(241).level);
     playerLevel.text(expToLevel(exp).level);
     playerImageDiv.append(playerLevel);
 
     // Make Player XP Bar, Name and Starter Image
     var expBar = $("<div id='expBar'>");
     var expProgress = $("<div id='expProgress'>");
+    console.log(expToLevel(exp).exp);
     expProgress.css("width", expToLevel(exp).exp + "%");
     expBar.append(expProgress);
     $("#player").append(expBar);
