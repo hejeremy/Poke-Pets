@@ -10,6 +10,7 @@ body {
 #header {
    background: #444;
    border-bottom: 4px solid #222;
+   margin-bottom: 8vh;
 
 }
 
@@ -35,7 +36,6 @@ body {
 }
 
 .main-section {
-	margin-top: 100px;
 	margin-bottom: 100px;
 }
 
@@ -143,6 +143,11 @@ table {
 @media screen and (max-width: 768px) {
 .main-section {
 	
+}
+
+#header {
+   margin-bottom: 1vh;
+
 }
 
 .pokemon {

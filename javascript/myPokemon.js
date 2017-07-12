@@ -57,6 +57,7 @@ $(document).ready(function() {
 				var desc = $("<div>").addClass("description").html(currentDesc);
 				var abilitiesTable = createTable(current.Skills.skillName, current.Skills.skillDMG);
 				var abilitiesPanel = createPanel("Abilities", abilitiesTable);
+				console.log(abilitiesPanel);
 				//add contents into column
 				var subRow2 = createRowDiv("stats-detail").html(desc).append(abilitiesPanel);
 				stats.append(subRow2);
@@ -80,17 +81,14 @@ $(document).ready(function() {
 
 	function createPanel(title, content) {
 		var fullPanel = $("<div>").addClass("panel panel-default");
-		console.log(content);
 		fullPanel.html($("<div>").addClass("panel-heading").html(title));
 		fullPanel.append($("<div>").addClass("panel-body").html(content));
-		console.log(fullPanel);
 	}
 
 	function createTable(elem1, elem2) {
 		var table = $("<table>").addClass("table").html("<tbody><tr><td>" + elem1 + "</td><td>" + elem2 + "</td></tr></tbody>");
-		console.log(table);
 		return table;
-		}
+	}
 
 
 });
