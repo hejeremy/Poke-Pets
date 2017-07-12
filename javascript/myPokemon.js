@@ -84,9 +84,10 @@ $(document).ready(function() {
 	}
 
 	function createTable(elem1, elem2) {
-		return $("<table>").addClass("table")
-		.html("<tbody><tr><td>" + elem1 + "</td><td>" + elem2 + "</td></tr></tbody>")
-	}
+		var table = $("<table>").addClass("table").html("<tbody><tr><td>" + elem1 + "</td><td>" + elem2 + "</td></tr></tbody>");
+		console.log(table);
+		return table;
+		}
 
 
 });
