@@ -63,7 +63,6 @@ h2 {
 }
 
 #playerImage {
-    position: relative;
     width: 100%;
     border: 1px solid #333;
     border-radius: 8px;
@@ -72,13 +71,14 @@ h2 {
 #playerLevel {
     position: absolute;
     right: 0;
-    bottom: 1vh;
-    font-size: 20px;
+    bottom: 0;
+    font-size: 3vh;
     background: white;
     border: 1px solid #333;
     margin: 0;
     width: 4vh;
     height: 4vh;
+    padding-top: 0.3vh;
 }
 
 #leftContainer {
@@ -108,6 +108,7 @@ h2 {
 }
 
 #playerImageDiv {
+    position: relative;
     display: inline-block;
     background: blue;
     width: 16vh;
