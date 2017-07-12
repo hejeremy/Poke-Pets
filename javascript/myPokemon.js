@@ -59,7 +59,8 @@ $(document).ready(function() {
 				var abilitiesPanel = createPanel("Abilities", abilitiesTable);
 				//add contents into column
 				var subRow2 = createRowDiv("stats-detail").html(desc).append(abilitiesPanel);
-				stats.append(subRow2)
+				stats.append(subRow2);
+				stats.append(abilitiesTable);
 
 				//adds columns into main div
 				pokemonDiv.html($("<div>").addClass("row").append(container).append(stats));
