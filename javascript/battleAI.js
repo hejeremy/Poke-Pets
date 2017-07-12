@@ -48,7 +48,7 @@ function generateOpponent() {
             console.log(data);
             setOpponent(data.results[0].name.first, data.results[0].picture.large);
         }
-    };
+    });
 }
 
 function setOpponent(name, image) {
