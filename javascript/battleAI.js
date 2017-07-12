@@ -46,10 +46,12 @@ function generateOpponent() {
         dataType: 'json',
         success: function(data) {
             console.log(data);
-            opponentName = data.results[0].name.first;
-            opponentImage = data.results[0].picture.large;
+            setOpponent(data.results[0].name.first, data.results[0].picture.large);
         }
-    });
+    };
+}
+
+function setOpponent(name, image) {
     $('#opponentName').html('<h2>' + capitalizeFirstLetter(opponentName) + '</h2>');
     $('#opponentImage').html('<img src=\'' + opponentImage + '\' alt=\'Opponent Image\'>');
 }
