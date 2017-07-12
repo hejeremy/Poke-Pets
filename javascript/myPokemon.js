@@ -61,7 +61,6 @@ $(document).ready(function() {
 				//add contents into column
 				var subRow2 = createRowDiv("stats-detail").html(desc).append(abilitiesPanel);
 				stats.append(subRow2);
-				stats.append(abilitiesTable);
 
 				//adds columns into main div
 				pokemonDiv.html($("<div>").addClass("row").append(container).append(stats));
@@ -83,6 +82,8 @@ $(document).ready(function() {
 		var fullPanel = $("<div>").addClass("panel panel-default");
 		fullPanel.html($("<div>").addClass("panel-heading").html(title));
 		fullPanel.append($("<div>").addClass("panel-body").html(content));
+
+		return fullPanel;
 	}
 
 	function createTable(elem1, elem2) {
