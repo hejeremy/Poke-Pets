@@ -19,6 +19,7 @@ database.ref('users').once('value', function(snapshot) {
     console.log(mainPlayer);
     //console.log(mainPlayer.profilePic);
     $('#opponentImage').html('<img src=\'https://placeholder.baker.com/100\' alt=\'Opponent Image\'>');
+    $('#playerName').html('<h2>' + mainPlayer.name + '</h2>');
     $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
 });
 
@@ -37,14 +38,24 @@ $(document).on('click', '#startBattle', function() {
 var opponent;
 
 function generateOpponent() {
+    var opponentName;
+    var opponentImage;
+    var opponentPokemon;
     $.ajax({
         url: 'https://randomuser.me/api/',
         dataType: 'json',
         success: function(data) {
             console.log(data);
-            $('#opponentImage').html('<img src=\'' + data.results[0].picture.large + '\' alt=\'Opponent Image\'>');
+            opponentName = data.results[0].name.first;
+            opponentImage = data.results[0].picture.large;
         }
     });
+    $('#opponentName').html('<h2>' + capitalizeFirstLetter(opponentName) + '</h2>');
+    $('#opponentImage').html('<img src=\'' + opponentImage + '\' alt=\'Opponent Image\'>');
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function startBattle() {
