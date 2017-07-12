@@ -18,9 +18,10 @@ database.ref('users').once('value', function(snapshot) {
     //console.log(snapshot);
     console.log(mainPlayer);
     //console.log(mainPlayer.profilePic);
-    $('#opponentImage').append('<img src=\'https://placeholder.baker.com/100\' alt=\'Your Image\'>');
+    $('#opponentImage').append('<img src=\'https://placeholder.baker.com/100\' alt=\'Opponent Image\'>');
     $('#playerImage').append('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
 });
+console.log(mainPlayer);
 
 $(document).on('click', '#clearYourself', function() {
     console.log('You have been cleared.');
