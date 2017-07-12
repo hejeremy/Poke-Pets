@@ -78,10 +78,12 @@ body {
 	
 }
 
-.pokemon-stats h6 {
+/*pokemon id*/
+.pokemon-stats h6 {	
 	margin: 0px 0px 5px 10px;
 }
 
+/*pokemon name*/
 .pokemon-stats h4 {
 	margin: 0;
 	margin-bottom: 10px;
@@ -101,6 +103,7 @@ body {
 	width: 50px;
 	height: 50px;
 	margin: 5px;
+	padding: 5px;
 
 }
 
@@ -109,20 +112,23 @@ body {
 	margin-bottom: 10px;
 	background-color: #fff;
 	border-radius: 20px;
-	padding: 10px;
+	padding: 10px 20px;
 }
 
 .panel {
 	border-radius: 20px;
 }
 
-.panel-heading {
+.panel .panel-heading {
 	border-radius: 20px 20px 0 0;
 	padding: 5px 15px;
+	font-weight: bold;
+	border: none;
+	background-color: red;
 }
 
 .panel-body {
-	padding: 0 10px;
+	padding: 10px;
 	margin-bottom: 0;
 }
 
@@ -130,20 +136,31 @@ body {
 	border: 1px solid #aaa;
 }
 
-table {
-	margin: 5px 0;
+.table {
+	width: 50%;
+	margin: 0 auto;
+
+	border-collapse: separate;
+	border-spacing: 10px;
+}
+
+.table tbody tr td, .table tbody tr th {
+	text-align: center;
+	border-radius: 10px;
+	padding: 0 5px;
+	margin: 10px;
+	border: none !important;
 
 }
 
-.table td, .table th {
-	text-align: right;
-	border: none !important;
+.table td:first-child {
+	background-color: pink;
+	font-weight: bold;
+
+
 }
 
 @media screen and (max-width: 768px) {
-.main-section {
-	
-}
 
 #header {
    margin-bottom: 1vh;
