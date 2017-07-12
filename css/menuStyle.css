@@ -59,18 +59,20 @@ h2 {
 
 #player {
     padding: 0;
+    height: 18vh;
 }
 
 #playerImage {
+    position: relative;
     width: 100%;
     border: 1px solid #333;
     border-radius: 8px;
 }
 
 #playerLevel {
-    position: relative;
-    left: calc(100% - 4vh);
-    bottom: 4vh;
+    position: absolute;
+    right: 0;
+    bottom: 1vh;
     font-size: 20px;
     background: white;
     border: 1px solid #333;
