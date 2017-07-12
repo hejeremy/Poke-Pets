@@ -59,7 +59,8 @@ $(document).ready(function() {
 				var abilitiesPanel = createPanel("Abilities", abilitiesTable);
 				//add contents into column
 				var subRow2 = createRowDiv("stats-detail").html(desc).append(abilitiesPanel);
-				stats.append(subRow2)
+				stats.append(subRow2);
+				stats.append(abilitiesTable);
 
 				//adds columns into main div
 				pokemonDiv.html($("<div>").addClass("row").append(container).append(stats));
@@ -79,14 +80,17 @@ $(document).ready(function() {
 
 	function createPanel(title, content) {
 		var fullPanel = $("<div>").addClass("panel panel-default");
+		console.log(content);
 		fullPanel.html($("<div>").addClass("panel-heading").html(title));
 		fullPanel.append($("<div>").addClass("panel-body").html(content));
+		console.log(fullPanel);
 	}
 
 	function createTable(elem1, elem2) {
-		return $("<table>").addClass("table")
-		.html("<tbody><tr><td>" + elem1 + "</td><td>" + elem2 + "</td></tr></tbody>")
-	}
+		var table = $("<table>").addClass("table").html("<tbody><tr><td>" + elem1 + "</td><td>" + elem2 + "</td></tr></tbody>");
+		console.log(table);
+		return table;
+		}
 
 
 });
