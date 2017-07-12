@@ -21,7 +21,6 @@ database.ref('users').once('value', function(snapshot) {
     $('#opponentImage').html('<img src=\'https://placeholder.baker.com/100\' alt=\'Opponent Image\'>');
     $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
 });
-console.log(mainPlayer);
 
 $(document).on('click', '#clearYourself', function() {
     console.log('You have been cleared.');
