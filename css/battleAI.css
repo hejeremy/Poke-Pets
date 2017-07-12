@@ -1,3 +1,70 @@
 .playerBox {
     margin-bottom: 10px;
 }
+
+body {
+    background: #dce6f7;
+}
+
+h2 {
+    font-size: 3vh;
+    margin-bottom: 2vh;
+}
+
+#header {
+    background: #444;
+    border-bottom: 4px solid #222;
+    margin-bottom: 96px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokeball {
+    display: inline-block;
+    height: 10vh;
+    margin: 1.5vh 2vh 1.5vh 0;
+}
+
+#titleText {
+    display: inline-block;
+    color: #eee;
+    font-size: 8vh;
+    margin: 0;
+}
+
+#content, #player {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 4vh;
+}
+
+#player {
+    padding: 0;
+}
+
+#playerImage {
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+#healthBar {
+    float: right;
+    width: calc(100% - 19vh);
+    height: 2vh;
+    background: #999;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin: 1vh 1vh 1vh 0;
+}
+
+#healthProgress {
+    background: yellow;
+    height: calc(2vh - 2px);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
