@@ -18,8 +18,8 @@ database.ref('users').once('value', function(snapshot) {
     //console.log(snapshot);
     console.log(mainPlayer);
     //console.log(mainPlayer.profilePic);
-    $('#opponentImage').append('<img src=\'https://placeholder.baker.com/100\' alt=\'Opponent Image\'>');
-    $('#playerImage').append('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
+    $('#opponentImage').html('<img src=\'https://placeholder.baker.com/100\' alt=\'Opponent Image\'>');
+    $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
 });
 console.log(mainPlayer);
 
@@ -45,6 +45,7 @@ function generateOpponent() {
             console.log(data);
         }
     });
+    $('#opponentImage').html('<img src=\'' + data.results.picture.large + '\' alt=\'Opponent Image\'>');
 }
 
 function startBattle() {

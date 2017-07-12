@@ -11,6 +11,11 @@ h2 {
     margin-bottom: 2vh;
 }
 
+img {
+    width: 100px;
+    height: 100px;
+}
+
 #header {
     background: #444;
     border-bottom: 4px solid #222;
