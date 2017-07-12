@@ -80,8 +80,10 @@ $(document).ready(function() {
 
 	function createPanel(title, content) {
 		var fullPanel = $("<div>").addClass("panel panel-default");
+		console.log(content);
 		fullPanel.html($("<div>").addClass("panel-heading").html(title));
 		fullPanel.append($("<div>").addClass("panel-body").html(content));
+		console.log(fullPanel);
 	}
 
 	function createTable(elem1, elem2) {
