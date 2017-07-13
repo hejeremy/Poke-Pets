@@ -1,4 +1,4 @@
-var version = 17;
+var version = 18;
 console.log('Version - ' + version);
 
 // Link to database
@@ -12,8 +12,6 @@ var config = {
 };
 firebase.initializeApp(config);
 var database = firebase.database();
-
-$('#opponent').css('visibility', 'hidden');
 
 var pokemonNames = [
     {name: 'Bulbasaur', image: 'images/bulbasaur_lg.png'},
@@ -81,11 +79,11 @@ function renderImages() {
 
     $('#playerName').html('<h2>' + mainPlayer.name + '</h2>');
     $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
-    $('#playerPokemon').html('<img src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
+    $('#playerPokemon').html('<img class=\'pokemonImage\' src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
 
     $('#opponentName').html('<h2>' + capitalizeFirstLetter(opponent.Name) + '</h2>');
     $('#opponentImage').html('<img src=\'' + opponent.Image + '\' alt=\'Opponent Image\'>');
-    $('#opponentPokemon').html('<img src=\'' + opponent.Pokemon.ImgLarge + '\' alt=\'Opponent Pokemon\'>');
+    $('#opponentPokemon').html('<img class=\'pokemonImage\' src=\'' + opponent.Pokemon.ImgLarge + '\' alt=\'Opponent Pokemon\'>');
 }
 
 
