@@ -1,4 +1,5 @@
-console.log('Version 12');
+var version = 13;
+console.log('Version' + version);
 
 // Link to database
 var config = {
@@ -22,11 +23,11 @@ var pokemonNames = [
 
 //Battle class
 var mainPlayer;
-//console.log(localStorage.getItem('id'));
+
 database.ref('users').once('value', function(snapshot) {
     mainPlayer = snapshot.val()[localStorage.getItem('id')];
     //console.log(snapshot);
-    console.log(mainPlayer);
+    //console.log(mainPlayer);
     //console.log(mainPlayer.profilePic);
     $('#opponentImage').html('<img src=\'https://placeholder.baker.com/100\' alt=\'Opponent Image\'>');
     $('#playerName').html('<h2>' + mainPlayer.name + '</h2>');
@@ -77,6 +78,7 @@ function capitalizeFirstLetter(string) {
 function startBattle() {
     generateOpponent();
     $('#startBattle').css('visibility', 'hidden');
+    console.log(mainPlayer);
 }
 
 /*
