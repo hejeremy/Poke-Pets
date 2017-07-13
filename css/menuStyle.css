@@ -120,7 +120,7 @@ h2 {
 
 #playerName {
     display: block;
-    font-size: 9vh;
+    font-size: 8vh;
     margin: 0;
 }
 
@@ -128,7 +128,7 @@ h2 {
     display: block;
     position: absolute;
     bottom: 0;
-    font-size: 5vh;
+    font-size: 4vh;
     margin: 0;
 }
 
@@ -138,4 +138,10 @@ h2 {
     font-size: 12vh;
     margin: auto;
     margin-bottom: 4vh;
+    background: #ddd;
+    border-radius: 8px;
+}
+
+.buttonText {
+    margin: 2vh 0 2vh 0;
 }
