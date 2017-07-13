@@ -1,5 +1,5 @@
-var version = 13;
-console.log('Version' + version);
+var version = 14;
+console.log('Version - ' + version);
 
 // Link to database
 var config = {
@@ -78,6 +78,8 @@ function capitalizeFirstLetter(string) {
 function startBattle() {
     generateOpponent();
     $('#startBattle').css('visibility', 'hidden');
+    $('#playerPokemon').html('<img src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
+    $('#opponentPokemon').html('<img src=\'' + opponent.Pokemon.ImgLarge + '\' alt=\'Opponent Pokemon\'>');
     console.log(mainPlayer);
 }
 
