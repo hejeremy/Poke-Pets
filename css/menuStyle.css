@@ -54,12 +54,12 @@ h2 {
 #content, #player {
     background: #fff;
     border-radius: 8px;
-    margin-bottom: 4vh;
+    margin-bottom: 6vw;
 }
 
 #player {
     padding: 0;
-    height: 18vh;
+    height: 20vh;
 }
 
 #playerImage {
@@ -102,7 +102,7 @@ h2 {
 
 #expProgress {
     background: yellow;
-    height: calc(2vh - 2px);
+    height: calc(4vh - 2px);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
@@ -113,7 +113,7 @@ h2 {
     background: blue;
     width: 16vh;
     height: 16vh;
-    margin: 1vh;
+    margin: 2vh;
     padding: 0;
     border-radius: 8px;
 }
@@ -138,8 +138,9 @@ h2 {
     font-size: 12vh;
     margin: auto;
     margin-bottom: 4vh;
-    background: #ddd;
+    background: white;
     border-radius: 8px;
+    border: 0;
 }
 
 .buttonText {
