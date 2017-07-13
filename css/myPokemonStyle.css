@@ -27,12 +27,9 @@ body {
 }
 
 #titleText {
-   display: inline-block;
-   max-width: 100%;
-   width:auto;
-   height: auto;
-   padding: 20px;
-   margin: 0 auto;
+    display: inline-block;
+    width: 32vh;
+    margin: 0;
 }
 
 .main-section {
