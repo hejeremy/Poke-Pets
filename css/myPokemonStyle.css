@@ -93,7 +93,7 @@ body {
 	padding: 0 15px;
 }
 
-.hp, .xp {
+.hp, .xp, .lvl {
 	display: inline-block;
 	background-color: #fff;
 	border-radius: 50%;
@@ -128,7 +128,7 @@ body {
 	margin-bottom: 0;
 }
 
-.pokemon-stats h4, .hp, .xp, .description, .panel, .panel-heading {
+.pokemon-stats h4, .hp, .xp, .lvl, .description, .panel, .panel-heading {
 	border: 1px solid #aaa;
 }
 
