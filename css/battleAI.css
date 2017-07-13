@@ -17,6 +17,10 @@ img {
     height: 100px;
 }
 
+.pokemonImage {
+    background-color: #fff;
+}
+
 #header {
     background: #444;
     border-bottom: 4px solid #222;
