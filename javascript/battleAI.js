@@ -1,4 +1,4 @@
-console.log('Version 11');
+console.log('Version 12');
 
 // Link to database
 var config = {
