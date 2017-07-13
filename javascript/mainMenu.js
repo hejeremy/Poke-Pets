@@ -18,6 +18,7 @@ database.ref("users").once("value", function(snapshot) {
 
     if (player["pokemon"] === undefined) {
         $("#player").addClass("hidden");
+        console.log("hide");
         chooseStarter(player);
     } else {
         drawPlayer(player);
