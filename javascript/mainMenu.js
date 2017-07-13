@@ -57,6 +57,7 @@ function chooseStarter(name) {
         });
         $("#content").empty();
         drawMenu();
+        drawPlayer();
     });
     pokemon2.click(function() {
         database.ref("users/" + localStorage.getItem("id")).update({
@@ -64,6 +65,7 @@ function chooseStarter(name) {
         });
         $("#content").empty();
         drawMenu();
+        drawPlayer();
     });
     pokemon3.click(function() {
         database.ref("users/" + localStorage.getItem("id")).update({
@@ -71,6 +73,7 @@ function chooseStarter(name) {
         });
         $("#content").empty();
         drawMenu();
+        drawPlayer();
     });
     
     // Append Pokemon Divs

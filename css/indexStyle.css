@@ -22,8 +22,7 @@ body {
 
 #titleText {
     display: inline-block;
-    color: #eee;
-    font-size: 8vh;
+    width: 32vh;
     margin: 0;
 }
 
