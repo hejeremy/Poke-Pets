@@ -133,6 +133,9 @@ h2 {
 }
 
 .button {
+    display: block;
     width: 48vh;
     font-size: 12vh;
+    margin: auto;
+    margin-bottom: 12vh;
 }
