@@ -1,4 +1,4 @@
-var version = 15;
+var version = 16;
 console.log('Version - ' + version);
 
 // Link to database
@@ -29,9 +29,7 @@ database.ref('users').once('value', function(snapshot) {
     //console.log(snapshot);
     //console.log(mainPlayer);
     //console.log(mainPlayer.profilePic);
-    $('#opponentImage').html('<img src=\'https://placeholder.baker.com/100\' alt=\'Opponent Image\'>');
-    $('#playerName').html('<h2>' + mainPlayer.name + '</h2>');
-    $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
+    startBattle();
 });
 
 $(document).on('click', '#clearYourself', function() {
@@ -40,7 +38,7 @@ $(document).on('click', '#clearYourself', function() {
     window.location.href = 'https://hejeremy.github.io/Poke-Pets/';
 });
 
-$(document).on('click', '#startBattle', startBattle);
+//$(document).on('click', '#startBattle', startBattle);
 
 var opponent;
 
@@ -67,9 +65,6 @@ function setOpponent(name, image) {
 
     console.log(opponent);
 
-    $('#opponentName').html('<h2>' + capitalizeFirstLetter(name) + '</h2>');
-    $('#opponentImage').html('<img src=\'' + image + '\' alt=\'Opponent Image\'>');
-    $('#opponent').css('visibility', 'visible');
 }
 
 function capitalizeFirstLetter(string) {
@@ -82,8 +77,14 @@ function startBattle() {
 }
 
 function renderImages() {
-    $('#startBattle').css('visibility', 'hidden');
+    //$('#startBattle').css('visibility', 'hidden');
+
+    $('#playerName').html('<h2>' + mainPlayer.name + '</h2>');
+    $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
     $('#playerPokemon').html('<img src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
+
+    $('#opponentName').html('<h2>' + capitalizeFirstLetter(name) + '</h2>');
+    $('#opponentImage').html('<img src=\'' + image + '\' alt=\'Opponent Image\'>');
     $('#opponentPokemon').html('<img src=\'' + opponent.Pokemon.ImgLarge + '\' alt=\'Opponent Pokemon\'>');
 }
 
