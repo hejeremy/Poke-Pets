@@ -54,7 +54,7 @@ h2 {
 #content, #player {
     background: #fff;
     border-radius: 8px;
-    margin-bottom: 4vh;
+    margin-bottom: 6vw;
 }
 
 #player {
@@ -138,8 +138,9 @@ h2 {
     font-size: 12vh;
     margin: auto;
     margin-bottom: 4vh;
-    background: #ddd;
+    background: white;
     border-radius: 8px;
+    border: 0;
 }
 
 .buttonText {
