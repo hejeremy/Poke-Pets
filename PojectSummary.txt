@@ -1,0 +1,13 @@
+Description:
+- This is a fan made Pokemon game where players can battle randomly generated AI and their Pokemon
+- It connects the player's profile to their facebook profile to get player image, and includes a level progression feature
+
+Motivation:
+- We wanted to make a low stress and easily accessible game for ourselves
+- We think Pokemon is awesome and there is not enough Pokemon fan games out there
+- There was also the need to learn how to create a simple user authentication response and utilizing several APIs we were not familiar with
+
+Results:
+- An easy to play game where the user can choose a starter Pokemon to battle against a randomly generated opponent
+- Users can log in using their Facebook account, and their information is stored in our Firebase database
+

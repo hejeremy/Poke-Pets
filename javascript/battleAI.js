@@ -12,6 +12,12 @@ var database = firebase.database();
 
 $('#opponent').css('visibility', 'hidden');
 
+var pokemonNames = [
+    {name: 'Bulbasaur', image: 'images/bulbasaur_lg.png'},
+    {name: 'Squirtle', image: 'images/squirtle_lg.png'},
+    {name: 'Charmander', image: 'images/charmander_lg.png'}
+];
+
 //Battle class
 var mainPlayer;
 console.log(localStorage.getItem('id'));
@@ -54,6 +60,13 @@ function generateOpponent() {
 }
 
 function setOpponent(name, image) {
+    var pokemon = pokemonNames[Math.floor(Math.random()*pokemonNames.length)];
+    var skills = new Skills('Tackle', 5);
+    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 60, 0, skills);
+    opponent = new Player(name, newPokemon);
+
+    console.log(opponent);
+
     $('#opponentName').html('<h2>' + capitalizeFirstLetter(name) + '</h2>');
     $('#opponentImage').html('<img src=\'' + image + '\' alt=\'Opponent Image\'>');
     $('#opponent').css('visibility', 'visible');
