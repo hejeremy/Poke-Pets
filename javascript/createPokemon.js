@@ -6,8 +6,9 @@
  */
 
 //Player constructor for creating AI
-function Player(Name, Pokemon) {
+function Player(Name, Image, Pokemon) {
     this.Name = Name;
+    this.Image = Image;
     this.Pokemon = Pokemon;
 }
 
