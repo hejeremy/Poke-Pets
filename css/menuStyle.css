@@ -84,9 +84,9 @@ h2 {
 #leftContainer {
     position: relative;
     float: right;
-    width: calc(100% - 19vh);
+    width: calc(100% - 21vh);
     height: 16vh;
-    margin: 1vh 1vh 1vh 0;
+    margin: 2vh 2vh 3vh 0;
 }
 
 #expBar {
