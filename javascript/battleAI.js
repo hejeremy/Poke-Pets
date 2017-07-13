@@ -10,6 +10,8 @@ firebase.initializeApp(config);
 // Link to database
 var database = firebase.database();
 
+$('#opponent').css('visibility', 'hidden');
+
 //Battle class
 var mainPlayer;
 console.log(localStorage.getItem('id'));
@@ -54,6 +56,7 @@ function generateOpponent() {
 function setOpponent(name, image) {
     $('#opponentName').html('<h2>' + capitalizeFirstLetter(name) + '</h2>');
     $('#opponentImage').html('<img src=\'' + image + '\' alt=\'Opponent Image\'>');
+    $('#opponent').css('visibility', 'visible');
 }
 
 function capitalizeFirstLetter(string) {
