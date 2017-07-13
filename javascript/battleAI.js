@@ -1,4 +1,4 @@
-var version = 16;
+var version = 17;
 console.log('Version - ' + version);
 
 // Link to database
@@ -61,7 +61,7 @@ function setOpponent(name, image) {
     var pokemon = pokemonNames[Math.floor(Math.random()*pokemonNames.length)];
     var skills = new Skill('Tackle', 5);
     var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 60, 0, skills);
-    opponent = new Player(name, newPokemon);
+    opponent = new Player(name, image, newPokemon);
 
     console.log(opponent);
 
@@ -83,8 +83,8 @@ function renderImages() {
     $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
     $('#playerPokemon').html('<img src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
 
-    $('#opponentName').html('<h2>' + capitalizeFirstLetter(name) + '</h2>');
-    $('#opponentImage').html('<img src=\'' + image + '\' alt=\'Opponent Image\'>');
+    $('#opponentName').html('<h2>' + capitalizeFirstLetter(opponent.Name) + '</h2>');
+    $('#opponentImage').html('<img src=\'' + opponent.Image + '\' alt=\'Opponent Image\'>');
     $('#opponentPokemon').html('<img src=\'' + opponent.Pokemon.ImgLarge + '\' alt=\'Opponent Pokemon\'>');
 }
 
