@@ -17,7 +17,7 @@ database.ref("users").once("value", function(snapshot) {
     player = snapshot.val()[localStorage.getItem("id")];
 
     if (player["pokemon"] === undefined) {
-        chooseStarter(player["name"]);
+        chooseStarter(player);
     } else {
         drawPlayer(player);
         drawMenu();
@@ -26,9 +26,9 @@ database.ref("users").once("value", function(snapshot) {
 
 // If not, draw normal menu
 
-function chooseStarter(name) {
+function chooseStarter(player) {
     // Draw welcome text
-    var text1 = $("<h2>Welcome to PokéPets, " + name + "</h2>"); 
+    var text1 = $("<h2>Welcome to PokéPets, " + player["name"] + "</h2>"); 
     var text2 = $("<h2>To get started, choose your starter Pokemon!</h2>")
     $("#content").append(text1, text2);
 
@@ -56,24 +56,24 @@ function chooseStarter(name) {
             pokemon: [new Pokemon("Bulbasaur", "#", "#", "images/bulbasaur_lg.png", 60, 0, new Skill("Vine Whip", 5))]
         });
         $("#content").empty();
+        drawPlayer(player);
         drawMenu();
-        drawPlayer();
     });
     pokemon2.click(function() {
         database.ref("users/" + localStorage.getItem("id")).update({
             pokemon: [new Pokemon("Charmander", "#", "#", "images/charmander_lg.png", 60, 0, new Skill("Ember", 5))]
         });
         $("#content").empty();
+        drawPlayer(player);
         drawMenu();
-        drawPlayer();
     });
     pokemon3.click(function() {
         database.ref("users/" + localStorage.getItem("id")).update({
             pokemon: [new Pokemon("Squirtle", "#", "#", "images/squirtle_lg.png", 60, 0, new Skill("Bubble", 5))]
         });
         $("#content").empty();
+        drawPlayer(player);
         drawMenu();
-        drawPlayer();
     });
     
     // Append Pokemon Divs
