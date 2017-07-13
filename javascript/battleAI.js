@@ -1,4 +1,4 @@
-var version = 14;
+var version = 15;
 console.log('Version - ' + version);
 
 // Link to database
@@ -54,6 +54,7 @@ function generateOpponent() {
         success: function(data) {
             //console.log(data);
             setOpponent(data.results[0].name.first, data.results[0].picture.large);
+            renderImages();
         }
     });
 }
@@ -77,11 +78,15 @@ function capitalizeFirstLetter(string) {
 
 function startBattle() {
     generateOpponent();
+    console.log(mainPlayer);
+}
+
+function renderImages() {
     $('#startBattle').css('visibility', 'hidden');
     $('#playerPokemon').html('<img src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
     $('#opponentPokemon').html('<img src=\'' + opponent.Pokemon.ImgLarge + '\' alt=\'Opponent Pokemon\'>');
-    console.log(mainPlayer);
 }
+
 
 /*
 //TEST BATTLE
