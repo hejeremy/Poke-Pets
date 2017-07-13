@@ -1,3 +1,6 @@
+console.log('Version 10');
+
+// Link to database
 var config = {
     apiKey: "AIzaSyCzrx1SkMDyNlE4X2gOadgtPf8asSAWh70",
     authDomain: "poke-pets.firebaseapp.com",
@@ -7,7 +10,6 @@ var config = {
     messagingSenderId: "416846931"
 };
 firebase.initializeApp(config);
-// Link to database
 var database = firebase.database();
 
 $('#opponent').css('visibility', 'hidden');
@@ -49,7 +51,7 @@ function generateOpponent() {
         url: 'https://randomuser.me/api/',
         dataType: 'json',
         success: function(data) {
-            console.log(data);
+            //console.log(data);
             setOpponent(data.results[0].name.first, data.results[0].picture.large);
         }
     });
