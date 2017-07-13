@@ -37,11 +37,7 @@ $(document).on('click', '#clearYourself', function() {
     window.location.href = 'https://hejeremy.github.io/Poke-Pets/';
 });
 
-$(document).on('click', '#startBattle', function() {
-    generateOpponent();
-    startBattle();
-    $('#startBattle').css('visibility', 'hidden');
-});
+$(document).on('click', '#startBattle', startBattle);
 
 var opponent;
 
@@ -77,6 +73,8 @@ function capitalizeFirstLetter(string) {
 }
 
 function startBattle() {
+    generateOpponent();
+    $('#startBattle').css('visibility', 'hidden');
 }
 
 /*
