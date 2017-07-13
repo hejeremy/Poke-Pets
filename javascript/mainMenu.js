@@ -17,6 +17,7 @@ database.ref("users").once("value", function(snapshot) {
     player = snapshot.val()[localStorage.getItem("id")];
 
     if (player["pokemon"] === undefined) {
+        $("#player").addClass("hidden");
         chooseStarter(player);
     } else {
         drawPlayer(player);
@@ -82,6 +83,9 @@ function chooseStarter(player) {
 
 function drawPlayer(player) {
     
+    // Show the div again
+    $("#player").removeClass("hidden");
+
     // Make Player Image
     var playerImageDiv = $("<div id='playerImageDiv'>");
     var img = $("<img id='playerImage'>");
