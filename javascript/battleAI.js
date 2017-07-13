@@ -1,4 +1,4 @@
-console.log('Version 10');
+console.log('Version 11');
 
 // Link to database
 var config = {
@@ -22,7 +22,7 @@ var pokemonNames = [
 
 //Battle class
 var mainPlayer;
-console.log(localStorage.getItem('id'));
+//console.log(localStorage.getItem('id'));
 database.ref('users').once('value', function(snapshot) {
     mainPlayer = snapshot.val()[localStorage.getItem('id')];
     //console.log(snapshot);
