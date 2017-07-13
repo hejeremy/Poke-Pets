@@ -71,7 +71,7 @@ $(document).ready(function() {
 	});
 
 	function createStatsDiv(statName, value) {
-		return $("<div>").addClass(statName).html(statName.toUpperCase() + ": " + value);
+		return $("<div>").addClass(statName).html(statName.toUpperCase()).append($("<div>").addClass("stat-value").html(value));
 	}
 
 	function createRowDiv(className) {
