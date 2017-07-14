@@ -139,9 +139,14 @@ h2 {
     font-size: 12vh;
     margin: auto;
     margin-bottom: 4vh;
-    background-color: #d4f7aa;
+    background: rgba(212, 247, 170, 0.7);
     border-radius: 8px;
     border: 1px solid #666;
+    transition: background 1s;
+}
+
+.button:hover {
+    background: rgba(212, 247, 170, 1);
 }
 
 .buttonText {
