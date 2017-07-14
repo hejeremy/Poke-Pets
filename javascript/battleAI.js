@@ -1,4 +1,4 @@
-var version = 40;
+var version = 41;
 console.log('Version - ' + version);
 
 // Link to database
@@ -167,7 +167,7 @@ function mainBattle() {
             $('#battleText').html('It missed!');
         }
         refreshHP();
-        eventWhich = 'endRound()';
+        eventWhich = 'endRound';
     }
 
     function potion1() {
@@ -183,7 +183,7 @@ function mainBattle() {
             attacker.HP += 20;
         }
         refreshHP();
-        eventWhich = 'endRound()';
+        eventWhich = 'endRound';
     }
 
     function refreshHP() {
@@ -242,7 +242,7 @@ function mainBattle() {
         $('#battleText').text('What will ' + pokemon1.Name + ' do?');
         $('#nextButton').css('visibility', 'hidden');
         $('.attackButton').css('visibility', 'visible');
-        $('.itemButton').css('visibility', 'hidden');
+        $('.itemButton').css('visibility', 'visibile');
     }
 
     function faintedText(input) {
