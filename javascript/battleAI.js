@@ -1,4 +1,4 @@
-var version = 41;
+var version = 47;
 console.log('Version - ' + version);
 
 // Link to database
@@ -85,14 +85,18 @@ function mainBattle() {
     var pokemon2 = JSON.parse(JSON.stringify(opponent.Pokemon));
     var attacker = pokemon1;
     var defender = pokemon2;
-    var attackerWho = 'Your '
-        var defenderWho = 'Foe\'s ';
+
+    var attackerWho = capitalizeFirstLetter(mainPlayer.name);
+    var defenderWho = capitalizeFirstLetter(opponent.Name);
 
     var eventWhich;
     var win;
 
+    var potions = 1;
     var expReward = 0;
     var moneyReward = 0;
+
+    $('.itemButton').text('Potions \(' + potions + '\)');
 
 
     //$('#battleBox').append('<button class=\'btn btn-default\' id=\nextButton\'>Next</button>');
@@ -145,38 +149,46 @@ function mainBattle() {
             case 'mainMenu':
                 mainMenu();
                 break;
+            case 'nextRound':
+                nextRound();
+                break;
             default:
-                console.log('Nothing interesting happens.');
                 break;
         }
     }
 
     function event1() {
-        $('#battleText').html(attackerWho + attacker.Name + ' used ' + attacker.Skills.skillName + '.');
+        $('#battleText').text(attacker.Name + '\(' + attackerWho + '\) used ' + attacker.Skills.skillName + '.');
         eventWhich = 'event2';
     }
 
     function event2() {
         if(Math.random() > .2) {
-            $('#battleText').html(defenderWho + defender.Name + ' takes ' + attacker.Skills.skillDMG + ' damage!');
+            $('#battleText').text(defender.Name + '\(' + defenderWho + '\) takes ' + attacker.Skills.skillDMG + ' damage!');
             defender.HP -= attacker.Skills.skillDMG;
             if (defender.HP <= 0) {
                 defender.HP = 0;
             }
         } else {
-            $('#battleText').html('It missed!');
+            $('#battleText').text('It missed!');
         }
         refreshHP();
         eventWhich = 'endRound';
     }
 
     function potion1() {
-        $('#battleText').html(attackerWho + ' used a potion.');
-        eventWhich = 'potion2';
+        if (potions > 0) {
+            $('#battleText').text(attackerWho + ' used a potion.');
+            eventWhich = 'potion2';
+            potions--;
+        } else {
+            $('#battleText').text('You have no potions left!');
+            eventWhich = 'nextRound';
+        }
     }
 
     function potion2() {
-        $('#battleText').html(attackerWho + attacker.Name + ' regained some HP.');
+        $('#battleText').text(attacker.Name + '\(' + attackerWho + '\) regained some HP.');
         if (attacker.HP + 20 > 60) {
             attacker.HP = 60;
         } else {
@@ -223,17 +235,17 @@ function mainBattle() {
         if (attacker == pokemon1) {
             attacker = pokemon2;
             defender = pokemon1;
-            attackerWho = 'Foe\'s '
-                defenderWho = 'Your '
-                eventWhich = 'event1';
-            nextEvent();
+            var attackerWho = capitalizeFirstLetter(opponent.Name);
+            var defenderWho = capitalizeFirstLetter(mainPlayer.name);
+            eventWhich = 'event1';
         } else {
             attacker = pokemon1;
             defender = pokemon2;
-            attackerWho = 'Your '
-                defenderWho = 'Foe\'s '
-                nextRound();
+            var attackerWho = capitalizeFirstLetter(mainPlayer.name);
+            var defenderWho = capitalizeFirstLetter(opponent.Name);
+            eventWhich = 'nextRound';
         }
+        nextEvent();
     }
 
     function nextRound() {
@@ -241,20 +253,21 @@ function mainBattle() {
         eventWhich = 'event1';
         $('#battleText').text('What will ' + pokemon1.Name + ' do?');
         $('#nextButton').css('visibility', 'hidden');
+        $('.itemButton').text('Potions \(' + potions + '\)');
         $('.attackButton').css('visibility', 'visible');
         $('.itemButton').css('visibility', 'visible');
     }
 
     function faintedText(input) {
-        $('#battleText').text(defenderWho + input + ' has fainted.');
+        $('#battleText').text(input + '\(' + defenderWho + '\) has fainted.');
     }
 
     function endBattle() {
         if (attacker == pokemon1) {
-            $('#battleText').text(mainPlayer.name + ' wins!');
+            $('#battleText').text(attacker.Name + '\(' + attackerWho + '\) won!');
             win = true;
         } else {
-            $('#battleText').text(mainPlayer.name + ' lost!');
+            $('#battleText').text(defender.Name + '\(' + defenderWho + '\) lost!');
             win = false;
         }
         eventWhich = 'rewards';
