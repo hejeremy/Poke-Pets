@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 				//adds columns into main div
 				pokemonDiv.html($("<div>").addClass("row").append(container).append(stats));
-				$("#my-pokemon").append(pokemonDiv);
+				$("#main-section").append(pokemonDiv);
 
 			});
 		}
