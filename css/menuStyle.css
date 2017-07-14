@@ -100,7 +100,7 @@ h2 {
 }
 
 #expProgress {
-    background: yellow;
+    background: linear-gradient(rgb(209, 230, 255), rgb(98, 160, 243));
     height: calc(3vw - 2px);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
