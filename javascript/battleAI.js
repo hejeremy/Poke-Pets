@@ -1,4 +1,4 @@
-var version = 22;
+var version = 23;
 console.log('Version - ' + version);
 
 // Link to database
@@ -76,8 +76,6 @@ function startBattle() {
 }
 
 function renderImages() {
-    //$('#startBattle').css('visibility', 'hidden');
-
     $('#playerName').html('<h2>' + mainPlayer.name + '</h2>');
     $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
     $('#playerPokemon').prepend('<img class=\'pokemonImage\' src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
@@ -103,16 +101,18 @@ function mainBattle() {
     var expReward = 0;
     var moneyReward = 0;
 
-    nextRound();
 
     //$('#battleBox').append('<button class=\'btn btn-default\' id=\nextButton\'>Next</button>');
     $('#nextButton').text('Next');
+    $('#nextButton').css('visibility', 'hidden');
     $(document).on('click', '#nextButton', nextEvent);
     $(document).on('click', '.attackButton', function() {
         $('#nextButton').css('visibility', 'visible');
         $('.attackButton').css('visibility', 'hidden');
         event1();
     });
+
+    nextRound();
 
     //EVERYTHING AFTER THIS IS ONLY CALLED IN mainBattle()
 
