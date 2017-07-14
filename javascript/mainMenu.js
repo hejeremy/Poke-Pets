@@ -107,7 +107,6 @@ function drawPlayer(player) {
     var expProgress = $("<div id='expProgress'>");
     var currentEXP = expToLevel(player["experience"]).exp;
     var totalEXP = expToLevel(player["experience"]).level * 2 + 7;
-    console.log(currentEXP + " / " + totalEXP);
     expProgress.css("width", (currentEXP/totalEXP)*100 + "%");
     expBar.append(expProgress);
     $("#leftContainer").append(expBar);
