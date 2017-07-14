@@ -122,7 +122,7 @@ body {
 }
 
 /*circles under image*/
-.hp, .xp {
+.hp, .lvl {
 	display: inline-block;
 	background-color: #fff;
 	border-radius: 50%;
@@ -166,7 +166,7 @@ body {
 	margin-bottom: 0;
 }
 
-.pokemon-stats h4, .hp, .xp, .description, .panel {
+.pokemon-stats h4, .hp, .lvl, .description, .panel {
 	border: 1px solid #aaa;
 	box-shadow: 5px 3px 2px #9198a3;
 }
@@ -238,7 +238,7 @@ body {
 	width: 150px;
 }
 
-.hp, .xp {
+.hp, .lvl {
 	display: block;
 	margin: 10px auto;
 }
