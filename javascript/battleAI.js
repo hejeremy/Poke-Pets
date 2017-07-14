@@ -208,16 +208,16 @@ function mainBattle() {
 
     function hpBar(input) {
         // Make Pokemon HP Bar
-        var hpBar = $("<div class='hpBar'>");
-        var hpProgress = $("<div class='hpProgress'>");
+        var hpBar = $("<div id='hpBar'>");
+        var hpProgress = $("<div id='hpProgress'>");
         var percentage = 100*input/60;
 
         if (percentage <= 25) {
-            hpProgress.css('background', 'red');
+            hpProgress.css('background', 'linear-gradient\(rgb\(230, 20, 0), rgb\(255, 255, 255\)\)');
         } else if (percentage > 25 && percentage <= 50) {
-            hpProgress.css('background', 'yellow');
+            hpProgress.css('background', 'linear-gradient\(rgb\(255, 230, 0), rgb\(255, 255, 255\)\)');
         } else {
-            hpProgress.css('background', 'green');
+            hpProgress.css('background', 'linear-gradient\(rgb\(20, 230, 0), rgb\(255, 255, 255\)\)');
         }
 
         hpProgress.css("width", percentage + "%");
