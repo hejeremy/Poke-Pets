@@ -59,6 +59,7 @@ h2 {
 #player {
     padding: 0;
     height: 20vh;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 #playerImage {
