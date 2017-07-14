@@ -1,4 +1,4 @@
-var version = 29;
+var version = 30;
 console.log('Version - ' + version);
 
 // Link to database
@@ -220,8 +220,8 @@ function mainBattle() {
     function rewards() {
         if (win) {
             expReward = 5 + Math.ceil(5*Math.random());
-            moneyReward = 100 + Math.ceil(50*Math.random());
-            $('#battleText').text(mainPlayer.name + ' gets ' + expReward + 'EXP and $' + moneyReward + ' for winning.');
+            moneyReward = 50 + Math.ceil(50*Math.random());
+            $('#battleText').text(mainPlayer.name + ' gets ' + expReward + ' EXP and $' + moneyReward + ' for winning.');
         } else {
             $('#battleTExt').text(mainPlayer.name + ' gets nothing for losing.');
         }
