@@ -73,7 +73,7 @@ img {
 }
 
 .hpProgress {
-    background: yellow;
+    background: green;
     height: calc(3vw - 2px);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
