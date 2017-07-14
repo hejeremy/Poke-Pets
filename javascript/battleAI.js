@@ -1,4 +1,4 @@
-var version = 27;
+var version = 28;
 console.log('Version - ' + version);
 
 // Link to database
@@ -59,7 +59,7 @@ function generateOpponent() {
 function setOpponent(name, image) {
     var pokemon = pokemonNames[Math.floor(Math.random()*pokemonNames.length)];
     var skills = new Skill('Tackle', 5);
-    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 20, 0, skills);
+    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 24, 0, skills);
     opponent = new Player(name, image, newPokemon);
 
     //console.log(opponent);
@@ -159,12 +159,12 @@ function mainBattle() {
     function event2() {
         if(Math.random() > .2) {
             $('#battleText').html(defender.Name + ' takes ' + attacker.Skills.skillDMG + ' damage!');
-            console.log('Defender HP: ' + defender.HP);
-            console.log('Attacker DMG: ' + attacker.Skills.skillDMG);
+            //console.log('Defender HP: ' + defender.HP);
+            //console.log('Attacker DMG: ' + attacker.Skills.skillDMG);
             defender.HP -= attacker.Skills.skillDMG;
             if (defender.HP <= 0) {
                 console.log('Defender HP reached 0.');
-                //defender.HP = 0;
+                defender.HP = 0;
             }
         } else {
             $('#battleText').html(attacker.Name + ' missed!');
@@ -209,21 +209,21 @@ function mainBattle() {
 
     function endBattle() {
         if (attacker == pokemon1) {
-            $('#battleText').text(mainPlayer.Name + 'wins!');
+            $('#battleText').text(mainPlayer.name + ' wins!');
             win = true;
         } else {
-            $('#battleText').text(mainPlayer.Name + 'lost!');
+            $('#battleText').text(mainPlayer.name + ' lost!');
             win = false;
         }
     }
 
     function rewards() {
         if (win) {
-            expReward = 10 + Math.ceil(10*Math.random());
+            expReward = 5 + Math.ceil(5*Math.random());
             moneyReward = 100 + Math.ceil(50*Math.random());
-            $('#battleText').text(mainPlayer.Name + ' gets ' + expReward + 'EXP and $' + moneyReward + ' for winning.');
+            $('#battleText').text(mainPlayer.name + ' gets ' + expReward + 'EXP and $' + moneyReward + ' for winning.');
         } else {
-            $('#battleTExt').text(mainPlayer.Name + ' gets nothing for losing.');
+            $('#battleTExt').text(mainPlayer.name + ' gets nothing for losing.');
         }
         $('#nextButton').text('Main Menu');
     }
