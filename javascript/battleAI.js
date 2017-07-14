@@ -1,4 +1,4 @@
-var version = 33;
+var version = 35;
 console.log('Version - ' + version);
 
 // Link to database
@@ -92,9 +92,9 @@ function mainBattle() {
     var attacker = pokemon1;
     var defender = pokemon2;
     var attackerWho = 'Your '
-    var defenderWho = 'Foe\'s '
-    //var playerTurn = true;
-    console.log(pokemon1);
+        var defenderWho = 'Foe\'s '
+        //var playerTurn = true;
+        console.log(pokemon1);
     console.log(pokemon2);
 
     var eventNumber = 0;
@@ -175,8 +175,21 @@ function mainBattle() {
     }
 
     function refreshHP() {
-        $('#playerHP').text(pokemon1.HP + '/60');
-        $('#opponentHP').text(pokemon2.HP + '/50');
+        $('#playerHPNum').text(pokemon1.HP + '/60');
+        $('#opponentHPNum').text(pokemon2.HP + '/50');
+        $('#playerHPBar').html(hpBar(pokemon1.HP));
+        $('#opponentHPBar').html(hpBar(pokemon2.HP));
+
+    }
+
+    function hpBar(input) {
+        // Make Pokemon HP Bar
+        var hpBar = $("<div class='hpBar'>");
+        var hpProgress = $("<div class='hpProgress'>");
+
+        hpProgress.css("width", (input/60) + "%");
+        hpBar.append(hpProgress);
+        return hpBar;
     }
 
     function endRound() {
@@ -190,14 +203,14 @@ function mainBattle() {
             attacker = pokemon2;
             defender = pokemon1;
             attackerWho = 'Foe\'s '
-            defenderWho = 'Your '
-            nextEvent();
+                defenderWho = 'Your '
+                nextEvent();
         } else {
             attacker = pokemon1;
             defender = pokemon2;
             attackerWho = 'Your '
-            defenderWho = 'Foe\'s '
-            nextRound();
+                defenderWho = 'Foe\'s '
+                nextRound();
         }
     }
 
