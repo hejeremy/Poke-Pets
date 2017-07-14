@@ -65,7 +65,7 @@ body {
 
 .pokemon {
 	padding: 15px 25px 10px 25px;
-	margin: 20px auto;
+	margin: 0 auto;
 	background: rgba(255,255,255, 0.7);
 	border-radius: 20px 0 20px 0;
 	width: 100%;
