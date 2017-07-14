@@ -1,4 +1,4 @@
-var version = 35;
+var version = 36;
 console.log('Version - ' + version);
 
 // Link to database
@@ -187,7 +187,7 @@ function mainBattle() {
         var hpBar = $("<div class='hpBar'>");
         var hpProgress = $("<div class='hpProgress'>");
 
-        hpProgress.css("width", (input/60) + "%");
+        hpProgress.css("width", (100*input/60) + "%");
         hpBar.append(hpProgress);
         return hpBar;
     }
