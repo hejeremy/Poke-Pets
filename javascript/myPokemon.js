@@ -22,47 +22,23 @@ $(document).ready(function() {
 			var current = currentPlayer.pokemon[i];
 		   	var currentID;
 		   	var currentDesc;
-		   	var currentName;
-		   	var currentImg;
-		   	var currentHP;
-		   	var currentEXP;
-		   	var currentSkillName;
-		   	var currentSkillDMG;
 
 		   	var queryURL = "https://pokeapi.co/api/v2/pokemon-species/" + current.Name.toLowerCase() + "/";
 
+
+
 		   $.ajax({
 				url: queryURL,
+				async: false,
 				method: "GET"
 			}).done(function(response) {
 				currentID = response["id"];
 				currentDesc = response["flavor_text_entries"][1]["flavor_text"];
-				currentName = current.Name;
-			   	currentImg = current.ImgLarge;
-			   	currentHP = current.HP;
-			   	currentEXP = current.EXP;
-			   	currentSkillName = current.Skills.skillName;
-			   	currentSkillDMG = current.Skills.skillDMG;
-
-				// creates main pokemon div
-				var pokemonDiv = $("<div>").addClass("pokemon").attr("id", currentName);
-				// creates column to hold img and stats
-				var container = $("<div>").addClass("col-xs-4 img-container");
-				// contents of column
-				var img = $("<img>").addClass("pokemon-img").attr("src", currentImg);
-				var hp = createStatsDiv("hp", currentHP);
-				var lvl = createStatsDiv("lvl", expToLevel(currentEXP).level);
-				// add contents into column
-				var subRow1 = createRowDiv("stats-detail");
-				subRow1.append(hp);
-				subRow1.append(lvl);
-				container.html(img).append(subRow1);
-
 				//creates column to hold name, description, etc
 				var stats = $("<div>").addClass("pokemon-stats col-xs-8").html("<h6>no. " +  currentID + "</h6><h4>" + current.Name + "</h4>");
 				//contents of column
 				var desc = $("<div>").addClass("description").html(currentDesc);
-				var abilitiesTable = createTable(currentSkillName, currentSkillDMG);
+				var abilitiesTable = createTable(current.Skills.skillName, current.Skills.skillDMG);
 				var abilitiesPanel = createPanel("Abilities", abilitiesTable);
 				
 				//add contents into column
