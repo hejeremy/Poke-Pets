@@ -1,4 +1,4 @@
-var version = 20;
+var version = 21;
 console.log('Version - ' + version);
 
 // Link to database
@@ -91,8 +91,8 @@ function renderImages() {
 function mainBattle() {
     var pokemon1 = mainPlayer.pokemon[0];
     var pokemon2 = opponent.Pokemon;
-    console.log(player1);
-    console.log(player2);
+    console.log(pokemon1);
+    console.log(pokemon2);
 }
 
 /*
