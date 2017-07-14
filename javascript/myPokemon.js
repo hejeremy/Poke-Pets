@@ -19,7 +19,7 @@ $(document).ready(function() {
 		currentPlayer = snap.val()[localStorage.getItem("id")];
 
 		for (var i = 0; i<currentPlayer.pokemon.length; i++) {
-			var current;
+			var current = currentPlayer.pokemon[i];
 		   	var currentID;
 		   	var currentDesc;
 		   	var currentName;
@@ -29,13 +29,12 @@ $(document).ready(function() {
 		   	var currentSkillName;
 		   	var currentSkillDMG;
 
-		   	var queryURL = "https://pokeapi.co/api/v2/pokemon-species/" + currentPlayer.pokemon[i].Name.toLowerCase() + "/";
+		   	var queryURL = "https://pokeapi.co/api/v2/pokemon-species/" + current.Name.toLowerCase() + "/";
 
 		   $.ajax({
 				url: queryURL,
 				method: "GET"
 			}).done(function(response) {
-				current = currentPlayer.pokemon[i];
 				currentID = response["id"];
 				currentDesc = response["flavor_text_entries"][1]["flavor_text"];
 				currentName = current.Name;
