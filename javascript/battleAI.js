@@ -1,4 +1,4 @@
-var version = 24;
+var version = 25;
 console.log('Version - ' + version);
 
 // Link to database
@@ -163,7 +163,7 @@ function mainBattle() {
             console.log('Attacker DMG: ' + attacker.Skills.skillDMG);
             defender.HP -= attacker.Skills.skillDMG;
             if (defender.HP <= 0) {
-                defender.HP = 0;
+                //defender.HP = 0;
             }
         } else {
             $('#battleText').html(attacker.Name + ' missed!');
@@ -177,7 +177,7 @@ function mainBattle() {
     }
 
     function endRound() {
-        if (defender.HP = 0) {
+        if (defender.HP <= 0) {
             faintedText(defender.Name);
         }
 
