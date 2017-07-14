@@ -1,4 +1,4 @@
-var version = 31;
+var version = 32;
 console.log('Version - ' + version);
 
 // Link to database
@@ -33,7 +33,8 @@ database.ref('users').once('value', function(snapshot) {
 $(document).on('click', '#clearYourself', function() {
     console.log('You have been cleared.');
     database.ref('users').child(localStorage.getItem('id')).remove();
-    window.location.href = 'https://hejeremy.github.io/Poke-Pets/main.html';
+    //window.location.href = 'https://hejeremy.github.io/Poke-Pets/main.html';
+    window.history.back();
 });
 
 //$(document).on('click', '#startBattle', startBattle);
@@ -210,7 +211,7 @@ function mainBattle() {
     }
 
     function faintedText(input) {
-        $('#battleText').text(input + ' has fainted.');
+        $('#battleText').text(defenderWho + input + ' has fainted.');
     }
 
     function endBattle() {
