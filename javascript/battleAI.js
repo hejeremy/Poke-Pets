@@ -1,4 +1,4 @@
-var version = 44;
+var version = 45;
 console.log('Version - ' + version);
 
 // Link to database
@@ -246,15 +246,15 @@ function mainBattle() {
     }
 
     function faintedText(input) {
-        $('#battleText').text(defenderWho + input + ' has fainted.');
+        $('#battleText').text(input + '(' + defenderWho + ') has fainted.');
     }
 
     function endBattle() {
         if (attacker == pokemon1) {
-            $('#battleText').text(mainPlayer.name + ' wins!');
+            $('#battleText').text(attacker.Name + '(' + attackerWho + ') won!');
             win = true;
         } else {
-            $('#battleText').text(mainPlayer.name + ' lost!');
+            $('#battleText').text(defender.Name + '(' + defenderWho + ') lost!');
             win = false;
         }
         eventWhich = 'rewards';
