@@ -49,8 +49,8 @@ $(document).ready(function() {
 				var lvl = createStatsDiv("lvl", expToLevel(current.EXP).level);
 				// add contents into column
 				var subRow1 = createRowDiv("stats-detail");
-				subrRow1.append(hp);
-				subrRow1.append(lvl);
+				subRow1.append(hp);
+				subRow1.append(lvl);
 				container.html(img).append(subRow1);
 
 				//creates column to hold name, description, etc
