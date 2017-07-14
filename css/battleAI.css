@@ -7,19 +7,19 @@ img {
     background-color: #fff;
 }
 
-#hpBar {
+.hpBar {
     float: right;
     width: 100%;
-    height: 2vh;
-    background: #aaa;
+    height: 3vw;
+    background: #999;
     border-radius: 8px;
-    border: 1px solid #666;
+    border: 1px solid black;
     padding: 0;
     margin: 0;
 }
 
-#hpProgress {
-    background: linear-gradient(rgb(209, 230, 255), rgb(98, 160, 243));
-    height: calc(2vh - 2px);
+.hpProgress {
+    background: green;
+    height: calc(3vw - 2px);
     border-radius: 8px;
 }
