@@ -74,6 +74,8 @@ h2 {
     font-size: 3vh;
     background: white;
     border: 1px solid #333;
+    border-top-left-radius: inherit;
+    border-bottom-right-radius: inherit;
     margin: 0;
     width: 4vh;
     height: 4vh;
