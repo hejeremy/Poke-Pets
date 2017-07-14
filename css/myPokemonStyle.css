@@ -55,6 +55,7 @@ body {
 
 
 #main:hover {
+	cursor: hand;
 	filter: contrast(200%);
 }
 
@@ -230,6 +231,7 @@ body {
 }
 
 #main:hover {
+	cursor: hand;
 	filter: contrast(200%);
 } 
 
