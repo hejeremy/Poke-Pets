@@ -1,4 +1,4 @@
-var version = 44;
+var version = 45;
 console.log('Version - ' + version);
 
 // Link to database
