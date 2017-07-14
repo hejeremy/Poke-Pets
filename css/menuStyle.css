@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+  border: 1px solid black;
+}
+
 body {
     background-color: #dce6f7;
 	background: url("../images/bg.jpg") fixed center;
@@ -28,14 +33,12 @@ h2 {
 }
 
 #header {
-    background: none;
-    margin-bottom: 6vw;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 #title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
 }
 
 #pokeball {
@@ -46,8 +49,10 @@ h2 {
 
 #titleText {
     display: inline-block;
-    width: 32vh;
-    margin: 0;
+    max-width: 60%;
+    width: auto;
+    height: auto;
+    margin: 0 10%;
 }
 
 #content, #player {
