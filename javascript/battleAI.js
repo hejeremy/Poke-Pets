@@ -1,4 +1,4 @@
-var version = 25;
+var version = 26;
 console.log('Version - ' + version);
 
 // Link to database
@@ -59,7 +59,7 @@ function generateOpponent() {
 function setOpponent(name, image) {
     var pokemon = pokemonNames[Math.floor(Math.random()*pokemonNames.length)];
     var skills = new Skill('Tackle', 5);
-    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 60, 0, skills);
+    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 20, 0, skills);
     opponent = new Player(name, image, newPokemon);
 
     //console.log(opponent);
@@ -163,6 +163,7 @@ function mainBattle() {
             console.log('Attacker DMG: ' + attacker.Skills.skillDMG);
             defender.HP -= attacker.Skills.skillDMG;
             if (defender.HP <= 0) {
+                console.log('Defender HP reached 0.');
                 //defender.HP = 0;
             }
         } else {
@@ -173,12 +174,14 @@ function mainBattle() {
 
     function refreshHP() {
         $('#playerHP').text(pokemon1.HP + '/60');
-        $('#opponentHP').text(pokemon2.HP + '/60');
+        $('#opponentHP').text(pokemon2.HP + '/50');
     }
 
     function endRound() {
         if (defender.HP <= 0) {
+            eventNumber = 6;
             faintedText(defender.Name);
+            return;
         }
 
         if (attacker == pokemon1) {
