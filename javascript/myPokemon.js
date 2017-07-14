@@ -22,12 +22,12 @@ $(document).ready(function() {
 			var current = currentPlayer.pokemon[i];
 		   	var currentID;
 		   	var currentDesc;
-		   	var currentName = current.Name;
-		   	var currentImg = current.ImgLarge;
-		   	var currentHP = current.HP;
-		   	var currentEXP = current.EXP;
-		   	var currentSkillName = current.Skills.skillName;
-		   	var currentSkillDMG = current.Skills.skillDMG;
+		   	var currentName;
+		   	var currentImg;
+		   	var currentHP;
+		   	var currentEXP;
+		   	var currentSkillName;
+		   	var currentSkillDMG;
 
 		   	var queryURL = "https://pokeapi.co/api/v2/pokemon-species/" + current.Name.toLowerCase() + "/";
 
@@ -37,6 +37,12 @@ $(document).ready(function() {
 			}).done(function(response) {
 				currentID = response["id"];
 				currentDesc = response["flavor_text_entries"][1]["flavor_text"];
+				currentName = current.Name;
+			   	currentImg = current.ImgLarge;
+			   	currentHP = current.HP;
+			   	currentEXP = current.EXP;
+			   	currentSkillName = current.Skills.skillName;
+			   	currentSkillDMG = current.Skills.skillDMG;
 
 				// creates main pokemon div
 				var pokemonDiv = $("<div>").addClass("pokemon").attr("id", currentName);
