@@ -91,5 +91,7 @@ $(document).ready(function() {
 		return table;
 	}
 
-
+	$("#menuButton").click(function() {
+        document.location.href = "main.html";
+    });
 });
