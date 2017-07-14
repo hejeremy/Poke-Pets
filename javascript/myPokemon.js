@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 		   $.ajax({
 				url: queryURL,
-				async: false,
+				async: false,		//this is bad?? but it allows the loop to function correctly
 				method: "GET"
 			}).done(function(response) {
 				currentID = response["id"];
