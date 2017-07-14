@@ -64,7 +64,6 @@ h2 {
 
 #playerImage {
     width: 100%;
-    border: 1px solid #333;
     border-radius: 8px;
 }
 
@@ -95,7 +94,7 @@ h2 {
     height: 2vh;
     background: #999;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 1px solid #aaa;
     padding: 0;
     margin: 0;
 }
@@ -110,7 +109,9 @@ h2 {
 #playerImageDiv {
     position: relative;
     display: inline-block;
-    background: blue;
+    background: gray;
+    border: 1px solid #aaa;
+	box-shadow: 5px 3px 2px #9198a3;
     width: 16vh;
     height: 16vh;
     margin: 2vh;
