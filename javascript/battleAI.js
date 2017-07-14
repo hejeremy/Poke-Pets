@@ -1,4 +1,4 @@
-var version = 42;
+var version = 43;
 console.log('Version - ' + version);
 
 // Link to database
@@ -85,8 +85,8 @@ function mainBattle() {
     var pokemon2 = JSON.parse(JSON.stringify(opponent.Pokemon));
     var attacker = pokemon1;
     var defender = pokemon2;
-    var attackerWho = 'Your '
-        var defenderWho = 'Foe\'s ';
+    var attackerWho = 'Your ';
+    var defenderWho = 'Foe\'s ';
 
     var eventWhich;
     var win;
