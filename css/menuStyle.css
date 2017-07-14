@@ -1,5 +1,6 @@
 body {
-    background: #dce6f7;
+    background-color: #dce6f7;
+	background: url("/images/bg.jpg") fixed center;
 }
 
 h2 {
