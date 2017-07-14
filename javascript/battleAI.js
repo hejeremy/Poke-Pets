@@ -1,4 +1,4 @@
-var version = 32;
+var version = 33;
 console.log('Version - ' + version);
 
 // Link to database
@@ -33,8 +33,7 @@ database.ref('users').once('value', function(snapshot) {
 $(document).on('click', '#clearYourself', function() {
     console.log('You have been cleared.');
     database.ref('users').child(localStorage.getItem('id')).remove();
-    //window.location.href = 'https://hejeremy.github.io/Poke-Pets/main.html';
-    window.history.back();
+    window.location.href = 'https://hejeremy.github.io/Poke-Pets/main.html';
 });
 
 //$(document).on('click', '#startBattle', startBattle);
@@ -232,14 +231,15 @@ function mainBattle() {
         } else {
             $('#battleTExt').text(mainPlayer.name + ' gets nothing for losing.');
         }
-        $('#nextButton').text('Main Menu');
-    }
-
-    function mainMenu() {
         database.ref('users').child(localStorage.getItem('id')).update({
             experience: mainPlayer.experience += expReward,
             pokedollar: mainPlayer.pokedollar += moneyReward,
         });
-        window.location.href = 'https://hejeremy.github.io/Poke-Pets/';
+        $('#nextButton').text('Return');
+    }
+
+    function mainMenu() {
+        //window.location.href = 'https://hejeremy.github.io/Poke-Pets/';
+        window.history.back();
     }
 }
