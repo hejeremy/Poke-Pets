@@ -87,7 +87,7 @@ $(document).ready(function() {
 		return table;
 	}
 
-	$("#menuButton").click(function() {
+	$("#main").click(function() {
         document.location.href = "main.html";
     });
 });

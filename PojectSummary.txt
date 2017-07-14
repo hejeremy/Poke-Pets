@@ -11,3 +11,16 @@ Results:
 - An easy to play game where the user can choose a starter Pokemon to battle against a randomly generated opponent
 - Users can log in using their Facebook account, and their information is stored in our Firebase database
 
+Team Effors:
+- At the beginning we had macro goals where we assigned sections such as frontend menu, battling, and backend user authentication to each person
+- Eventually we started borrowing functions from each others' javascript and borrowing css styling as it became convenient for our different sections to become standardized
+
+Individual Responsibilities:
+- Alec handled the backend Facebook user authentication and Firebase storage
+- Caroline created the myPokemon menu that displays all Pokemon currently owend by the player, and designed a majority of the css styling we use.
+- Jeremy created the current battle system where you face off against a random AI
+
+Improvements:
+- If we had more time, we could have done extensive compatibility testing to make sure it work properly on any versions of browsers
+- Currently as it stands, inidivdual Pokemon moves are not scalable. During battle, the player can only use 1 potion. If we had more time we could have made a scalable array for Pokemon moves and implement a bag feature that holds items that can be used during battle.
+- We also had a shop feature where players can spend their currency to buy items and additional Pokemon, but that idea was scrapped due to time constraints.

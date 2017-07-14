@@ -1,4 +1,4 @@
-var version = 47;
+var version = 51;
 console.log('Version - ' + version);
 
 // Link to database
@@ -33,7 +33,7 @@ $(document).on('click', '#clearYourself', function() {
 });
 
 // Return Button
-$("#menuButton").click(function() {
+$("#main").click(function() {
     document.location.href = "main.html";
 });
 
@@ -208,16 +208,16 @@ function mainBattle() {
 
     function hpBar(input) {
         // Make Pokemon HP Bar
-        var hpBar = $("<div class='hpBar'>");
-        var hpProgress = $("<div class='hpProgress'>");
+        var hpBar = $("<div id='hpBar'>");
+        var hpProgress = $("<div id='hpProgress'>");
         var percentage = 100*input/60;
 
         if (percentage <= 25) {
-            hpProgress.css('background', 'red');
+            hpProgress.css('background', 'linear-gradient\(rgb\(230, 20, 0), rgb\(255, 255, 255\)\)');
         } else if (percentage > 25 && percentage <= 50) {
-            hpProgress.css('background', 'yellow');
+            hpProgress.css('background', 'linear-gradient\(rgb\(255, 230, 0), rgb\(255, 255, 255\)\)');
         } else {
-            hpProgress.css('background', 'green');
+            hpProgress.css('background', 'linear-gradient\(rgb\(20, 230, 0), rgb\(255, 255, 255\)\)');
         }
 
         hpProgress.css("width", percentage + "%");
@@ -235,14 +235,14 @@ function mainBattle() {
         if (attacker == pokemon1) {
             attacker = pokemon2;
             defender = pokemon1;
-            var attackerWho = capitalizeFirstLetter(opponent.Name);
-            var defenderWho = capitalizeFirstLetter(mainPlayer.name);
+            attackerWho = capitalizeFirstLetter(opponent.Name);
+            defenderWho = capitalizeFirstLetter(mainPlayer.name);
             eventWhich = 'event1';
         } else {
             attacker = pokemon1;
             defender = pokemon2;
-            var attackerWho = capitalizeFirstLetter(mainPlayer.name);
-            var defenderWho = capitalizeFirstLetter(opponent.Name);
+            attackerWho = capitalizeFirstLetter(mainPlayer.name);
+            defenderWho = capitalizeFirstLetter(opponent.Name);
             eventWhich = 'nextRound';
         }
         nextEvent();
