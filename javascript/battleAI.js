@@ -85,8 +85,9 @@ function mainBattle() {
     var pokemon2 = JSON.parse(JSON.stringify(opponent.Pokemon));
     var attacker = pokemon1;
     var defender = pokemon2;
-    var attackerWho = 'Your ';
-    var defenderWho = 'Foe\'s ';
+
+    var attackerWho = capitalizeFirstLetter(mainPlayer.name);
+    var defenderWho = capitalizeFirstLetter(opponent.name);
 
     var eventWhich;
     var win;
@@ -151,13 +152,13 @@ function mainBattle() {
     }
 
     function event1() {
-        $('#battleText').html(attackerWho + attacker.Name + ' used ' + attacker.Skills.skillName + '.');
+        $('#battleText').html(attacker.Name + '(' + attackerWho + ') used ' + attacker.Skills.skillName + '.');
         eventWhich = 'event2';
     }
 
     function event2() {
         if(Math.random() > .2) {
-            $('#battleText').html(defenderWho + defender.Name + ' takes ' + attacker.Skills.skillDMG + ' damage!');
+            $('#battleText').html(defender.Name + '(' + defenderWho + ') takes ' + attacker.Skills.skillDMG + ' damage!');
             defender.HP -= attacker.Skills.skillDMG;
             if (defender.HP <= 0) {
                 defender.HP = 0;
@@ -175,7 +176,7 @@ function mainBattle() {
     }
 
     function potion2() {
-        $('#battleText').html(attackerWho + attacker.Name + ' regained some HP.');
+        $('#battleText').html(attacker.Name + '(' + attackerWho + ') regained some HP.');
         if (attacker.HP + 20 > 60) {
             attacker.HP = 60;
         } else {
@@ -222,16 +223,16 @@ function mainBattle() {
         if (attacker == pokemon1) {
             attacker = pokemon2;
             defender = pokemon1;
-            attackerWho = 'Foe\'s '
-                defenderWho = 'Your '
-                eventWhich = 'event1';
+            var attackerWho = capitalizeFirstLetter(opponent.name);
+            var defenderWho = capitalizeFirstLetter(mainPlayer.name);
+            eventWhich = 'event1';
             nextEvent();
         } else {
             attacker = pokemon1;
             defender = pokemon2;
-            attackerWho = 'Your '
-                defenderWho = 'Foe\'s '
-                nextRound();
+            var attackerWho = capitalizeFirstLetter(mainPlayer.name);
+            var defenderWho = capitalizeFirstLetter(opponent.name);
+            nextRound();
         }
     }
 
