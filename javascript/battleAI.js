@@ -102,6 +102,7 @@ function mainBattle() {
     //$('#battleBox').append('<button class=\'btn btn-default\' id=\nextButton\'>Next</button>');
     $('#nextButton').text('Next');
     $('#nextButton').css('visibility', 'hidden');
+
     $(document).on('click', '#nextButton', nextEvent);
     $(document).on('click', '.attackButton', function() {
         $('#nextButton').css('visibility', 'visible');
@@ -203,7 +204,6 @@ function mainBattle() {
         $('#opponentHPNum').text(pokemon2.HP + '/50');
         $('#playerHPBar').html(hpBar(pokemon1.HP));
         $('#opponentHPBar').html(hpBar(pokemon2.HP));
-
     }
 
     function hpBar(input) {
