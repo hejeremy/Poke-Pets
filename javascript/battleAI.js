@@ -1,4 +1,4 @@
-var version = 43;
+var version = 44;
 console.log('Version - ' + version);
 
 // Link to database
@@ -87,7 +87,7 @@ function mainBattle() {
     var defender = pokemon2;
 
     var attackerWho = capitalizeFirstLetter(mainPlayer.name);
-    var defenderWho = capitalizeFirstLetter(opponent.name);
+    var defenderWho = capitalizeFirstLetter(opponent.Name);
 
     var eventWhich;
     var win;
@@ -223,7 +223,7 @@ function mainBattle() {
         if (attacker == pokemon1) {
             attacker = pokemon2;
             defender = pokemon1;
-            var attackerWho = capitalizeFirstLetter(opponent.name);
+            var attackerWho = capitalizeFirstLetter(opponent.Name);
             var defenderWho = capitalizeFirstLetter(mainPlayer.name);
             eventWhich = 'event1';
             nextEvent();
@@ -231,7 +231,7 @@ function mainBattle() {
             attacker = pokemon1;
             defender = pokemon2;
             var attackerWho = capitalizeFirstLetter(mainPlayer.name);
-            var defenderWho = capitalizeFirstLetter(opponent.name);
+            var defenderWho = capitalizeFirstLetter(opponent.Name);
             nextRound();
         }
     }
