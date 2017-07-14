@@ -134,7 +134,6 @@ function mainBattle() {
                 mainMenu();
                 break;
             default:
-                console.log('Nothing interesting happens.');
                 break;
         }
     }
