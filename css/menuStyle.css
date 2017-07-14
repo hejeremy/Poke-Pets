@@ -28,8 +28,7 @@ h2 {
 }
 
 #header {
-    background: #444;
-    border-bottom: 4px solid #222;
+    background: none;
     margin-bottom: 6vw;
 }
 
