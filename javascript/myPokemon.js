@@ -15,13 +15,8 @@ var currentPlayer;
 
 $(document).ready(function() {
 	// var player = JSON.parse(JSON.stringify(examplePlayer1));  //example player
-	console.log(localStorage.getItem("id"));
 	database.ref("users").once("value", function(snap) {
-		console.log(snap.val());
 		currentPlayer = snap.val()[localStorage.getItem("id")];
-
-		console.log(currentPlayer);
-
 
 		for (var i = 0; i<currentPlayer.pokemon.length; i++) {
 			var current = currentPlayer.pokemon[i];
@@ -36,8 +31,6 @@ $(document).ready(function() {
 			}).done(function(response) {
 				currentID = response["id"];
 				currentDesc = response["flavor_text_entries"][1]["flavor_text"];
-				console.log("ID: " +currentID);
-				console.log("Desc: " + currentDesc);
 
 				// creates main pokemon div
 				var pokemonDiv = $("<div>").addClass("pokemon").attr("id", current.Name);
@@ -57,7 +50,7 @@ $(document).ready(function() {
 				var desc = $("<div>").addClass("description").html(currentDesc);
 				var abilitiesTable = createTable(current.Skills.skillName, current.Skills.skillDMG);
 				var abilitiesPanel = createPanel("Abilities", abilitiesTable);
-				console.log(abilitiesPanel);
+				
 				//add contents into column
 				var subRow2 = createRowDiv("stats-detail").html(desc).append(abilitiesPanel);
 				stats.append(subRow2);
