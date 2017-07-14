@@ -54,7 +54,12 @@ body {
 }
 
 
-#main:hover, #my-pokemon:hover {
+#main:hover {
+	background: url("../images/pokeball.png") center no-repeat;;
+	filter: contrast(200%);
+}
+
+#my-pokemon:hover {
 	font-size: 16pt;
 
 }
@@ -225,7 +230,12 @@ body {
 
 }
 
-#main:hover, #my-pokemon:hover {
+#main:hover {
+	background: url("../images/pokeball.png") center no-repeat;;
+	filter: contrast(200%);
+} 
+
+#my-pokemon:hover {
 	font-size: 12pt;
 
 }
