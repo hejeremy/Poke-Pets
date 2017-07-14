@@ -1,0 +1,14 @@
+#menuButton {
+    display: block;
+    width: 48vh;
+    font-size: 12vh;
+    margin: auto;
+    margin-bottom: 4vh;
+    background: white;
+    border-radius: 8px;
+    border: 0;
+}
+
+#menuButtonText {
+    margin: 2vh 0 2vh 0;
+}
