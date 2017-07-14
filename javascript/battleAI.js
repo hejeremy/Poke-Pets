@@ -1,4 +1,4 @@
-var version = 37;
+var version = 38;
 console.log('Version - ' + version);
 
 // Link to database
@@ -59,7 +59,7 @@ function generateOpponent() {
 function setOpponent(name, image) {
     var pokemon = pokemonNames[Math.floor(Math.random()*pokemonNames.length)];
     var skills = new Skill('Tackle', 5);
-    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 24, 0, skills);
+    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 27, 0, skills);
     opponent = new Player(name, image, newPokemon);
 
     //console.log(opponent);
@@ -118,6 +118,7 @@ function mainBattle() {
 
     //EVERYTHING AFTER THIS IS ONLY CALLED IN mainBattle()
 
+    //Battle event handler, not scalar right now but it works and I don't want to risk something going wrong last second.
     function nextEvent() {
         eventNumber++;
         switch(eventNumber) {
@@ -131,21 +132,12 @@ function mainBattle() {
                 endRound();
                 break;
             case 4:
-                event1();
-                break;
-            case 5:
-                event2();
-                break;
-            case 6:
-                endRound();
-                break;
-            case 7:
                 endBattle();
                 break;
-            case 8:
+            case 5:
                 rewards();
                 break;
-            case 9:
+            case 6:
                 mainMenu();
                 break;
             default:
@@ -203,7 +195,7 @@ function mainBattle() {
 
     function endRound() {
         if (defender.HP <= 0) {
-            eventNumber = 6;
+            //eventNumber = 3;
             faintedText(defender.Name);
             return;
         }
@@ -213,6 +205,7 @@ function mainBattle() {
             defender = pokemon1;
             attackerWho = 'Foe\'s '
                 defenderWho = 'Your '
+                eventNumber = 0;
                 nextEvent();
         } else {
             attacker = pokemon1;
@@ -261,7 +254,7 @@ function mainBattle() {
     }
 
     function mainMenu() {
-        //window.location.href = 'https://hejeremy.github.io/Poke-Pets/';
-        window.history.back();
+        document.location.href = 'main.html';
+        //document.history.back();
     }
 }
