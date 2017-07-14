@@ -1,4 +1,4 @@
-var version = 23;
+var version = 24;
 console.log('Version - ' + version);
 
 // Link to database
@@ -109,7 +109,7 @@ function mainBattle() {
     $(document).on('click', '.attackButton', function() {
         $('#nextButton').css('visibility', 'visible');
         $('.attackButton').css('visibility', 'hidden');
-        event1();
+        nextEvent();
     });
 
     nextRound();
@@ -159,6 +159,8 @@ function mainBattle() {
     function event2() {
         if(Math.random() > .2) {
             $('#battleText').html(defender.Name + ' takes ' + attacker.Skills.skillDMG + ' damage!');
+            console.log('Defender HP: ' + defender.HP);
+            console.log('Attacker DMG: ' + attacker.Skills.skillDMG);
             defender.HP -= attacker.Skills.skillDMG;
             if (defender.HP <= 0) {
                 defender.HP = 0;
@@ -193,7 +195,7 @@ function mainBattle() {
     function nextRound() {
         refreshHP();
         eventNumber = 0;
-        $('#battleText').text('What will + ' + pokemon1.Name + ' do?');
+        $('#battleText').text('What will ' + pokemon1.Name + ' do?');
         $('#nextButton').css('visibility', 'hidden');
         $('.attackButton').css('visibility', 'visible');
     }
