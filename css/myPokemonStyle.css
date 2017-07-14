@@ -1,35 +1,59 @@
-/** {
+* {
 	box-sizing: border-box;
-	border: 1px solid black;
+/*	border: 1px solid black;*/
 }
-*/
+
 body {
 	background-color: #dce6f7;
+	background: url("../images/bg.jpg") fixed center;
 }
 
 #header {
-   background: #444;
-   border-bottom: 4px solid #222;
-   margin-bottom: 8vh;
-
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 #title {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-#pokeball {
-   display: inline-block;
-   height: 10vh;
-   margin: 1.5vh 2vh 1.5vh 0;
+	padding: 0;
 }
 
 #titleText {
-    display: inline-block;
-    width: 32vh;
-    margin: 0;
+	display: inline-block;
+	max-width: 60%;
+	width: auto;
+	height: auto;
+	margin: 0 10%;
+}
+
+#subheader {
+	margin-bottom: 1%;
+	height: 100%;
+/*	padding: 0;*/
+}
+
+#subtitle {
+	padding: 20px;
+}
+
+.subheader-nav {
+	background: url("../images/pokeball.png") center no-repeat;
+	background-size: contain;
+	padding: 20px;
+	color: #fff;
+	font-size: 12pt;
+	font-weight: bold;
+	text-shadow: 0px 0px 5px black;
+	-o-transition: .5s;
+  	-ms-transition: .5s;
+  	-moz-transition: .5s;
+ 	-webkit-transition: .5s;
+  	transition: .5s;
+}
+
+
+#main:hover, #my-pokemon:hover {
+	font-size: 16pt;
+
 }
 
 .main-section {
@@ -39,7 +63,7 @@ body {
 .pokemon {
 	padding: 15px 25px 10px 25px;
 	margin: 20px auto;
-	background: rgba(255,255,255, 0.5);
+	background: rgba(255,255,255, 0.7);
 	border-radius: 20px 0 20px 0;
 	width: 100%;
 	-o-transition: .5s;
@@ -55,7 +79,6 @@ body {
 
 .img-container {
 	text-align: center;
-	/*background-color: #fff;*/
 	border-radius: 20px;
 	padding: 10px 20px 0 20px;
 	margin-top: 1%;
@@ -87,20 +110,31 @@ body {
 	padding: 5px 10px;
 	background-color: #fff2ce;
 	border-radius: 20px;
+	font-size: 20pt;
 }
 
+/*stats sections within pokemon div*/
 .stats-detail {
 	padding: 0 15px;
 }
 
-.hp, .xp, .lvl {
+/*circles under image*/
+.hp, .xp {
 	display: inline-block;
 	background-color: #fff;
 	border-radius: 50%;
 	width: 50px;
 	height: 50px;
 	margin: 5px;
+	padding: 2px;
+	font-size: 8pt;
+	background-color: #d4f7aa;
+}
 
+/*numbers inside stat*/
+.stat-value {
+	font-weight: bold;
+	font-size: 12pt;
 }
 
 .description {
@@ -109,6 +143,7 @@ body {
 	background-color: #fff;
 	border-radius: 20px;
 	padding: 10px 20px;
+	font-size: 10pt;
 }
 
 .panel {
@@ -116,11 +151,11 @@ body {
 }
 
 .panel .panel-heading {
-	border-radius: 20px 20px 0 0;
+	border-radius: 18px 18px 0 0;
 	padding: 5px 15px;
 	font-weight: bold;
 	border: none;
-	background-color: red;
+	background-color: #7d81d1;
 }
 
 .panel-body {
@@ -128,8 +163,9 @@ body {
 	margin-bottom: 0;
 }
 
-.pokemon-stats h4, .hp, .xp, .lvl, .description, .panel, .panel-heading {
+.pokemon-stats h4, .hp, .xp, .description, .panel {
 	border: 1px solid #aaa;
+	box-shadow: 5px 3px 2px #9198a3;
 }
 
 .table {
@@ -158,16 +194,37 @@ body {
 @media screen and (max-width: 768px) {
 
 #header {
-   margin-bottom: 1vh;
-
+	margin-top: 0;
 }
 
-.pokemon {
+#title {
+	padding: 5px;
+	background: rgba(203, 216, 207,0.5);
+	margin-bottom: 10px;
+}
+
+#titleText {
+	max-width: 50%;
+}
+
+.pokemon, .subheader-nav {
 	-o-transition: none;
   	-ms-transition: none;
   	-moz-transition: none;
  	-webkit-transition: none;
   	transition: none;
+}
+
+.subheader-nav {
+	background: url("../images/pokeball.png") center no-repeat;
+	background-size: contain;
+	padding: 15px;
+
+}
+
+#main:hover, #my-pokemon:hover {
+	font-size: 12pt;
+
 }
 
 .pokemon:hover {
