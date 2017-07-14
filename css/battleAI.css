@@ -22,7 +22,6 @@ img {
 #hpProgress {
     background: linear-gradient(rgb(209, 230, 255), rgb(98, 160, 243));
     height: calc(2vh - 2px);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-radius: 8px;
 }
 
