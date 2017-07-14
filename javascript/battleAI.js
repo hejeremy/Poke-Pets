@@ -242,7 +242,7 @@ function mainBattle() {
         $('#battleText').text('What will ' + pokemon1.Name + ' do?');
         $('#nextButton').css('visibility', 'hidden');
         $('.attackButton').css('visibility', 'visible');
-        $('.itemButton').css('visibility', 'visibile');
+        $('.itemButton').css('visibility', 'visible');
     }
 
     function faintedText(input) {
