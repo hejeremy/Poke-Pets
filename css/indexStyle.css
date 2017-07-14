@@ -4,8 +4,7 @@ body {
 }
 
 #header {
-    background: #444;
-    border-bottom: 4px solid #222;
+    background: none;
     margin-bottom: 24vh;
 }
 
@@ -28,14 +27,14 @@ body {
 }
 
 #signinDiv {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
 }
 
 #signin {
     font-size: 3.5vh;
-    border-bottom: 4px solid #dce6f7;
-    margin: 0 -15px 4vh -15px;
+    border-bottom: 1px solid black;
+    margin: 0 0px 4vh 0px;
     padding: 3vh;
     color: #444;
 }
