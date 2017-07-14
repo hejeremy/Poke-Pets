@@ -1,4 +1,4 @@
-var version = 38;
+var version = 39;
 console.log('Version - ' + version);
 
 // Link to database
@@ -24,14 +24,10 @@ var mainPlayer;
 
 database.ref('users').once('value', function(snapshot) {
     mainPlayer = snapshot.val()[localStorage.getItem('id')];
-    //console.log(snapshot);
-    //console.log(mainPlayer);
-    //console.log(mainPlayer.profilePic);
     startBattle();
 });
 
 $(document).on('click', '#clearYourself', function() {
-    console.log('You have been cleared.');
     database.ref('users').child(localStorage.getItem('id')).remove();
     window.location.href = 'https://hejeremy.github.io/Poke-Pets/main.html';
 });
@@ -53,7 +49,6 @@ function generateOpponent() {
         url: 'https://randomuser.me/api/',
         dataType: 'json',
         success: function(data) {
-            //console.log(data);
             setOpponent(data.results[0].name.first, data.results[0].picture.large);
             renderImages();
             mainBattle();
@@ -66,9 +61,6 @@ function setOpponent(name, image) {
     var skills = new Skill('Tackle', 5);
     var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 27, 0, skills);
     opponent = new Player(name, image, newPokemon);
-
-    //console.log(opponent);
-
 }
 
 function capitalizeFirstLetter(string) {
@@ -77,7 +69,6 @@ function capitalizeFirstLetter(string) {
 
 function startBattle() {
     generateOpponent();
-    //console.log(mainPlayer);
 }
 
 function renderImages() {
@@ -97,10 +88,7 @@ function mainBattle() {
     var attacker = pokemon1;
     var defender = pokemon2;
     var attackerWho = 'Your '
-        var defenderWho = 'Foe\'s '
-        //var playerTurn = true;
-        console.log(pokemon1);
-    console.log(pokemon2);
+        var defenderWho = 'Foe\'s ';
 
     var eventNumber = 0;
     var win;
@@ -158,11 +146,8 @@ function mainBattle() {
     function event2() {
         if(Math.random() > .2) {
             $('#battleText').html(defenderWho + defender.Name + ' takes ' + attacker.Skills.skillDMG + ' damage!');
-            //console.log('Defender HP: ' + defender.HP);
-            //console.log('Attacker DMG: ' + attacker.Skills.skillDMG);
             defender.HP -= attacker.Skills.skillDMG;
             if (defender.HP <= 0) {
-                console.log('Defender HP reached 0.');
                 defender.HP = 0;
             }
         } else {
@@ -211,7 +196,7 @@ function mainBattle() {
             attackerWho = 'Foe\'s '
                 defenderWho = 'Your '
                 eventNumber = 0;
-                nextEvent();
+            nextEvent();
         } else {
             attacker = pokemon1;
             defender = pokemon2;
