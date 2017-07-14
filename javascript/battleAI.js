@@ -51,6 +51,7 @@ function generateOpponent() {
             //console.log(data);
             setOpponent(data.results[0].name.first, data.results[0].picture.large);
             renderImages();
+            mainBattle();
         }
     });
 }
@@ -79,13 +80,20 @@ function renderImages() {
 
     $('#playerName').html('<h2>' + mainPlayer.name + '</h2>');
     $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
-    $('#playerPokemon').html('<img class=\'pokemonImage\' src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
+    $('#playerPokemon').prepend('<img class=\'pokemonImage\' src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
 
     $('#opponentName').html('<h2>' + capitalizeFirstLetter(opponent.Name) + '</h2>');
     $('#opponentImage').html('<img src=\'' + opponent.Image + '\' alt=\'Opponent Image\'>');
-    $('#opponentPokemon').html('<img class=\'pokemonImage\' src=\'' + opponent.Pokemon.ImgLarge + '\' alt=\'Opponent Pokemon\'>');
+    $('#opponentPokemon').append('<img class=\'pokemonImage\' src=\'' + opponent.Pokemon.ImgLarge + '\' alt=\'Opponent Pokemon\'>');
 }
 
+//Everything for battling happens in here
+function mainBattle() {
+    var pokemon1 = mainPlayer.Pokemon[0];
+    var pokemon2 = opponent.pokemon;
+    console.log(player1);
+    console.log(player2);
+}
 
 /*
 //TEST BATTLE
