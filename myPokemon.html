@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Pokémon</title>
+	<title>My Pok&eacute;mon</title>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	crossorigin="anonymous"></script>
@@ -17,11 +17,21 @@
 <body>
 <!-- Banner -->
     <div id="header" class="text-center container-fluid">
-        <div id="title" class="col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1">
-            <img id="pokeball" src="https://vignette3.wikia.nocookie.net/youtubepoop/images/4/4c/Pokeball.png/revision/latest?cb=20150418234807">
-            <img id="titleText" src="images/logo.png">
+    	<div class="row">
+	        <div id="title" class="col-sm-6 col-xs-12 col-sm-offset-3 col-xs-offset-0">
+	            <!-- <img class="pokeball" src="https://vignette3.wikia.nocookie.net/youtubepoop/images/4/4c/Pokeball.png/revision/latest?cb=20150418234807"> -->
+	            <img id="titleText" src="images/logo.png">
+	            
+	        </div>
         </div>
-    </div>
+
+	    <div id="subheader" class="text-center row">
+	        <div id="subtitle" class="col-md-6 col-xs-12 col-md-offset-3 col-xs-offset-0">
+	            <span class="subheader-nav" id="main">Main Menu</span>
+	            <span class="subheader-nav" id="my-pokemon">My Pok&eacute;mon</span>
+	    	</div>
+	    </div>
+	</div>
 
 	<div class="container-fluid">
 		<div class="row">
@@ -30,10 +40,10 @@
 			<div class="col-sm-8 col-xs-12">
 
 			<!-- middle section on larger screens -->
-				<div class="main-section" id="my-pokemon">
+				<div class="main-section">
 
 				<!-- div created dynamically for each pokemon -->
-					<!-- <div class="pokemon" id="pokemon-name0">
+				<!-- 	<div class="pokemon" id="pokemon-name0">
 						<div class="row">
 							<div class="col-xs-4 img-container">
 								<img class="pokemon-img" src="images/squirtle_lg.png">
@@ -78,7 +88,7 @@
 								
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="pokemon" id="pokemon-name1">
 						<div class="row">
@@ -87,9 +97,15 @@
 								<div class="stats-detail row">
 										<div class="hp">
 										HP
+											<div class="stat-value">
+											50
+											</div>
 										</div>
 										<div class="xp">
 										XP
+											<div class="stat-value">
+											0
+											</div>
 										</div>
 								</div>
 							</div>
@@ -121,7 +137,7 @@
 								</div>							
 							</div>
 						</div>
-					</div> -->
+					</div>
 				</div>
 			</div>
 			<div class="col-sm-2 col-xs-0">
