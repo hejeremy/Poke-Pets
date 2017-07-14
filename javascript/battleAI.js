@@ -1,4 +1,4 @@
-var version = 26;
+var version = 27;
 console.log('Version - ' + version);
 
 // Link to database
@@ -209,10 +209,10 @@ function mainBattle() {
 
     function endBattle() {
         if (attacker == pokemon1) {
-            $('#battleText').text(player1.Name + 'wins!');
+            $('#battleText').text(mainPlayer.Name + 'wins!');
             win = true;
         } else {
-            $('#battleText').text(player1.Name + 'lost!');
+            $('#battleText').text(mainPlayer.Name + 'lost!');
             win = false;
         }
     }
@@ -221,9 +221,9 @@ function mainBattle() {
         if (win) {
             expReward = 10 + Math.ceil(10*Math.random());
             moneyReward = 100 + Math.ceil(50*Math.random());
-            $('#battleText').text(player1.Name + ' gets ' + expReward + 'EXP and $' + moneyReward + ' for winning.');
+            $('#battleText').text(mainPlayer.Name + ' gets ' + expReward + 'EXP and $' + moneyReward + ' for winning.');
         } else {
-            $('#battleTExt').text(player1.Name + ' gets nothing for losing.');
+            $('#battleTExt').text(mainPlayer.Name + ' gets nothing for losing.');
         }
         $('#nextButton').text('Main Menu');
     }
