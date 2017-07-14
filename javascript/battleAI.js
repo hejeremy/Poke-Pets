@@ -38,6 +38,11 @@ $(document).on('click', '#clearYourself', function() {
 
 //$(document).on('click', '#startBattle', startBattle);
 
+// Return Button
+$("#menuButton").click(function() {
+    document.location.href = "main.html";
+});
+
 var opponent;
 
 function generateOpponent() {
@@ -265,3 +270,4 @@ function mainBattle() {
         window.history.back();
     }
 }
+
