@@ -55,7 +55,7 @@ body {
 
 
 #main:hover {
-	cursor: hand;
+	cursor: pointer;
 	filter: contrast(200%);
 }
 
@@ -231,7 +231,7 @@ body {
 }
 
 #main:hover {
-	cursor: hand;
+	cursor: pointer;
 	filter: contrast(200%);
 } 
 
