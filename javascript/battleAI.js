@@ -1,4 +1,4 @@
-var version = 49;
+var version = 50;
 console.log('Version - ' + version);
 
 // Link to database
@@ -33,7 +33,7 @@ $(document).on('click', '#clearYourself', function() {
 });
 
 // Return Button
-$("#menuButton").click(function() {
+$("#main").click(function() {
     document.location.href = "main.html";
 });
 
