@@ -14,11 +14,16 @@ Results:
 Team Effors:
 - At the beginning we had macro goals where we assigned sections such as frontend menu, battling, and backend user authentication to each person
 - Eventually we started borrowing functions from each others' javascript and borrowing css styling as it became convenient for our different sections to become standardized
+- We used GitHub collaboration
 
 Individual Responsibilities:
 - Alec handled the backend Facebook user authentication and Firebase storage
+    -
 - Caroline created the myPokemon menu that displays all Pokemon currently owend by the player, and designed a majority of the css styling we use.
+    - Our CSS looked like crap, so Caroline designed most of what our current layout, background images, and overall asethetic display
 - Jeremy created the current battle system where you face off against a random AI
+    - The structure of the player information that is stored was planned by Jeremy to become scalable for possible updates where a shop system can be implemented
+    - The current battle system is designed so player use items that will be bought from the shop, and a Pokemon array that can hold additional Pokemon
 
 Improvements:
 - If we had more time, we could have done extensive compatibility testing to make sure it work properly on any versions of browsers
