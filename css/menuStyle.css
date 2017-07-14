@@ -1,5 +1,6 @@
 body {
-    background: #dce6f7;
+    background-color: #dce6f7;
+	background: url("../images/bg.jpg") fixed center;
 }
 
 h2 {
@@ -27,8 +28,7 @@ h2 {
 }
 
 #header {
-    background: #444;
-    border-bottom: 4px solid #222;
+    background: none;
     margin-bottom: 6vw;
 }
 
