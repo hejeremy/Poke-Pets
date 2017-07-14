@@ -55,7 +55,6 @@ body {
 
 
 #main:hover {
-	background: url("../images/pokeball.png") center no-repeat;;
 	filter: contrast(200%);
 }
 
@@ -231,7 +230,6 @@ body {
 }
 
 #main:hover {
-	background: url("../images/pokeball.png") center no-repeat;;
 	filter: contrast(200%);
 } 
 
