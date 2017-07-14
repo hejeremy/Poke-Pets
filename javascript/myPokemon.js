@@ -25,8 +25,6 @@ $(document).ready(function() {
 
 		   	var queryURL = "https://pokeapi.co/api/v2/pokemon-species/" + current.Name.toLowerCase() + "/";
 
-
-
 		   $.ajax({
 				url: queryURL,
 				async: false,
@@ -34,6 +32,21 @@ $(document).ready(function() {
 			}).done(function(response) {
 				currentID = response["id"];
 				currentDesc = response["flavor_text_entries"][1]["flavor_text"];
+
+				// creates main pokemon div
+				var pokemonDiv = $("<div>").addClass("pokemon").attr("id", current.Name);
+				// creates column to hold img and stats
+				var container = $("<div>").addClass("col-xs-4 img-container");
+				// contents of column
+				var img = $("<img>").addClass("pokemon-img").attr("src", current.ImgLarge);
+				var hp = createStatsDiv("hp", current.HP);
+				var lvl = createStatsDiv("lvl", expToLevel(current.EXP).level);
+				// add contents into column
+				var subRow1 = createRowDiv("stats-detail");
+				subRow1.append(hp);
+				subRow1.append(lvl);
+				container.html(img).append(subRow1);
+
 				//creates column to hold name, description, etc
 				var stats = $("<div>").addClass("pokemon-stats col-xs-8").html("<h6>no. " +  currentID + "</h6><h4>" + current.Name + "</h4>");
 				//contents of column
