@@ -186,8 +186,17 @@ function mainBattle() {
         // Make Pokemon HP Bar
         var hpBar = $("<div class='hpBar'>");
         var hpProgress = $("<div class='hpProgress'>");
+        var percentage = 100*input/60;
 
-        hpProgress.css("width", (100*input/60) + "%");
+        if (percentage <= 25) {
+            hpProgress.css('background', 'red');
+        } else if (percentage > 25 && percentage <= 50) {
+            hpProgress.css('background', 'yellow');
+        } else {
+            hpProgress.css('background', 'green');
+        }
+
+        hpProgress.css("width", percentage + "%");
         hpBar.append(hpProgress);
         return hpBar;
     }
