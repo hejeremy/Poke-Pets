@@ -1,4 +1,4 @@
-var version = 19;
+var version = 20;
 console.log('Version - ' + version);
 
 // Link to database
@@ -89,18 +89,14 @@ function renderImages() {
 
 //Everything for battling happens in here
 function mainBattle() {
-    var pokemon1 = mainPlayer.Pokemon[0];
-    var pokemon2 = opponent.pokemon;
+    var pokemon1 = mainPlayer.pokemon[0];
+    var pokemon2 = opponent.Pokemon;
     console.log(player1);
     console.log(player2);
 }
 
 /*
 //TEST BATTLE
-//var player1 = JSON.parse(JSON.stringify(mainPlayer));
-var player1 = JSON.parse(JSON.stringify(examplePlayer2));
-var player2 = JSON.parse(JSON.stringify(examplePlayer3));
-
 var attacker = player1;
 var defender = player2;
 
