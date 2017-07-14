@@ -1,4 +1,4 @@
-var version = 39;
+var version = 40;
 console.log('Version - ' + version);
 
 // Link to database
@@ -31,8 +31,6 @@ $(document).on('click', '#clearYourself', function() {
     database.ref('users').child(localStorage.getItem('id')).remove();
     window.location.href = 'https://hejeremy.github.io/Poke-Pets/main.html';
 });
-
-//$(document).on('click', '#startBattle', startBattle);
 
 // Return Button
 $("#menuButton").click(function() {
@@ -90,7 +88,7 @@ function mainBattle() {
     var attackerWho = 'Your '
         var defenderWho = 'Foe\'s ';
 
-    var eventNumber = 0;
+    var eventWhich;
     var win;
 
     var expReward = 0;
@@ -104,6 +102,15 @@ function mainBattle() {
     $(document).on('click', '.attackButton', function() {
         $('#nextButton').css('visibility', 'visible');
         $('.attackButton').css('visibility', 'hidden');
+        $('.itemButton').css('visibility', 'hidden');
+        eventWhich = 'event1';
+        nextEvent();
+    });
+    $(document).on('click', '.itemButton', function() {
+        $('#nextButton').css('visibility', 'visible');
+        $('.attackButton').css('visibility', 'hidden');
+        $('.itemButton').css('visibility', 'hidden');
+        eventWhich = 'potion1';
         nextEvent();
     });
 
@@ -113,24 +120,29 @@ function mainBattle() {
 
     //Battle event handler, not scalar right now but it works and I don't want to risk something going wrong last second.
     function nextEvent() {
-        eventNumber++;
-        switch(eventNumber) {
-            case 1:
+        switch(eventWhich) {
+            case 'event1':
                 event1();
                 break;
-            case 2:
+            case 'event2':
                 event2();
                 break;
-            case 3:
+            case 'potion1':
+                potion1();
+                break;
+            case 'potion2':
+                potion2();
+                break;
+            case 'endRound':
                 endRound();
                 break;
-            case 4:
+            case 'endBattle':
                 endBattle();
                 break;
-            case 5:
+            case 'rewards':
                 rewards();
                 break;
-            case 6:
+            case 'mainMenu':
                 mainMenu();
                 break;
             default:
@@ -141,6 +153,7 @@ function mainBattle() {
 
     function event1() {
         $('#battleText').html(attackerWho + attacker.Name + ' used ' + attacker.Skills.skillName + '.');
+        eventWhich = 'event2';
     }
 
     function event2() {
@@ -154,6 +167,23 @@ function mainBattle() {
             $('#battleText').html('It missed!');
         }
         refreshHP();
+        eventWhich = 'endRound()';
+    }
+
+    function potion1() {
+        $('#battleText').html(attackerWho + ' used a potion.');
+        eventWhich = 'potion2';
+    }
+
+    function potion2() {
+        $('#battleText').html(attackerWho + attacker.Name + ' regained some HP.');
+        if (attacker.HP + 20 > 60) {
+            attacker.HP = 60;
+        } else {
+            attacker.HP += 20;
+        }
+        refreshHP();
+        eventWhich = 'endRound()';
     }
 
     function refreshHP() {
@@ -185,7 +215,7 @@ function mainBattle() {
 
     function endRound() {
         if (defender.HP <= 0) {
-            //eventNumber = 3;
+            eventWhich = 'endBattle';
             faintedText(defender.Name);
             return;
         }
@@ -195,7 +225,7 @@ function mainBattle() {
             defender = pokemon1;
             attackerWho = 'Foe\'s '
                 defenderWho = 'Your '
-                eventNumber = 0;
+                eventWhich = 'event1';
             nextEvent();
         } else {
             attacker = pokemon1;
@@ -208,10 +238,11 @@ function mainBattle() {
 
     function nextRound() {
         refreshHP();
-        eventNumber = 0;
+        eventWhich = 'event1';
         $('#battleText').text('What will ' + pokemon1.Name + ' do?');
         $('#nextButton').css('visibility', 'hidden');
         $('.attackButton').css('visibility', 'visible');
+        $('.itemButton').css('visibility', 'hidden');
     }
 
     function faintedText(input) {
@@ -226,6 +257,7 @@ function mainBattle() {
             $('#battleText').text(mainPlayer.name + ' lost!');
             win = false;
         }
+        eventWhich = 'rewards';
     }
 
     function rewards() {
@@ -240,12 +272,12 @@ function mainBattle() {
             experience: mainPlayer.experience += expReward,
             pokedollar: mainPlayer.pokedollar += moneyReward,
         });
+        eventWhich = 'mainMenu';
         $('#nextButton').text('Return');
     }
 
     function mainMenu() {
         document.location.href = 'main.html';
-        //document.history.back();
     }
 }
 
