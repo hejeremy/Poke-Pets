@@ -1,4 +1,4 @@
-var version = 37;
+var version = 39;
 console.log('Version - ' + version);
 
 // Link to database
@@ -24,14 +24,10 @@ var mainPlayer;
 
 database.ref('users').once('value', function(snapshot) {
     mainPlayer = snapshot.val()[localStorage.getItem('id')];
-    //console.log(snapshot);
-    //console.log(mainPlayer);
-    //console.log(mainPlayer.profilePic);
     startBattle();
 });
 
 $(document).on('click', '#clearYourself', function() {
-    console.log('You have been cleared.');
     database.ref('users').child(localStorage.getItem('id')).remove();
     window.location.href = 'https://hejeremy.github.io/Poke-Pets/main.html';
 });
@@ -53,7 +49,6 @@ function generateOpponent() {
         url: 'https://randomuser.me/api/',
         dataType: 'json',
         success: function(data) {
-            //console.log(data);
             setOpponent(data.results[0].name.first, data.results[0].picture.large);
             renderImages();
             mainBattle();
@@ -64,11 +59,8 @@ function generateOpponent() {
 function setOpponent(name, image) {
     var pokemon = pokemonNames[Math.floor(Math.random()*pokemonNames.length)];
     var skills = new Skill('Tackle', 5);
-    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 24, 0, skills);
+    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 27, 0, skills);
     opponent = new Player(name, image, newPokemon);
-
-    //console.log(opponent);
-
 }
 
 function capitalizeFirstLetter(string) {
@@ -77,7 +69,6 @@ function capitalizeFirstLetter(string) {
 
 function startBattle() {
     generateOpponent();
-    //console.log(mainPlayer);
 }
 
 function renderImages() {
@@ -97,10 +88,7 @@ function mainBattle() {
     var attacker = pokemon1;
     var defender = pokemon2;
     var attackerWho = 'Your '
-        var defenderWho = 'Foe\'s '
-        //var playerTurn = true;
-        console.log(pokemon1);
-    console.log(pokemon2);
+        var defenderWho = 'Foe\'s ';
 
     var eventNumber = 0;
     var win;
@@ -123,6 +111,7 @@ function mainBattle() {
 
     //EVERYTHING AFTER THIS IS ONLY CALLED IN mainBattle()
 
+    //Battle event handler, not scalar right now but it works and I don't want to risk something going wrong last second.
     function nextEvent() {
         eventNumber++;
         switch(eventNumber) {
@@ -136,21 +125,12 @@ function mainBattle() {
                 endRound();
                 break;
             case 4:
-                event1();
-                break;
-            case 5:
-                event2();
-                break;
-            case 6:
-                endRound();
-                break;
-            case 7:
                 endBattle();
                 break;
-            case 8:
+            case 5:
                 rewards();
                 break;
-            case 9:
+            case 6:
                 mainMenu();
                 break;
             default:
@@ -166,11 +146,8 @@ function mainBattle() {
     function event2() {
         if(Math.random() > .2) {
             $('#battleText').html(defenderWho + defender.Name + ' takes ' + attacker.Skills.skillDMG + ' damage!');
-            //console.log('Defender HP: ' + defender.HP);
-            //console.log('Attacker DMG: ' + attacker.Skills.skillDMG);
             defender.HP -= attacker.Skills.skillDMG;
             if (defender.HP <= 0) {
-                console.log('Defender HP reached 0.');
                 defender.HP = 0;
             }
         } else {
@@ -208,7 +185,7 @@ function mainBattle() {
 
     function endRound() {
         if (defender.HP <= 0) {
-            eventNumber = 6;
+            //eventNumber = 3;
             faintedText(defender.Name);
             return;
         }
@@ -218,7 +195,8 @@ function mainBattle() {
             defender = pokemon1;
             attackerWho = 'Foe\'s '
                 defenderWho = 'Your '
-                nextEvent();
+                eventNumber = 0;
+            nextEvent();
         } else {
             attacker = pokemon1;
             defender = pokemon2;
@@ -266,8 +244,8 @@ function mainBattle() {
     }
 
     function mainMenu() {
-        //window.location.href = 'https://hejeremy.github.io/Poke-Pets/';
-        window.history.back();
+        document.location.href = 'main.html';
+        //document.history.back();
     }
 }
 
