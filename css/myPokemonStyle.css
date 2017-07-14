@@ -5,7 +5,7 @@
 
 body {
 	background-color: #dce6f7;
-	background: url("images/bg.jpg") fixed center;
+	background: url("../images/bg.jpg") fixed center;
 }
 
 #header {
@@ -36,7 +36,7 @@ body {
 }
 
 .subheader-nav {
-	background: url("images/pokeball.png") center no-repeat;
+	background: url("../images/pokeball.png") center no-repeat;
 	background-size: contain;
 	padding: 20px;
 	color: #fff;
