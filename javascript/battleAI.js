@@ -1,4 +1,4 @@
-var version = 28;
+var version = 29;
 console.log('Version - ' + version);
 
 // Link to database
@@ -33,7 +33,7 @@ database.ref('users').once('value', function(snapshot) {
 $(document).on('click', '#clearYourself', function() {
     console.log('You have been cleared.');
     database.ref('users').child(localStorage.getItem('id')).remove();
-    window.location.href = 'https://hejeremy.github.io/Poke-Pets/';
+    window.location.href = 'https://hejeremy.github.io/Poke-Pets/main.html';
 });
 
 //$(document).on('click', '#startBattle', startBattle);
