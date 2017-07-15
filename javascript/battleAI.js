@@ -213,7 +213,7 @@ function mainBattle() {
         var percentage = 100*input/60;
         var hpProgressText = $("<h1 id='hpProgressText'>" + input + '/60' + "</h1>");
         
-        hpProgress.css('background', 'linear-gradient(' + getColorForPercentage(percentage/100)[0] + ', ' + getColorForPercentage(percentage/100)[1] + ')';
+        hpProgress.css('background', 'linear-gradient(' + getColorForPercentage(percentage/100)[0] + ', ' + getColorForPercentage(percentage/100)[1] + ')');
 
         hpProgress.css("width", percentage + "%");
 
