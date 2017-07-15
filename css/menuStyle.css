@@ -161,7 +161,7 @@ h2 {
     margin-bottom: 5vh;
     padding: 30px;
     background-size: contain;
-    background: url(../images/pokeball.png) center no-repeat;
+    background: url(../images/pokeball2.png) center no-repeat;
     border-radius: 8px;
     border: none;
     -o-transition: .5s;
@@ -173,7 +173,7 @@ h2 {
 
 .button:hover {
     cursor: pointer;
-    filter: contrast(200%);
+    filter: contrast(150%);
 }
 
 .buttonText {
