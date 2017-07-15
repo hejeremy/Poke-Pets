@@ -225,12 +225,14 @@ function mainBattle() {
         hpProgress.css("width", percentage + "%");
 
         // Center Text
+        console.log($(".hpBar").width());
         var center = hpBar.width() - (hpProgressText.width()/2);
         console.log(center);
         hpProgressText.css("left", center);
         hpProgress.append(hpProgressText);
 
         hpBar.append(hpProgress);
+        console.log($(".hpBar").width());
         return hpBar;
     }
 
