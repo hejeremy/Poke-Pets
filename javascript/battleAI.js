@@ -1,4 +1,4 @@
-var version = 60;
+var version = 61;
 console.log('Version - ' + version);
 
 // Link to database
@@ -286,7 +286,7 @@ function mainBattle() {
         database.ref('users').child(localStorage.getItem('id')).update({
             experience: mainPlayer.experience += expReward,
             pokedollar: mainPlayer.pokedollar += moneyReward,
-            pokemon[0].EXP: pokemon[0].EXP += expReward,
+            pokemon[0].EXP: mainPlayer.pokemon[0].EXP += expReward,
         });
         eventWhich = 'mainMenu';
         $('#nextButton').text('Return');
