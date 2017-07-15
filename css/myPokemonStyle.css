@@ -59,11 +59,6 @@ body {
 	filter: contrast(200%);
 }
 
-#my-pokemon:hover {
-	font-size: 16pt;
-
-}
-
 #main-section {
 	margin-bottom: 100px;
 }
@@ -235,11 +230,6 @@ body {
 	cursor: pointer;
 	filter: contrast(200%);
 } 
-
-#my-pokemon:hover {
-	font-size: 12pt;
-
-}
 
 .pokemon:hover {
 	width: 100%;
