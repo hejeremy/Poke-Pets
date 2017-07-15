@@ -286,6 +286,7 @@ function mainBattle() {
         database.ref('users').child(localStorage.getItem('id')).update({
             experience: mainPlayer.experience += expReward,
             pokedollar: mainPlayer.pokedollar += moneyReward,
+            pokemon[0].EXP: pokemon[0].EXP += expReward,
         });
         eventWhich = 'mainMenu';
         $('#nextButton').text('Return');
