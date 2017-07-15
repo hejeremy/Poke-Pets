@@ -17,6 +17,12 @@ h2 {
     width: 24vh;
 }
 
+.starterText {
+    font-size: 3vh;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
 #pokemon1, #pokemon2, #pokemon3 {
     margin-bottom: 2vh;
     border-radius: 8px;
@@ -185,6 +191,9 @@ h2 {
 
 @media screen and (max-width: 768px) {
 
+.starterText {
+    margin-top:20px;
+}
 #header {
     margin-top: 0;
 }
