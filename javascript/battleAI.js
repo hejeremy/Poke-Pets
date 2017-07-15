@@ -1,4 +1,4 @@
-var version = 55;
+var version = 56;
 console.log('Version - ' + version);
 
 // Link to database
@@ -208,10 +208,10 @@ function mainBattle() {
 
     function hpBar(input) {
         // Make Pokemon HP Bar
-        var hpBar = $("<div class='hpBar text-center'>");
+        var hpBar = $("<div class='hpBar'>");
         var hpProgress = $("<div class='hpProgress'>");
         var percentage = 100*input/60;
-        hpBar.text(input + '/60');
+        hpProgress.text(input + '/60');
 
         if (percentage <= 25) {
             hpProgress.css('background', 'linear-gradient\(rgb\(230, 20, 0), rgb\(255, 255, 255\)\)');
