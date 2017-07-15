@@ -14,7 +14,8 @@ h2 {
 }
 
 .starterImage {
-    width: 24vh;
+    max-width:20vw;
+    width:auto;
     margin:20px;
 }
 
@@ -25,6 +26,7 @@ h2 {
 }
 
 .pokemon-container {
+    width:30%;
     display: inline-block;
     margin: 10px auto;
 }
@@ -32,7 +34,6 @@ h2 {
 #pokemon1, #pokemon2, #pokemon3 {
     margin-bottom: 2vh;
     border-radius: 8px;
-    width: 20vw;
     background: rgba(255,255,255,0.5);
     -o-transition: .5s;
     -ms-transition: .5s;
@@ -58,12 +59,6 @@ h2 {
 
 #title {
     padding: 0;
-}
-
-#pokeball {
-    display: inline-block;
-    height: 10vh;
-    margin: 1.5vh 2vh 1.5vh 0;
 }
 
 #titleText {
@@ -211,6 +206,7 @@ h2 {
 
 .pokemon-container {
     display: block;
+    width: 100%;
 }
 
 #header {
