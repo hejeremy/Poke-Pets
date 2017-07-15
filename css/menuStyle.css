@@ -52,7 +52,7 @@ h2 {
     max-width: 60%;
     width: auto;
     height: auto;
-    margin: 0 10%;
+    margin: 0 10% 5% 10%;
 }
 
 #content, #player {
@@ -131,8 +131,10 @@ h2 {
 
 #playerName {
     display: block;
-    font-size: 6vh;
-    margin-top: 15px;
+    font-size: 5vh;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 20px;
 
 }
 
@@ -142,6 +144,9 @@ h2 {
     bottom: 0;
     font-size: 3vh;
     margin: 0;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
 }
 
 .button {
@@ -162,4 +167,25 @@ h2 {
 
 .buttonText {
     margin: 2vh 0 2vh 0;
+}
+
+@media screen and (max-width: 768px) {
+
+#header {
+    margin-top: 0;
+}
+
+#title {
+    padding: 5px;
+    background: rgba(203, 216, 207,0.5);
+    margin: 0 10%;
+}
+
+#titleText {
+    max-width: 50%;
+}
+
+#player {
+    border-radius: 0;
+}
 }
