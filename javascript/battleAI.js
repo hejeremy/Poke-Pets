@@ -212,8 +212,7 @@ function mainBattle() {
         var hpProgress = $("<div class='hpProgress'>");
         var percentage = 100*input/60;
         var hpProgressText = $("<h1 id='hpProgressText'>" + input + '/60' + "</h1>");
-        hpProgressText.css("left", JSON.stringify(calc(50% - hpProgressText.width()/2)));
-        hpProgress.append(hpProgressText);
+        
 
         if (percentage <= 25) {
             hpProgress.css('background', 'linear-gradient\(rgb\(230, 20, 0), rgb\(255, 255, 255\)\)');
@@ -224,6 +223,12 @@ function mainBattle() {
         }
 
         hpProgress.css("width", percentage + "%");
+
+        // Center Text
+        var center = hpProgress.width() - hpProgressText.width()/2;
+        hpProgressText.css("left", center);
+        hpProgress.append(hpProgressText);
+
         hpBar.append(hpProgress);
         return hpBar;
     }
