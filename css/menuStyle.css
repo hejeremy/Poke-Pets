@@ -155,20 +155,20 @@ h2 {
 }
 
 .button {
-    display: block;
-    width: 48vh;
-    margin: auto;
+    display: inline-block;
+    width: 35vh;
+    margin: auto 20px;
     margin-bottom: 5vh;
-    padding: 20px;
-    background: url("../images/pokeball.png") center no-repeat;
+    padding: 30px;
     background-size: contain;
+    background: url(../images/pokeball.png) center no-repeat;
     border-radius: 8px;
     border: none;
     -o-transition: .5s;
     -ms-transition: .5s;
     -moz-transition: .5s;
     -webkit-transition: .5s;
-    transition: .5s;
+    transition: .5s
 }
 
 .button:hover {
