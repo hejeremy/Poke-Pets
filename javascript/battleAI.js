@@ -60,7 +60,7 @@ function generateOpponent() {
 function setOpponent(name, image) {
     var pokemon = pokemonNames[Math.floor(Math.random()*pokemonNames.length)];
     var skills = new Skill('Tackle', 5);
-    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 27, 0, skills);
+    var newPokemon = new Pokemon(pokemon.name, '#', '#', pokemon.image, 60, 0, skills);
     opponent = new Player(name, image, newPokemon);
 }
 
