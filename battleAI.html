@@ -25,7 +25,6 @@
         <div id="header" class="text-center container-fluid">
             <div class="row">
                 <div id="title" class="col-sm-6 col-xs-12 col-sm-offset-3 col-xs-offset-0">
-                    <!-- <img class="pokeball" src="https://vignette3.wikia.nocookie.net/youtubepoop/images/4/4c/Pokeball.png/revision/latest?cb=20150418234807"> -->
                     <img id="titleText" src="images/logo.png">
                 </div>
             </div>
@@ -45,35 +44,36 @@
                 </div>
                 <div class='col-sm-4'></div>
             </div>
+            <div id='main-section'>
+                <div class='row playerbox' id='opponentBox'>
+                    <div class='col-sm-4' id='opponentImage'></div>
+                    <div class='col-sm-4' id='opponentName'></div>
+                    <div class='col-sm-4'></div>
+                </div>
 
-            <div class='row playerbox' id='opponentBox'>
-                <div class='col-sm-4' id='opponentImage'></div>
-                <div class='col-sm-4' id='opponentName'></div>
-                <div class='col-sm-4'></div>
-            </div>
+                <div class='row playerbox text-right' id='opponentPokemon'>
+                    <p id='opponentHPNum'></p>
+                    <div id='opponentHPBar'></div>
+                </div>
+                
+                <div class='row playerbox text-left' id='playerPokemon'>
+                    <p id='playerHPNum'></p>
+                    <div id='playerHPBar'></div>
+                </div>
 
-            <div class='row playerbox text-right' id='opponentPokemon'>
-                <p id='opponentHPNum'></p>
-                <div id='opponentHPBar'></div>
-            </div>
+                <div class='row playerbox' id='playerBox'>
+                    <div class='col-sm-4' id='playerImage'></div>
+                    <div class='col-sm-4' id='playerName'></div>
+                    <div class='col-sm-4'></div>
+                </div>
 
-            <div class='row playerbox text-left' id='playerPokemon'>
-                <p id='playerHPNum'></p>
-                <div id='playerHPBar'></div>
-            </div>
-
-            <div class='row playerbox' id='playerBox'>
-                <div class='col-sm-4' id='playerImage'></div>
-                <div class='col-sm-4' id='playerName'></div>
-                <div class='col-sm-4'></div>
-            </div>
-
-            <div class='row playerbox' id='battleBox'>
-                <p id='battleText'></p>
-                <button class='btn btn-default' id='nextButton'>Next</button>
-                <div id='moves'>
-                    <button class='btn btn-default attackButton'>Attack</button>
-                    <button class='btn btn-default itemButton'>Potion</button>
+                <div class='row playerbox' id='battleBox'>
+                    <p id='battleText'></p>
+                    <button class='btn btn-default' id='nextButton'>Next</button>
+                    <div id='moves'>
+                        <button class='btn btn-default attackButton'>Attack</button>
+                        <button class='btn btn-default itemButton'>Potion</button>
+                    </div>
                 </div>
             </div>
         </div>
