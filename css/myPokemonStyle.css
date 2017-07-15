@@ -7,7 +7,7 @@ body {
 	background-color: #dce6f7;
 	background: url("../images/bg.jpg") fixed center;
 	background-size: cover;
-	font-family: 'Roboto' sans-serif;
+	font-family: 'Roboto' sans-serif !important;
 }
 
 #header {
@@ -41,7 +41,6 @@ body {
 	background-size: contain;
 	padding: 20px;
 	color: #fff;
-	font-family: 'Roboto' sans-serif;
 	font-size: 12pt;
 	font-weight: bold;
 	text-shadow: 0px 0px 5px black;
@@ -63,7 +62,6 @@ body {
 }
 
 .pokemon {
-	font-family: 'Roboto' sans-serif;
 	padding: 15px 25px 10px 25px;
 	margin: 0 auto 20px auto;
 	background: rgba(255,255,255, 0.7);
