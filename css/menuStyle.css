@@ -25,22 +25,29 @@ h2 {
 }
 
 .pokemon-container {
-    margin: 10px;
+    display: inline-block;
+    margin: 10px auto;
 }
 
 #pokemon1, #pokemon2, #pokemon3 {
     margin-bottom: 2vh;
     border-radius: 8px;
+    width: 20vw;
+    background: rgba(255,255,255,0.5);
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s
 }
 
-#pokemon1 {
+#pokemon1:hover {
     background: #ccffd5;
-
 }
-#pokemon2 {
+#pokemon2:hover {
     background: #ffcccc;
 }
-#pokemon3 {
+#pokemon3:hover {
     background: #ccd7ff;
 }
 
@@ -200,6 +207,10 @@ h2 {
 
 .starterText {
     margin-top:20px;
+}
+
+.pokemon-container {
+    display: block;
 }
 
 #header {
