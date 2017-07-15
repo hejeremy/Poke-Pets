@@ -23,3 +23,8 @@ img {
     height: calc(3vw - 2px);
     border-radius: 8px;
 }
+
+#hpProgressText {
+    margin: auto;
+    font-weight: bold;
+}
