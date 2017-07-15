@@ -215,13 +215,22 @@ h2 {
     display: block;
     width: 100%;
     background: none;
-    text-shadow: 0px 0px 5px black;
 }
 
 h2 {
     color: #fff;
-
+    text-shadow: 0px 0px 5px black;
 }
+
+#pokemon1, #pokemon2, #pokemon3 {
+    background: rgba(255,255,255,0.7);
+    -o-transition: none;
+    -ms-transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    transition: none;
+}
+
 #header {
     margin-top: 0;
 }
@@ -233,7 +242,7 @@ h2 {
 
 #titleText {
     max-width: 50%;
-    margin: 0 10%;
+    margin: 0;
 }
 
 #player {
