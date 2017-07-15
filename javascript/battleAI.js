@@ -1,4 +1,4 @@
-var version = 58;
+var version = 60;
 console.log('Version - ' + version);
 
 // Link to database
@@ -27,6 +27,7 @@ database.ref('users').once('value', function(snapshot) {
     startBattle();
 });
 
+//Quick testing remove self for those without admin rights to the Firebase
 $(document).on('click', '#clearYourself', function() {
     database.ref('users').child(localStorage.getItem('id')).remove();
     window.location.href = 'https://hejeremy.github.io/Poke-Pets/main.html';
@@ -39,6 +40,7 @@ $("#main").click(function() {
 
 var opponent;
 
+//Generating opponent, also comtains main battle function
 function generateOpponent() {
     var opponentName;
     var opponentImage;
@@ -54,6 +56,7 @@ function generateOpponent() {
     });
 }
 
+//Creates opponent using the random name API
 function setOpponent(name, image) {
     var pokemon = pokemonNames[Math.floor(Math.random()*pokemonNames.length)];
     var skills = new Skill('Tackle', 5);
@@ -98,8 +101,6 @@ function mainBattle() {
 
     $('.itemButton').text('Potions \(' + potions + '\)');
 
-
-    //$('#battleBox').append('<button class=\'btn btn-default\' id=\nextButton\'>Next</button>');
     $('#nextButton').text('Next');
     $('#nextButton').css('visibility', 'hidden');
 
@@ -122,8 +123,6 @@ function mainBattle() {
     nextRound();
 
     //EVERYTHING AFTER THIS IS ONLY CALLED IN mainBattle()
-
-    //Battle event handler, not scalar right now but it works and I don't want to risk something going wrong last second.
     function nextEvent() {
         switch(eventWhich) {
             case 'event1':
@@ -158,11 +157,13 @@ function mainBattle() {
         }
     }
 
+    //Attack choice 1st text
     function event1() {
         $('#battleText').text(attacker.Name + '\(' + attackerWho + '\) used ' + attacker.Skills.skillName + '.');
         eventWhich = 'event2';
     }
 
+    //Attack choice 2nd text
     function event2() {
         if(Math.random() > .2) {
             $('#battleText').text(defender.Name + '\(' + defenderWho + '\) takes ' + attacker.Skills.skillDMG + ' damage!');
@@ -177,6 +178,7 @@ function mainBattle() {
         eventWhich = 'endRound';
     }
 
+    //Potion choice 1st text
     function potion1() {
         if (potions > 0) {
             $('#battleText').text(attackerWho + ' used a potion.');
@@ -188,6 +190,7 @@ function mainBattle() {
         }
     }
 
+    //Potion choice 2nd text
     function potion2() {
         $('#battleText').text(attacker.Name + '\(' + attackerWho + '\) regained some HP.');
         if (attacker.HP + 20 > 60) {
@@ -199,20 +202,19 @@ function mainBattle() {
         eventWhich = 'endRound';
     }
 
+    //Refreshes HP display
     function refreshHP() {
-        //$('#playerHPNum').text(pokemon1.HP + '/60');
-        //$('#opponentHPNum').text(pokemon2.HP + '/60');
         $('#playerHPBar').html(hpBar(pokemon1.HP));
         $('#opponentHPBar').html(hpBar(pokemon2.HP));
     }
 
+    // Make Pokemon HP Bar
     function hpBar(input) {
-        // Make Pokemon HP Bar
         var hpBar = $("<div class='hpBar'>");
         var hpProgress = $("<div class='hpProgress'>");
         var percentage = 100*input/60;
         var hpProgressText = $("<h1 id='hpProgressText'>" + input + '/60' + "</h1>");
-        
+
         hpProgress.css('background', 'linear-gradient(' + getColorForPercentage(percentage/100) + ', rgb\(255, 255, 255\)\)');
 
         hpProgress.css("width", percentage + "%");
@@ -222,6 +224,7 @@ function mainBattle() {
         return hpBar;
     }
 
+    //Switches attacker/defender
     function endRound() {
         if (defender.HP <= 0) {
             eventWhich = 'endBattle';
@@ -245,6 +248,7 @@ function mainBattle() {
         nextEvent();
     }
 
+    //Starts new round after trading hits
     function nextRound() {
         refreshHP();
         eventWhich = 'event1';
@@ -270,6 +274,7 @@ function mainBattle() {
         eventWhich = 'rewards';
     }
 
+    //Player must get to this point in order to recieve rewards from the battle
     function rewards() {
         if (win) {
             expReward = 5 + Math.ceil(5*Math.random());
@@ -294,7 +299,8 @@ function mainBattle() {
 var percentColors = [
     { pct: 0.0, color: { r: 0xff, g: 0x00, b: 0 } },
     { pct: 0.5, color: { r: 0xff, g: 0xff, b: 0 } },
-    { pct: 1.0, color: { r: 0x00, g: 0xff, b: 0 } } ];
+    { pct: 1.0, color: { r: 0x00, g: 0xff, b: 0 } }
+];
 
 var getColorForPercentage = function(pct) {
     for (var i = 1; i < percentColors.length - 1; i++) {
@@ -315,4 +321,4 @@ var getColorForPercentage = function(pct) {
     };
     return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
     // or output as hex if preferred
-}  
+}
