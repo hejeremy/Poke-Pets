@@ -79,7 +79,7 @@ h2 {
     font-size: 3vh;
     background: white;
 
-    border: 1px solid #333;
+    border: 1px solid #aaa;
     border-top-left-radius: inherit;
     border-bottom-right-radius: inherit;
 
@@ -131,8 +131,9 @@ h2 {
 
 #playerName {
     display: block;
-    font-size: 7vh;
-    margin: 0;
+    font-size: 6vh;
+    margin-top: 15px;
+
 }
 
 #playerMoney {
@@ -151,7 +152,7 @@ h2 {
     margin-bottom: 4vh;
     background: rgba(212, 247, 170, 0.7);
     border-radius: 8px;
-    border: 1px solid #666;
+    border: none;
     transition: background 1s;
 }
 
