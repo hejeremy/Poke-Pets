@@ -37,7 +37,7 @@ img {
 
 #playerName, #opponentName {
     font-size: 3vw;
-    font-weight: bold;
+    font-weight: 500;
     margin: 10px;
 }
 
@@ -76,6 +76,10 @@ img {
 
 .playerbox {
     margin: 10px;
+}
+
+#battleText {
+    font-weight: 500;
 }
 
 #battleBox {
