@@ -213,14 +213,7 @@ function mainBattle() {
         var percentage = 100*input/60;
         var hpProgressText = $("<h1 id='hpProgressText'>" + input + '/60' + "</h1>");
         
-
-        if (percentage <= 25) {
-            hpProgress.css('background', 'linear-gradient\(rgb\(230, 20, 0), rgb\(255, 255, 255\)\)');
-        } else if (percentage > 25 && percentage <= 50) {
-            hpProgress.css('background', 'linear-gradient\(rgb\(255, 230, 0), rgb\(255, 255, 255\)\)');
-        } else {
-            hpProgress.css('background', 'linear-gradient\(rgb\(20, 230, 0), rgb\(255, 255, 255\)\)');
-        }
+        hpProgress.css('background', 'linear-gradient(' + getColorForPercentage(percentage/100) + ', rgb\(255, 255, 255\)\)');
 
         hpProgress.css("width", percentage + "%");
 
@@ -323,9 +316,3 @@ var getColorForPercentage = function(pct) {
     return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
     // or output as hex if preferred
 }  
-
-console.log(getColorForPercentage(24));
-console.log(getColorForPercentage(0));
-console.log(getColorForPercentage(100));
-console.log(getColorForPercentage(75));
-console.log(getColorForPercentage(44));
