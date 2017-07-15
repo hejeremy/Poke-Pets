@@ -34,4 +34,5 @@ img {
     font-weight: bold;
     position: absolute;
     font-size: 3vw;
+    z-index: 1;
 }
