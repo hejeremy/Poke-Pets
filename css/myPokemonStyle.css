@@ -228,7 +228,7 @@ body {
 
 #main:hover {
 	cursor: pointer;
-	filter: contrast(200%);
+	filter: none;
 } 
 
 .pokemon:hover {
