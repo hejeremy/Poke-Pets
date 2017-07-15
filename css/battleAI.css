@@ -25,6 +25,10 @@ img {
     padding: 0;
 }
 
+#playerName h2, #opponentName h2 {
+    font-size: 3vw;
+}
+
 .hpBar {
     display: flex;
     float: right;
