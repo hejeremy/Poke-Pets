@@ -312,9 +312,9 @@ var getColorForPercentage = function(pct) {
         r: Math.floor(lower.color.r * pctLower + upper.color.r * pctUpper),
         g: Math.floor(lower.color.g * pctLower + upper.color.g * pctUpper),
         b: Math.floor(lower.color.b * pctLower + upper.color.b * pctUpper),
-        rShift: this.r + 10;
-        gShift: this.g + 10;
-        bShift: this.b + 10;
+        rShift: this.r + 10,
+        gShift: this.g + 10,
+        bShift: this.b + 10
     };
     return ['rgb(' + [color.r, color.g, color.b].join(',') + ')', 'rgb(' + [color.rShift, color.gShift color.bShift].join(',') + ')'];
     // or output as hex if preferred
