@@ -211,7 +211,9 @@ function mainBattle() {
         var hpBar = $("<div class='hpBar'>");
         var hpProgress = $("<div class='hpProgress'>");
         var percentage = 100*input/60;
-        hpProgress.append("<h1 id='hpProgressText'>" + input + '/60' + "</h1>");
+        var hpProgressText = $("<h1 id='hpProgressText'>" + input + '/60' + "</h1>");
+        hpProgressText.css("left", JSON.stringify(calc(50% - hpProgressText.width()/2)));
+        hpProgress.append(hpProgressText);
 
         if (percentage <= 25) {
             hpProgress.css('background', 'linear-gradient\(rgb\(230, 20, 0), rgb\(255, 255, 255\)\)');
