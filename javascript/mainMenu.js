@@ -35,11 +35,11 @@ function chooseStarter(player) {
 
     // Make 3 Pokemon Divs
     var pokemon1 = $("<div id='pokemon1'></div>");
-    pokemon1.addClass("col-sm-4");
-    var pokemon2 = $("<div id='pokemon2'></div>");
-    pokemon2.addClass("col-sm-4");
+    pokemon1.addClass("pokemon-container");
+    var pokemon2 = $("<div id='pokemon'></div>");
+    pokemon2.addClass("pokemon-container");
     var pokemon3 = $("<div id='pokemon3'></div>");
-    pokemon3.addClass("col-sm-4");
+    pokemon3.addClass("pokemon-container");
 
     // Add Pokemon Names
     pokemon1.append("<h1 class='starterText'>Bulbasaur</h1>");

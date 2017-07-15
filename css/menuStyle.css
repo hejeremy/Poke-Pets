@@ -15,12 +15,17 @@ h2 {
 
 .starterImage {
     width: 24vh;
+    margin:20px;
 }
 
 .starterText {
     font-size: 3vh;
     margin-top: 10px;
     margin-bottom: 0;
+}
+
+.pokemon-container {
+    margin: 10px;
 }
 
 #pokemon1, #pokemon2, #pokemon3 {
@@ -30,6 +35,7 @@ h2 {
 
 #pokemon1 {
     background: #ccffd5;
+
 }
 #pokemon2 {
     background: #ffcccc;
@@ -62,9 +68,10 @@ h2 {
 }
 
 #content, #player {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
     margin-bottom: 6vw;
+    padding: 0 20px 20px 20px;
 }
 
 #player {
@@ -194,6 +201,7 @@ h2 {
 .starterText {
     margin-top:20px;
 }
+
 #header {
     margin-top: 0;
 }
