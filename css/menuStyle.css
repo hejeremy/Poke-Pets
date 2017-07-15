@@ -104,7 +104,6 @@ h2 {
     background: #b6c1d3;
     border-radius: 8px;
     border: 1px solid #aaa;
-
     padding: 0;
     margin: 0;
 }
@@ -131,15 +130,16 @@ h2 {
 
 #playerName, #playerMoney {
     border: 1px solid #aaa;
+    box-shadow: 5px 3px 2px #9198a3;
 }
 
 #playerName {
     display: block;
-    font-size: 5vh;
+    font-size: 4vh;
     margin-top: 20px;
     background: #fff;
     padding: 5px 10px;
-    border-radius: 20px;
+    border-radius: 25px;
 
 }
 
@@ -157,20 +157,22 @@ h2 {
 .button {
     display: block;
     width: 48vh;
-    font-size: 12vh;
     margin: auto;
-    margin-bottom: 4vh;
-    background: rgba(212, 247, 170, 0.7);
+    margin-bottom: 5vh;
+    background: url("../images/pokeball.png") center no-repeat;
+    background-size: contain;
     border-radius: 8px;
     border: none;
     transition: background 1s;
 }
 
 .button:hover {
-    background: rgba(212, 247, 170, 1);
+    cursor: pointer;
+    filter: contrast(200%);
 }
 
 .buttonText {
+    font-size: 3vh;
     margin: 2vh 0 2vh 0;
 }
 
