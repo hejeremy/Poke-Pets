@@ -4,26 +4,20 @@ body {
 }
 
 #header {
-    background: none;
-    margin-bottom: 24vh;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 #title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#pokeball {
-    display: inline-block;
-    height: 10vh;
-    margin: 1.5vh 2vh 1.5vh 0;
+    padding: 0;
 }
 
 #titleText {
     display: inline-block;
-    width: 32vh;
-    margin: 0;
+    max-width: 60%;
+    width: auto;
+    height: auto;
+    margin: 0 10%;
 }
 
 #signinDiv {
