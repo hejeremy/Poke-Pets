@@ -24,12 +24,14 @@ h2 {
     font-size: 3vh;
     margin-top: 10px;
     margin-bottom: 0;
+    color:#fff;
+    text-shadow: 0px 0px 10px white;
 }
 
 .pokemon-container {
     width:30%;
     display: inline-block;
-    margin: 10px auto;
+    margin: 10px;
 }
 
 #pokemon1, #pokemon2, #pokemon3 {
@@ -44,13 +46,13 @@ h2 {
 }
 
 #pokemon1:hover {
-    background: #ccffd5;
+    background: #afff9b;
 }
 #pokemon2:hover {
-    background: #ffcccc;
+    background: #ffb395;
 }
 #pokemon3:hover {
-    background: #ccd7ff;
+    background: #99deff;
 }
 
 #header {
