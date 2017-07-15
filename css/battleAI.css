@@ -35,8 +35,10 @@ img {
     padding: 0;
 }
 
-#playerName h2, #opponentName h2 {
+#playerName, #opponentName {
     font-size: 3vw;
+    font-weight: bold;
+    margin: 10px;
 }
 
 .hpBar {
@@ -82,9 +84,21 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+.col-xs-12 {
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
 
 #main-section {
     background: none;
+    padding: 0;
+}
+
+#playerPokemon, #opponentPokemon {
+    border-radius: 10px 0 10px 0;
 }
 
 }
