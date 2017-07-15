@@ -203,6 +203,10 @@ h2 {
 
 @media screen and (max-width: 768px) {
 
+#content {
+    background: none;
+}
+
 .starterText {
     padding-top:10px;
 }
@@ -210,8 +214,14 @@ h2 {
 .pokemon-container {
     display: block;
     width: 100%;
+    background: none;
+    text-shadow: 0px 0px 5px black;
 }
 
+h2 {
+    color: #fff;
+
+}
 #header {
     margin-top: 0;
 }
