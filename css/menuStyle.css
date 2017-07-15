@@ -24,7 +24,7 @@ h2 {
     font-size: 3vh;
     margin-top: 10px;
     margin-bottom: 0;
-    color:#fff;
+    color:#333;
     text-shadow: 0px 0px 10px white;
 }
 
@@ -204,8 +204,7 @@ h2 {
 @media screen and (max-width: 768px) {
 
 .starterText {
-    margin-top:20px;
-}
+    padding-top:10px;
 
 .pokemon-container {
     display: block;
