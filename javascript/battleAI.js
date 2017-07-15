@@ -73,11 +73,11 @@ function startBattle() {
 }
 
 function renderImages() {
-    $('#playerName').html('<h2>' + mainPlayer.name + '</h2>');
+    $('#playerName').html(mainPlayer.name);
     $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
     $('#player-pokemon-col').append('<img class=\'pokemonImage\' src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
 
-    $('#opponentName').html('<h2>' + capitalizeFirstLetter(opponent.Name) + '</h2>');
+    $('#opponentName').html(capitalizeFirstLetter(opponent.Name));
     $('#opponentImage').html('<img src=\'' + opponent.Image + '\' alt=\'Opponent Image\'>');
     $('#opponent-pokemon-col').append('<img class=\'pokemonImage\' src=\'' + opponent.Pokemon.ImgLarge + '\' alt=\'Opponent Pokemon\'>');
 }
