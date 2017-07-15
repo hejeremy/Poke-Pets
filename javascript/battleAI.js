@@ -1,4 +1,4 @@
-var version = 56;
+var version = 58;
 console.log('Version - ' + version);
 
 // Link to database
@@ -72,7 +72,7 @@ function startBattle() {
 function renderImages() {
     $('#playerName').html('<h2>' + mainPlayer.name + '</h2>');
     $('#playerImage').html('<img src=\'' + mainPlayer.profilePic + '\' alt=\'Your Image\'>');
-    $('#playerPokemon').prepend('<img class=\'pokemonImage\' src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
+    $('#playerPokemon').append('<img class=\'pokemonImage\' src=\'' + mainPlayer.pokemon[0].ImgLarge + '\' alt=\'Your Pokemon\'>');
 
     $('#opponentName').html('<h2>' + capitalizeFirstLetter(opponent.Name) + '</h2>');
     $('#opponentImage').html('<img src=\'' + opponent.Image + '\' alt=\'Opponent Image\'>');
