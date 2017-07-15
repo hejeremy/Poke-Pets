@@ -159,7 +159,7 @@ h2 {
     width: 48vh;
     margin: auto;
     margin-bottom: 5vh;
-    padding: 10px;
+    padding: 20px;
     background: url("../images/pokeball.png") center no-repeat;
     background-size: contain;
     border-radius: 8px;
@@ -173,7 +173,8 @@ h2 {
 }
 
 .buttonText {
-    font-size: 3vh;
+    font-size: 4vh;
+    color: #fff;
     margin: 2vh 0 2vh 0;
     text-shadow: 0px 0px 5px black;
 }
