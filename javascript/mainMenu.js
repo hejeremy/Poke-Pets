@@ -29,7 +29,7 @@ database.ref("users").once("value", function(snapshot) {
 
 function chooseStarter(player) {
     // Draw welcome text
-    var text1 = $("<h2>Welcome to PokéPets, " + player["name"] + "</h2>"); 
+    var text1 = $("<h2>Welcome to PokéPets, " + player["name"] + "!" + "</h2>"); 
     var text2 = $("<h2>To get started, choose your starter Pokemon!</h2>")
     $("#content").append(text1, text2);
 
