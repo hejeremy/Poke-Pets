@@ -57,3 +57,7 @@ img {
 .playerbox {
     margin: 10px;
 }
+
+#battlebox {
+    text-align: center;
+}
