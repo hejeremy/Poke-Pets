@@ -65,6 +65,7 @@ h2 {
     padding: 0;
     height: 20vh;
     background: rgba(255, 255, 255, 0.7);
+    padding: ;
 }
 
 #playerImage {
@@ -134,6 +135,7 @@ h2 {
     font-size: 5vh;
     margin-top: 20px;
     background: #fff;
+    padding: 5px 10px;
     border-radius: 20px;
 
 }
@@ -178,11 +180,11 @@ h2 {
 #title {
     padding: 5px;
     background: rgba(203, 216, 207,0.5);
-    margin: 0 10%;
 }
 
 #titleText {
     max-width: 50%;
+    margin: 0 10%;
 }
 
 #player {
