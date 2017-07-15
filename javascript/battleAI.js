@@ -252,7 +252,7 @@ function mainBattle() {
     function nextRound() {
         refreshHP();
         eventWhich = 'event1';
-        $('#battleText').text('What will ' + pokemon1.Name + ' do?');
+        $('#battleText').text('What will you do?');
         $('#nextButton').css('visibility', 'hidden');
         $('.itemButton').text('Potions \(' + potions + '\)');
         $('.attackButton').css('visibility', 'visible');
