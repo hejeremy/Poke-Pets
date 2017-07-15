@@ -213,12 +213,22 @@ function mainBattle() {
         var percentage = 100*input/60;
         var hpProgressText = $("<h1 id='hpProgressText'>" + input + '/60' + "</h1>");
         
-        hpProgress.css('background', 'linear-gradient(' + getColorForPercentage(percentage/100)[0] + ', ' + getColorForPercentage(percentage/100)[1] + ')');
+
+        if (percentage <= 25) {
+            hpProgress.css('background', 'linear-gradient\(rgb\(230, 20, 0), rgb\(255, 255, 255\)\)');
+        } else if (percentage > 25 && percentage <= 50) {
+            hpProgress.css('background', 'linear-gradient\(rgb\(255, 230, 0), rgb\(255, 255, 255\)\)');
+        } else {
+            hpProgress.css('background', 'linear-gradient\(rgb\(20, 230, 0), rgb\(255, 255, 255\)\)');
+        }
 
         hpProgress.css("width", percentage + "%");
 
-        hpBar.append(hpProgressText);
+        // Center Text
+        hpProgress.append(hpProgressText);
+
         hpBar.append(hpProgress);
+        console.log($("#playerHPBar").width());
         return hpBar;
     }
 
@@ -291,31 +301,3 @@ function mainBattle() {
     }
 }
 
-var percentColors = [
-    { pct: 0.0, color: { r: 0xff, g: 0x00, b: 0 } },
-    { pct: 0.5, color: { r: 0xff, g: 0xff, b: 0 } },
-    { pct: 1.0, color: { r: 0x00, g: 0xff, b: 0 } } ];
-
-var getColorForPercentage = function(pct) {
-    for (var i = 1; i < percentColors.length - 1; i++) {
-        if (pct < percentColors[i].pct) {
-            break;
-        }
-    }
-    var lower = percentColors[i - 1];
-    var upper = percentColors[i];
-    var range = upper.pct - lower.pct;
-    var rangePct = (pct - lower.pct) / range;
-    var pctLower = 1 - rangePct;
-    var pctUpper = rangePct;
-    var color = {
-        r: Math.floor(lower.color.r * pctLower + upper.color.r * pctUpper),
-        g: Math.floor(lower.color.g * pctLower + upper.color.g * pctUpper),
-        b: Math.floor(lower.color.b * pctLower + upper.color.b * pctUpper),
-        rShift: this.r + 10,
-        gShift: this.g + 10,
-        bShift: this.b + 10
-    };
-    return ['rgb(' + [color.r, color.g, color.b].join(',') + ')', 'rgb(' + [color.rShift, color.gShift, color.bShift].join(',') + ')'];
-    // or output as hex if preferred
-}  
