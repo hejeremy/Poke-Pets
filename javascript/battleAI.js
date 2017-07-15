@@ -201,16 +201,17 @@ function mainBattle() {
 
     function refreshHP() {
         $('#playerHPNum').text(pokemon1.HP + '/60');
-        $('#opponentHPNum').text(pokemon2.HP + '/50');
+        $('#opponentHPNum').text(pokemon2.HP + '/60');
         $('#playerHPBar').html(hpBar(pokemon1.HP));
         $('#opponentHPBar').html(hpBar(pokemon2.HP));
     }
 
     function hpBar(input) {
         // Make Pokemon HP Bar
-        var hpBar = $("<div class='hpBar'>");
+        var hpBar = $("<div class='hpBar text-center'>");
         var hpProgress = $("<div class='hpProgress'>");
         var percentage = 100*input/60;
+        hpBar.text = input + '/60';
 
         if (percentage <= 25) {
             hpProgress.css('background', 'linear-gradient\(rgb\(230, 20, 0), rgb\(255, 255, 255\)\)');
