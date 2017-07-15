@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PokePets</title>
+        <title>Pok&eacute;Pets</title>
         <!-- <meta charset='utf-8'> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -39,27 +39,28 @@
 
         <div class='container-fluid'>
             <div id='main-section'>
-                <div class='row playerbox' id='opponentBox'>
-                    <div class='col-sm-4' id='opponentImage'></div>
-                    <div class='col-sm-4' id='opponentName'></div>
-                    <div class='col-sm-4'></div>
-                </div>
 
                 <div class='row playerbox text-right' id='opponentPokemon'>
                     <div class= 'col-xs-9'>
-                    <p id='opponentHPNum'></p>
-                    <div id='opponentHPBar'></div>
+                        <p id='opponentHPNum'></p>
+                        <div id='opponentHPBar'></div>
+                        <div class='row playerbox' id='opponentBox'>
+                            <div class='col-sm-4' id='opponentImage'></div>
+                            <div class='col-sm-4' id='opponentName'></div>
+                            <div class='col-sm-4'></div>
+                        </div>
                     </div>
                     <div class= 'col-xs-3' id='opponent-pokemon-col'>
                     </div>
                 </div>
-                
+
                 <div class='row playerbox' id='battleBox'>
                     <p id='battleText'></p>
-                    <button class='btn btn-default' id='nextButton'>Next</button>
+                    
                     <div id='moves'>
                         <button class='btn btn-default attackButton'>Attack</button>
                         <button class='btn btn-default itemButton'>Potion</button>
+                        <button class='btn btn-default' id='nextButton'>Next</button>
                     </div>
                 </div>
 
@@ -69,14 +70,15 @@
                     <div class= 'col-xs-9'>
                         <p id='playerHPNum'></p>
                         <div id='playerHPBar'></div>
+                        <div class='row playerbox' id='playerBox'>
+                            <div class='col-sm-4' id='playerImage'></div>
+                            <div class='col-sm-4' id='playerName'></div>
+                            <div class='col-sm-4'></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class='row playerbox' id='playerBox'>
-                    <div class='col-sm-4' id='playerImage'></div>
-                    <div class='col-sm-4' id='playerName'></div>
-                    <div class='col-sm-4'></div>
-                </div>
+                
 
                 
             </div>
