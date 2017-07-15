@@ -82,6 +82,16 @@ img {
     font-weight: 500;
 }
 
+.attackButton, .itemButton, #nextButton {
+    border:none;
+    background-color: #d4f7aa;
+}
+
+.attackButton:hover, .itemButton:hover, #nextButton:hover {
+    border:none;
+    background-color: #99b775;
+}
+
 #battleBox {
     text-align: center;
     margin: 20px auto;
