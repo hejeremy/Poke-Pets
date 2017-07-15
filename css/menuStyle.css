@@ -173,7 +173,7 @@ h2 {
 
 .button:hover {
     cursor: pointer;
-    filter: contrast(200%);
+    filter: contrast(150%);
 }
 
 .buttonText {
