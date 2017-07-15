@@ -225,7 +225,7 @@ function mainBattle() {
         hpProgress.css("width", percentage + "%");
 
         // Center Text
-        var center = hpProgress.width() - (hpProgressText.width()/2);
+        var center = hpBar.width() - (hpProgressText.width()/2);
         console.log(center);
         hpProgressText.css("left", center);
         hpProgress.append(hpProgressText);
