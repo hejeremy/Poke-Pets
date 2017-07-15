@@ -316,6 +316,6 @@ var getColorForPercentage = function(pct) {
         gShift: this.g + 10,
         bShift: this.b + 10
     };
-    return ['rgb(' + [color.r, color.g, color.b].join(',') + ')', 'rgb(' + [color.rShift, color.gShift color.bShift].join(',') + ')'];
+    return ['rgb(' + [color.r, color.g, color.b].join(',') + ')', 'rgb(' + [color.rShift, color.gShift, color.bShift].join(',') + ')'];
     // or output as hex if preferred
 }  
