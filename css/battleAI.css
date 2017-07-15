@@ -87,7 +87,7 @@ img {
     background-color: #d4f7aa;
 }
 
-.attackButton:hover, .itemButton:hover, #nextButton:hover {
+.attackButton:hover, .attackButton:active, .itemButton:hover, .itemButton:active, #nextButton:hover, #nextButton:active {
     border:none;
     background-color: #99b775;
 }
