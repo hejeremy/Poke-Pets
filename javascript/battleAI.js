@@ -1,4 +1,4 @@
-var version = 54;
+var version = 55;
 console.log('Version - ' + version);
 
 // Link to database
@@ -211,7 +211,7 @@ function mainBattle() {
         var hpBar = $("<div class='hpBar text-center'>");
         var hpProgress = $("<div class='hpProgress'>");
         var percentage = 100*input/60;
-        hpBar.text = input + '/60';
+        hpBar.text(input + '/60');
 
         if (percentage <= 25) {
             hpProgress.css('background', 'linear-gradient\(rgb\(230, 20, 0), rgb\(255, 255, 255\)\)');
