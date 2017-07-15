@@ -23,11 +23,12 @@ body {
 #signinDiv {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
+    margin-top:20vh;
 }
 
 #signin {
     font-size: 3.5vh;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #444;
     margin: 0 0px 4vh 0px;
     padding: 3vh;
     color: #444;
