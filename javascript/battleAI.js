@@ -1,4 +1,4 @@
-var version = 60;
+var version = 62;
 console.log('Version - ' + version);
 
 // Link to database
@@ -252,7 +252,7 @@ function mainBattle() {
     function nextRound() {
         refreshHP();
         eventWhich = 'event1';
-        $('#battleText').text('What will ' + pokemon1.Name + ' do?');
+        $('#battleText').text('What will you do?');
         $('#nextButton').css('visibility', 'hidden');
         $('.itemButton').text('Potions \(' + potions + '\)');
         $('.attackButton').css('visibility', 'visible');
@@ -276,12 +276,12 @@ function mainBattle() {
 
     //Player must get to this point in order to recieve rewards from the battle
     function rewards() {
-        if (win) {
+        if (win === true) {
             expReward = 5 + Math.ceil(5*Math.random());
             moneyReward = 50 + Math.ceil(50*Math.random());
             $('#battleText').text(mainPlayer.name + ' gets ' + expReward + ' EXP and $' + moneyReward + ' for winning.');
         } else {
-            $('#battleTExt').text(mainPlayer.name + ' gets nothing for losing.');
+            $('#battleText').text(mainPlayer.name + ' gets nothing for losing.');
         }
         database.ref('users').child(localStorage.getItem('id')).update({
             experience: mainPlayer.experience += expReward,
