@@ -125,7 +125,7 @@ function drawPlayer(player) {
 function drawMenu() {
     // Add Menu Buttons
     var myPokemon = $("<button class='button text-center'>");
-    myPokemon.append($("<h1 class='buttonText'>My Pokemon</h1>")) 
+    myPokemon.append($("<h1 class='buttonText'>My Pok&eacute;mon</h1>")) 
     var playAI = $("<button class='button text-center'>");
     playAI.append($("<h1 class='buttonText'>Battle</h1>")) 
 
