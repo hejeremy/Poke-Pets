@@ -46,7 +46,7 @@ img {
 }
 
 #hpProgressText {
-    margin: auto;
+    margin: 0.1vw;
     font-weight: 500;
     position: absolute;
     font-size: 2vw;
