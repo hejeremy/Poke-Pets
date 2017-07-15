@@ -21,6 +21,10 @@ img {
     height: auto;
 }
 
+#opponent-pokemon-col, #player-pokemon-col {
+    padding: 0;
+}
+
 .hpBar {
     display: flex;
     float: right;
