@@ -24,7 +24,7 @@ body {
 #signinDiv {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
-    margin-top:20vh;
+    margin-top:12vh;
 }
 
 #signin {
@@ -49,4 +49,22 @@ body {
     display: inline;
     font-size: 3vh;
     margin-left: 1vh;
+}
+
+@media screen and (max-width: 768px) {
+
+#header {
+	margin-top: 0;
+}
+
+#title {
+	padding: 5px;
+	background: rgba(203, 216, 207,0.5);
+	margin-bottom: 10px;
+}
+
+#titleText {
+	max-width: 50%;
+}
+
 }
