@@ -200,8 +200,8 @@ function mainBattle() {
     }
 
     function refreshHP() {
-        $('#playerHPNum').text(pokemon1.HP + '/60');
-        $('#opponentHPNum').text(pokemon2.HP + '/60');
+        //$('#playerHPNum').text(pokemon1.HP + '/60');
+        //$('#opponentHPNum').text(pokemon2.HP + '/60');
         $('#playerHPBar').html(hpBar(pokemon1.HP));
         $('#opponentHPBar').html(hpBar(pokemon2.HP));
     }
