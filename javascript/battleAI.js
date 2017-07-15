@@ -226,7 +226,7 @@ function mainBattle() {
 
         // Center Text
         console.log($("#playerHPBar").width());
-        var center = hpBar.width() - (hpProgressText.width()/2);
+        var center = $("#playerHPBar").width() - (hpProgressText.width()/2);
         console.log(center);
         hpProgressText.css("left", center);
         hpProgress.append(hpProgressText);
