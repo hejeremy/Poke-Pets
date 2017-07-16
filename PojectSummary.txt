@@ -1,5 +1,5 @@
 Description:
-- This is a fan made Pokemon game where players can battle randomly generated AI and their Pokemon
+- This is a fan made Pokemon game where players pick a starter pokemon and battle randomly generated AI and their Pokemon
 - It connects the player's profile to their facebook profile to get player image, and includes a level progression feature
 
 Motivation:
